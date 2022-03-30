@@ -78,7 +78,7 @@
                         <a href="#endpoints-GETapi-user">GET api/user</a>
                     </li>
                                     <li class="tocify-item level-2" data-unique="endpoints-GETapi-requests">
-                        <a href="#endpoints-GETapi-requests">GET api/requests</a>
+                        <a href="#endpoints-GETapi-requests">Get all requests</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -210,7 +210,7 @@ access-control-allow-origin: *
         </p>
                     </form>
 
-            <h2 id="endpoints-GETapi-requests">GET api/requests</h2>
+            <h2 id="endpoints-GETapi-requests">Get all requests</h2>
 
 <p>
 </p>
@@ -223,7 +223,7 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://backend.localhost/api/requests?sort_date=facere&amp;sort_status=culpa" \
+    --get "http://backend.localhost/api/requests?sort_date=quae&amp;sort_status=autem&amp;start=aspernatur&amp;end=qui&amp;filter_status=esse" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -234,8 +234,11 @@ access-control-allow-origin: *
 );
 
 const params = {
-    "sort_date": "facere",
-    "sort_status": "culpa",
+    "sort_date": "quae",
+    "sort_status": "autem",
+    "start": "aspernatur",
+    "end": "qui",
+    "filter_status": "esse",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -269,7 +272,6 @@ access-control-allow-origin: *
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;status&quot;: 200,
     &quot;message&quot;: &quot;OK&quot;,
     &quot;data&quot;: [
         {
@@ -621,7 +623,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="sort_date"
                data-endpoint="GETapi-requests"
-               value="facere"
+               value="quae"
                data-component="query" hidden>
     <br>
 <p>Sorting by created. Values: new, old.</p>
@@ -631,10 +633,42 @@ access-control-allow-origin: *
                 <input type="text"
                name="sort_status"
                data-endpoint="GETapi-requests"
-               value="culpa"
+               value="autem"
                data-component="query" hidden>
     <br>
 <p>Sorting by status. Values: active, resolved.</p>
+            </p>
+                    <p>
+                <b><code>start</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="start"
+               data-endpoint="GETapi-requests"
+               value="aspernatur"
+               data-component="query" hidden>
+    <br>
+<p>Start of date filter. Values: Carbon compatible string.</p>
+<p>For example: 2010-1-1 00:00:00</p>
+            </p>
+                    <p>
+                <b><code>end</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="end"
+               data-endpoint="GETapi-requests"
+               value="qui"
+               data-component="query" hidden>
+    <br>
+<p>End of date filter. Values: Carbon compatible string.</p>
+<p>For example: 2020-12-25 12:45:16</p>
+            </p>
+                    <p>
+                <b><code>filter_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="filter_status"
+               data-endpoint="GETapi-requests"
+               value="esse"
+               data-component="query" hidden>
+    <br>
+<p>Filter by status. Values: active, resolved.</p>
             </p>
                 </form>
 

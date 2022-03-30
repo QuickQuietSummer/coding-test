@@ -44,29 +44,59 @@ paths:
       security: []
   /api/requests:
     get:
-      summary: ''
+      summary: 'Get all requests'
       description: ''
       parameters:
         -
           in: query
           name: sort_date
           description: 'Sorting by created. Values: new, old.'
-          example: facere
+          example: quae
           required: false
           schema:
             type: string
             description: 'Sorting by created. Values: new, old.'
-            example: facere
+            example: quae
         -
           in: query
           name: sort_status
           description: 'Sorting by status. Values: active, resolved.'
-          example: culpa
+          example: autem
           required: false
           schema:
             type: string
             description: 'Sorting by status. Values: active, resolved.'
-            example: culpa
+            example: autem
+        -
+          in: query
+          name: start
+          description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
+          example: aspernatur
+          required: false
+          schema:
+            type: string
+            description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
+            example: aspernatur
+        -
+          in: query
+          name: end
+          description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
+          example: qui
+          required: false
+          schema:
+            type: string
+            description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
+            example: qui
+        -
+          in: query
+          name: filter_status
+          description: 'Filter by status. Values: active, resolved.'
+          example: esse
+          required: false
+          schema:
+            type: string
+            description: 'Filter by status. Values: active, resolved.'
+            example: esse
         -
           in: header
           name: Content-Type
@@ -89,7 +119,6 @@ paths:
               schema:
                 type: object
                 example:
-                  status: 200
                   message: OK
                   data:
                     -
@@ -363,9 +392,6 @@ paths:
                       created_at: '2021-01-14T00:00:00.000000Z'
                       updated_at: '2022-03-30T14:04:02.000000Z'
                 properties:
-                  status:
-                    type: integer
-                    example: 200
                   message:
                     type: string
                     example: OK

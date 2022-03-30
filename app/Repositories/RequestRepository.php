@@ -3,8 +3,9 @@
 namespace App\Repositories;
 
 use App\Models\Request;
+use Carbon\Carbon;
+use Carbon\Exceptions\InvalidFormatException;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\DB;
 
 class RequestRepository
 {
@@ -17,17 +18,43 @@ class RequestRepository
         'OLD' => 'ASC',
     ];
 
-    public function getAll(string|null $sortDate = null, string|null $sortStatus = null): array
+    public function getAll(
+        string|null $sortDateValue,
+        string|null $sortStatusValue,
+        string|null $start,
+        string|null $end,
+        string|null $filterStatus,
+    ): array
     {
-        $bidsQuery = Request::query();
-
-        $bidsQuery = $this->sort($bidsQuery, 'status', $sortStatus, $this->statusDictionary);
-        $bidsQuery = $this->sort($bidsQuery, 'created_at', $sortDate, $this->dateDictionary);
-
-        return $bidsQuery->get()->toArray();
+        $builder = Request::query();
+        $builder = $this->filterStatus($builder, $filterStatus);
+        $builder = $this->sort($builder, 'status', $sortStatusValue, $this->statusDictionary);
+        $builder = $this->filterDate($builder, $start, $end);
+        $builder = $this->sort($builder, 'created_at', $sortDateValue, $this->dateDictionary);
+        return $builder->get()->toArray();
     }
 
-    private function sort(Builder $builder, string $sortColumn, string|null $sortValue = null, array $dictionary): Builder
+    private function filterStatus(Builder $builder, string|null $status)
+    {
+        if (!isset($status)) return $builder;
+        if (!array_key_exists(strtoupper($status), $this->statusDictionary)) return $builder;
+
+        return $builder->where('status', '=', ucfirst(strtolower($status)));
+    }
+
+    private function filterDate(Builder $builder, string|null $start, string|null $end)
+    {
+        if (!isset($start) || !isset($end)) return $builder;
+        try {
+            $parsedStart = Carbon::parse($start);
+            $parsedEnd = Carbon::parse($end);
+        } catch (InvalidFormatException) {
+            return $builder;
+        }
+        return $builder->whereBetween('created_at', [$parsedStart, $parsedEnd]);
+    }
+
+    private function sort(Builder $builder, string $sortColumn, string|null $sortValue, array $dictionary): Builder
     {
         if (!isset($sortValue)) return $builder;
         $sortKey = strtoupper($sortValue);
