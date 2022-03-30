@@ -2,11 +2,11 @@
 
 namespace Database\Factories;
 
-use App\Models\Bid;
+use App\Models\Request;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class BidFactory extends Factory
+class RequestFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,7 +20,7 @@ class BidFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'status' => $resolved ? Bid::STATUS_RESOLVED : Bid::STATUS_ACTIVE,
+            'status' => $resolved ? Request::STATUS_RESOLVED : Request::STATUS_ACTIVE,
             'message' => $this->faker->text,
             'comment' => $resolved ? 'Comment text. Comment text.' : '',
             'created_at' => $this->faker->date

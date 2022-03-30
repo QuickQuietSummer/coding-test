@@ -2,11 +2,11 @@
 
 namespace App\Repositories;
 
-use App\Models\Bid;
+use App\Models\Request;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
-class BidRepository
+class RequestRepository
 {
     private array $statusDictionary = [
         'ACTIVE' => 'ASC',
@@ -19,7 +19,7 @@ class BidRepository
 
     public function getAll(string|null $sortDate = null, string|null $sortStatus = null): array
     {
-        $bidsQuery = Bid::query();
+        $bidsQuery = Request::query();
 
         $bidsQuery = $this->sort($bidsQuery, 'status', $sortStatus, $this->statusDictionary);
         $bidsQuery = $this->sort($bidsQuery, 'created_at', $sortDate, $this->dateDictionary);

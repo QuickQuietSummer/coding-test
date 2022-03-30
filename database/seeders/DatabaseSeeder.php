@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Bid;
+use App\Models\Request;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Bid::factory(30)->create();
+        Request::factory(30)->create();
     }
 }
