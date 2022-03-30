@@ -19,7 +19,14 @@ class BidGetTest extends TestCase
         $this->get('/api/bids/')->assertStatus(200);
     }
 
-    /*
+    public function test_that_incorrect_sort_is_just_no_sort_and_200()
+    {
+        $this->get('/api/bids/?sort_status=' . 'incorrect active or resolved')->assertStatus(200);
+        $this->get('/api/bids/?sort_date=' . 'incorrect new or last')->assertStatus(200);
+
+    }
+
+    /**
      * @depends test_that_entry_point_available
      */
     public function test_that_response_exact_structure()
@@ -42,9 +49,9 @@ class BidGetTest extends TestCase
         ]);
     }
 
-    /*
-    * @depends test_that_response_exact_structure
-    */
+    /**
+     * @depends test_that_response_exact_structure
+     */
     public function test_that_bids_sorting_by_active()
     {
         $resolvedBid = Bid::factory()->createOne([
@@ -54,16 +61,16 @@ class BidGetTest extends TestCase
             'status' => Bid::STATUS_ACTIVE
         ])->toArray();
 
-        $bids = $this->get('/api/bids/?sort[status]=' . 'active')['data'];
+        $bids = $this->get('/api/bids/?sort_status=' . 'active')['data'];
 
         self::assertTrue($bids[0]['id'] == $activeBid['id']);
         self::assertTrue($bids[1]['id'] == $resolvedBid['id']);
     }
 
 
-    /*
-    * @depends test_that_response_exact_structure
-    */
+    /**
+     * @depends test_that_response_exact_structure
+     */
     public function test_that_bids_sorting_by_resolved()
     {
         $activeBid = Bid::factory()->createOne([
@@ -73,16 +80,16 @@ class BidGetTest extends TestCase
             'status' => Bid::STATUS_RESOLVED
         ])->toArray();
 
-        $bids = $this->get('/api/bids/?sort[status]=' . 'resolved')['data'];
+        $bids = $this->get('/api/bids/?sort_status=' . 'resolved')['data'];
 
         self::assertTrue($bids[0]['id'] == $resolvedBid['id']);
         self::assertTrue($bids[1]['id'] == $activeBid['id']);
     }
 
 
-    /*
-    * @depends test_that_response_exact_structure
-    */
+    /**
+     * @depends test_that_response_exact_structure
+     */
     public function test_that_bids_sorting_by_date()
     {
         $date = Carbon::now();
@@ -90,7 +97,7 @@ class BidGetTest extends TestCase
         $date = $date->addDay();
         $bid1 = Bid::factory()->createOne(['created_at' => $date])->toArray();
 
-        $bidsResponse = $this->get('/api/bids/?sort[date]=' . 'desc')['data'];
+        $bidsResponse = $this->get('/api/bids/?sort_date=' . 'last')['data'];
 
         self::assertTrue($bidsResponse[0]['id'] == $bid1['id']);
         self::assertTrue($bidsResponse[1]['id'] == $bid0['id']);
@@ -100,7 +107,7 @@ class BidGetTest extends TestCase
         $date = $date->addDay();
         $bid3 = Bid::factory()->createOne(['created_at' => $date])->toArray();
 
-        $bidsResponse = $this->get('/api/bids/?sort[date]=' . 'asc')['data'];
+        $bidsResponse = $this->get('/api/bids/?sort_date=' . 'new')['data'];
 
         self::assertTrue($bidsResponse[0]['id'] == $bid0['id']);
         self::assertTrue($bidsResponse[1]['id'] == $bid1['id']);

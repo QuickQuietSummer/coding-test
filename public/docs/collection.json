@@ -1,0 +1,145 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "http:\/\/backend.localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "5a3846a0-0b90-41ce-9fbc-0278d9b1e229",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/user",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/bids",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/bids",
+                            "query": [
+                                {
+                                    "key": "sort_date",
+                                    "value": "architecto",
+                                    "description": "Sorting by created. Values: new, old.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "sort_status",
+                                    "value": "ad",
+                                    "description": "Sorting by status. Values: active, resolved.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/bids?sort_date=architecto&sort_status=ad"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"status\":200,\"message\":\"OK\",\"data\":[{\"id\":1,\"name\":\"Prof. Bradly Stanton\",\"email\":\"grace.steuber@example.net\",\"status\":\"Resolved\",\"message\":\"Placeat numquam sint quia rerum et cupiditate. Odio nobis saepe ratione accusantium qui commodi sed. Hic eius nihil vel deserunt sit distinctio nihil. Hic aperiam ut et ipsam.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2000-02-15T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":2,\"name\":\"Jaylen Okuneva\",\"email\":\"ehilpert@example.net\",\"status\":\"Active\",\"message\":\"Quo praesentium error ratione culpa id non. Sed id aut iure voluptas officiis enim. Et illo molestias aspernatur repudiandae qui odio. Nulla ab alias at consequatur soluta unde ut.\",\"comment\":\"\",\"created_at\":\"1973-08-06T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":3,\"name\":\"Gerard Padberg\",\"email\":\"mayer.roslyn@example.com\",\"status\":\"Active\",\"message\":\"Atque quia sint vero libero laborum dolor ea. Est expedita in repellat aliquam. Quas esse maxime inventore libero et libero.\",\"comment\":\"\",\"created_at\":\"2004-04-08T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":4,\"name\":\"Mrs. Myrtie Johns II\",\"email\":\"augustus09@example.org\",\"status\":\"Active\",\"message\":\"Ab rerum dolor aut in alias maiores non. Id rerum laudantium non voluptatibus. Consectetur nobis id nemo sapiente eveniet minus. Omnis delectus odit non.\",\"comment\":\"\",\"created_at\":\"1995-08-14T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":5,\"name\":\"Eldon Jast\",\"email\":\"kattie75@example.org\",\"status\":\"Active\",\"message\":\"Ut voluptatum distinctio vitae itaque. Rem repellat omnis corporis quisquam aut dolores. Dolorem ut eum eius illum deserunt quod quaerat.\",\"comment\":\"\",\"created_at\":\"1990-08-15T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":6,\"name\":\"Dr. Javier Legros MD\",\"email\":\"werner.cummerata@example.net\",\"status\":\"Active\",\"message\":\"Rerum debitis omnis explicabo impedit suscipit quia deserunt. Et voluptatibus magni molestiae iure sequi. Qui blanditiis magnam exercitationem aut est occaecati.\",\"comment\":\"\",\"created_at\":\"1978-06-15T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":7,\"name\":\"Carmela Gutmann\",\"email\":\"augustine.oconner@example.com\",\"status\":\"Resolved\",\"message\":\"Veritatis ut omnis et adipisci rem. Consequatur aut quis et expedita aliquam illo. Quis dolorem repudiandae aliquam ea maxime dicta. Et rerum et recusandae blanditiis impedit ut magni suscipit.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"1983-04-30T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":8,\"name\":\"Micaela Wiegand Sr.\",\"email\":\"ejacobs@example.org\",\"status\":\"Active\",\"message\":\"Omnis nobis cum soluta quaerat. Quia aliquam quo veniam possimus deleniti nisi. In fugit expedita porro facere. Doloribus ipsa accusamus eveniet saepe.\",\"comment\":\"\",\"created_at\":\"1994-11-28T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":9,\"name\":\"Woodrow Heathcote\",\"email\":\"oconner.francesca@example.com\",\"status\":\"Resolved\",\"message\":\"Perspiciatis neque error iure non labore asperiores dolores. Dicta accusamus voluptatem possimus maiores qui.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2001-04-19T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":10,\"name\":\"Fae Walker\",\"email\":\"tyshawn.wolff@example.net\",\"status\":\"Resolved\",\"message\":\"Dolorem quidem neque ea sit nisi nam. Dolores facere natus necessitatibus et qui ut. Impedit hic tempora facilis eos ullam eum quas iste. Nobis eveniet nam quo totam eveniet voluptas velit.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"1997-10-20T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":11,\"name\":\"Fae McDermott\",\"email\":\"hdickinson@example.com\",\"status\":\"Active\",\"message\":\"Assumenda repellat exercitationem odio autem odit et. Ratione rerum aliquam quidem et. Illum voluptatum repellendus enim aut voluptatibus accusamus. Veritatis magni fuga natus et laboriosam.\",\"comment\":\"\",\"created_at\":\"1988-06-20T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":12,\"name\":\"Dr. Eddie Johns\",\"email\":\"ohartmann@example.net\",\"status\":\"Resolved\",\"message\":\"Maiores porro harum quia ut. Distinctio explicabo fugit dolores consequatur ullam. Atque eos dolorum perspiciatis et vitae eos reiciendis.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2005-02-10T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":13,\"name\":\"Destinee Feest\",\"email\":\"lizzie15@example.com\",\"status\":\"Resolved\",\"message\":\"Exercitationem doloremque quae ullam. Qui aut aut illum at et officia. Sint voluptatem quam labore ullam.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"1982-02-08T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":14,\"name\":\"Aida Mayert\",\"email\":\"grace.leffler@example.org\",\"status\":\"Active\",\"message\":\"Sed eligendi quo neque doloremque sit aliquam. Sit animi rerum magni repellat quas perferendis facilis. Sint recusandae hic atque ab inventore minima accusamus.\",\"comment\":\"\",\"created_at\":\"1978-10-12T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":15,\"name\":\"Millie Johnson III\",\"email\":\"pamela64@example.org\",\"status\":\"Resolved\",\"message\":\"Rerum est qui natus. Itaque nisi assumenda et rerum. Voluptate architecto reprehenderit eligendi temporibus eos dolores tenetur iusto.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"1992-01-24T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":16,\"name\":\"Jessie Jones Sr.\",\"email\":\"aidan68@example.com\",\"status\":\"Resolved\",\"message\":\"Ea dignissimos est reprehenderit omnis accusantium architecto. Voluptatem eaque et harum aut quos perferendis et sunt. Incidunt ut qui expedita doloremque.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2018-03-20T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":17,\"name\":\"Liliane McKenzie DVM\",\"email\":\"uriel.thompson@example.com\",\"status\":\"Active\",\"message\":\"Labore est expedita voluptatem quasi et. Fugiat quidem nam saepe consequatur. Consequuntur sint provident ut aut eveniet voluptatem quia.\",\"comment\":\"\",\"created_at\":\"1970-09-29T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":18,\"name\":\"Lucile Fisher\",\"email\":\"nkihn@example.net\",\"status\":\"Active\",\"message\":\"Accusantium harum alias harum possimus voluptatum dolorum. Ipsa aut consectetur sit esse repudiandae. Delectus voluptas quibusdam et necessitatibus.\",\"comment\":\"\",\"created_at\":\"1997-04-30T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":19,\"name\":\"Ms. Shemar Kutch\",\"email\":\"krajcik.cloyd@example.net\",\"status\":\"Resolved\",\"message\":\"Deserunt perspiciatis est est tenetur inventore neque quia. Dolor quo deleniti dolore deserunt ea debitis.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2003-04-12T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":20,\"name\":\"Katarina Erdman\",\"email\":\"orie52@example.org\",\"status\":\"Active\",\"message\":\"Nam et illum eos architecto enim. Dolorem consequuntur quasi magnam incidunt incidunt tempore esse. Debitis illo nobis rerum perferendis molestias aliquam. Natus repellat omnis amet in rerum eius.\",\"comment\":\"\",\"created_at\":\"2008-11-16T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":21,\"name\":\"Dax Schmeler\",\"email\":\"ricardo32@example.net\",\"status\":\"Resolved\",\"message\":\"Vero a voluptatem fugit adipisci qui. Ab autem nihil quis ut quibusdam debitis. Quidem voluptas commodi dolor possimus quibusdam provident doloremque. Qui aut dolor minima culpa.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"1982-11-09T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":22,\"name\":\"Roslyn Brakus\",\"email\":\"cdach@example.com\",\"status\":\"Resolved\",\"message\":\"Vel ut veniam recusandae a. Officia qui maxime laborum vel consectetur. Odit molestias quasi cum. Facere vitae at non porro. Consectetur blanditiis facere esse doloribus alias non.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2002-09-01T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":23,\"name\":\"Reginald Raynor\",\"email\":\"lakin.juston@example.org\",\"status\":\"Active\",\"message\":\"Sed temporibus inventore quaerat ullam quia. Voluptatibus non fugit sequi. Omnis ea nisi repellat et rem quidem. Quibusdam dignissimos ut iure quia.\",\"comment\":\"\",\"created_at\":\"1972-02-24T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":24,\"name\":\"Emile Erdman\",\"email\":\"nzboncak@example.org\",\"status\":\"Active\",\"message\":\"Molestias aperiam amet et enim. Eveniet neque esse et recusandae tempore. Officia debitis quia qui est quae qui nihil harum.\",\"comment\":\"\",\"created_at\":\"2013-01-28T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":25,\"name\":\"Esmeralda Thiel\",\"email\":\"braun.rosario@example.net\",\"status\":\"Active\",\"message\":\"Voluptatem neque reiciendis cupiditate autem sint numquam. Perspiciatis dignissimos nesciunt quo ut. Consectetur et qui qui vitae cumque.\",\"comment\":\"\",\"created_at\":\"2004-06-12T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":26,\"name\":\"Arlie Boyer\",\"email\":\"meggie.reilly@example.com\",\"status\":\"Resolved\",\"message\":\"Fuga quis cum eum ut quia. Blanditiis placeat nulla quia. Omnis qui eaque quam voluptatum et dicta sed. Numquam sint non et error a vel ea asperiores.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2009-05-31T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":27,\"name\":\"Leatha Murphy\",\"email\":\"keshawn.pouros@example.net\",\"status\":\"Resolved\",\"message\":\"Aut nobis in distinctio totam. Cum debitis excepturi id numquam quod aut ullam. Sed aspernatur possimus repudiandae recusandae. Non explicabo fugit animi harum est.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"2014-06-17T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":28,\"name\":\"Durward Osinski\",\"email\":\"rutherford.everette@example.org\",\"status\":\"Active\",\"message\":\"Suscipit reiciendis sed impedit ab sit sit. Aspernatur sint voluptatum eius soluta sed ratione. Aut dignissimos aut aut dolores. Accusantium consequuntur soluta quo enim et nemo.\",\"comment\":\"\",\"created_at\":\"2003-05-19T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":29,\"name\":\"Miss Lonie Turcotte I\",\"email\":\"jon.satterfield@example.org\",\"status\":\"Active\",\"message\":\"Odio totam corporis voluptates amet alias ratione. Enim voluptas possimus temporibus incidunt id quibusdam. Vero molestias quo veritatis quos magni tenetur est.\",\"comment\":\"\",\"created_at\":\"1982-06-20T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"},{\"id\":30,\"name\":\"Johnathon Fadel\",\"email\":\"alisa.ward@example.org\",\"status\":\"Resolved\",\"message\":\"Tempora animi quis pariatur eos odio neque. Eum saepe fugit quia reiciendis corporis ipsam et. Architecto nam pariatur vel voluptate deleniti. Et fuga nihil ipsum praesentium tempora veritatis.\",\"comment\":\"Comment text. Comment text.\",\"created_at\":\"1994-10-06T00:00:00.000000Z\",\"updated_at\":\"2022-03-30T09:04:55.000000Z\"}]}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

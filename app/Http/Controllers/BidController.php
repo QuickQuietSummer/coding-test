@@ -15,11 +15,16 @@ class BidController extends Controller
         $this->bidRepository = $bidRepository;
     }
 
+    /**
+     * @queryParam sort_date string Sorting by created. Values: new, old.
+     * @queryParam sort_status string Sorting by status. Values: active, resolved.
+     */
     public function index(Request $request)
     {
-        $sort = $request->get('sort', null);
+        $sortDate = $request->get('sort_date', null);
+        $sortStatus = $request->get('sort_status', null);
 
-        $bids = $this->bidRepository->getAll($sort);
+        $bids = $this->bidRepository->getAll($sortDate, $sortStatus);
 
         $result = [
             'status' => 200,
