@@ -14,8 +14,8 @@ class RequestRepository
         'RESOLVED' => 'DESC',
     ];
     private array $dateDictionary = [
-        'NEW' => 'DESC',
         'OLD' => 'ASC',
+        'NEW' => 'DESC',
     ];
 
     public function getAll(

@@ -74,11 +74,14 @@
                     <a href="#endpoints">Endpoints</a>
                 </li>
                                     <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-user">
-                        <a href="#endpoints-GETapi-user">GET api/user</a>
+                                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-requests">
+                        <a href="#endpoints-GETapi-requests">Get all requests.</a>
                     </li>
-                                    <li class="tocify-item level-2" data-unique="endpoints-GETapi-requests">
-                        <a href="#endpoints-GETapi-requests">Get all requests</a>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-register">
+                        <a href="#endpoints-POSTapi-register">Register client.</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-login">
+                        <a href="#endpoints-POSTapi-login">Login client.</a>
                     </li>
                                                     </ul>
                             </ul>
@@ -92,7 +95,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: March 30 2022</li>
+        <li>Last updated: March 31 2022</li>
     </ul>
 </div>
 
@@ -115,107 +118,13 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-            <h2 id="endpoints-GETapi-user">GET api/user</h2>
+            <h2 id="endpoints-GETapi-requests">Get all requests.</h2>
 
 <p>
+<small class="badge badge-darkred">requires authentication</small>
 </p>
 
-
-
-<span id="example-requests-GETapi-user">
-<blockquote>Example request:</blockquote>
-
-
-<div class="bash-example">
-    <pre><code class="language-bash">curl --request GET \
-    --get "http://backend.localhost/api/user" \
-    --header "Content-Type: application/json" \
-    --header "Accept: application/json"</code></pre></div>
-
-
-<div class="javascript-example">
-    <pre><code class="language-javascript">const url = new URL(
-    "http://backend.localhost/api/user"
-);
-
-const headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre></div>
-
-</span>
-
-<span id="example-responses-GETapi-user">
-            <blockquote>
-            <p>Example response (401):</p>
-        </blockquote>
-                <details class="annotation">
-            <summary>
-                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
-            </summary>
-            <pre><code class="language-http">cache-control: no-cache, private
-content-type: application/json
-access-control-allow-origin: *
- </code></pre>
-        </details>         <pre>
-
-<code class="language-json">{
-    &quot;message&quot;: &quot;Unauthenticated.&quot;
-}</code>
- </pre>
-    </span>
-<span id="execution-results-GETapi-user" hidden>
-    <blockquote>Received response<span
-                id="execution-response-status-GETapi-user"></span>:
-    </blockquote>
-    <pre class="json"><code id="execution-response-content-GETapi-user"></code></pre>
-</span>
-<span id="execution-error-GETapi-user" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETapi-user"></code></pre>
-</span>
-<form id="form-GETapi-user" data-method="GET"
-      data-path="api/user"
-      data-authed="0"
-      data-hasfiles="0"
-      data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-      autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
-    <h3>
-        Request&nbsp;&nbsp;&nbsp;
-                    <button type="button"
-                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-GETapi-user"
-                    onclick="tryItOut('GETapi-user');">Try it out ⚡
-            </button>
-            <button type="button"
-                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-GETapi-user"
-                    onclick="cancelTryOut('GETapi-user');" hidden>Cancel 🛑
-            </button>&nbsp;&nbsp;
-            <button type="submit"
-                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-GETapi-user" hidden>Send Request 💥
-            </button>
-            </h3>
-            <p>
-            <small class="badge badge-green">GET</small>
-            <b><code>api/user</code></b>
-        </p>
-                    </form>
-
-            <h2 id="endpoints-GETapi-requests">Get all requests</h2>
-
-<p>
-</p>
-
-
+<p>Only for client.</p>
 
 <span id="example-requests-GETapi-requests">
 <blockquote>Example request:</blockquote>
@@ -223,7 +132,7 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://backend.localhost/api/requests?sort_date=quae&amp;sort_status=autem&amp;start=aspernatur&amp;end=qui&amp;filter_status=esse" \
+    --get "http://backend.localhost/api/requests?sort_date=deleniti&amp;sort_status=sunt&amp;start=sequi&amp;end=rerum&amp;filter_status=ratione" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -234,11 +143,11 @@ access-control-allow-origin: *
 );
 
 const params = {
-    "sort_date": "quae",
-    "sort_status": "autem",
-    "start": "aspernatur",
-    "end": "qui",
-    "filter_status": "esse",
+    "sort_date": "deleniti",
+    "sort_status": "sunt",
+    "start": "sequi",
+    "end": "rerum",
+    "filter_status": "ratione",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -257,7 +166,7 @@ fetch(url, {
 
 <span id="example-responses-GETapi-requests">
             <blockquote>
-            <p>Example response (200):</p>
+            <p>Example response (401):</p>
         </blockquote>
                 <details class="annotation">
             <summary>
@@ -265,316 +174,12 @@ fetch(url, {
             </summary>
             <pre><code class="language-http">cache-control: no-cache, private
 content-type: application/json
-x-ratelimit-limit: 60
-x-ratelimit-remaining: 59
 access-control-allow-origin: *
  </code></pre>
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;message&quot;: &quot;OK&quot;,
-    &quot;data&quot;: [
-        {
-            &quot;id&quot;: 1,
-            &quot;name&quot;: &quot;Norma Parisian DDS&quot;,
-            &quot;email&quot;: &quot;arvid46@example.net&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Voluptatem sed veritatis minima illum placeat est. Omnis aut voluptatem fugiat dicta aut nemo. Iure et ullam consequatur dolores delectus a.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1970-09-20T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 2,
-            &quot;name&quot;: &quot;Tressa Botsford&quot;,
-            &quot;email&quot;: &quot;jreinger@example.org&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Numquam voluptas corporis in quia quia temporibus architecto. Omnis harum tempore molestiae saepe excepturi. Explicabo voluptates blanditiis impedit voluptatum.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;1989-02-04T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 3,
-            &quot;name&quot;: &quot;Mrs. Estella Watsica III&quot;,
-            &quot;email&quot;: &quot;boehm.alford@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Fugit nobis quisquam esse quae. Corrupti dolorem velit a. Sint quia minus commodi.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1999-08-06T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 4,
-            &quot;name&quot;: &quot;Yesenia Hahn IV&quot;,
-            &quot;email&quot;: &quot;jonathon.gutkowski@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Ea qui delectus dolor quia maiores et reiciendis quaerat. Eius maiores aliquam sed omnis nihil quae ea dolores. Repellat voluptatem molestiae ipsam placeat omnis praesentium accusamus.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1994-04-01T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 5,
-            &quot;name&quot;: &quot;Prof. Payton Hermiston II&quot;,
-            &quot;email&quot;: &quot;katharina.morissette@example.net&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Quia pariatur doloremque ut dolorem ut maxime. Vel dolor adipisci voluptatem est expedita. Quibusdam ut et optio quidem. Quidem non minima placeat. Rerum id soluta doloribus non sequi optio quia.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2020-07-09T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 6,
-            &quot;name&quot;: &quot;Dax Lueilwitz&quot;,
-            &quot;email&quot;: &quot;sierra.abshire@example.net&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Cumque doloribus praesentium quia earum blanditiis ut. Ut delectus commodi ex et vitae quo autem atque. Autem magni dolor quia omnis rerum eveniet.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;1992-09-19T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 7,
-            &quot;name&quot;: &quot;Miss Else Kling DDS&quot;,
-            &quot;email&quot;: &quot;agoodwin@example.org&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Impedit sint ipsa est quo laboriosam. Vero voluptas optio voluptatem saepe nemo deleniti.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2012-10-05T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 8,
-            &quot;name&quot;: &quot;Miss Dora Ruecker&quot;,
-            &quot;email&quot;: &quot;casandra83@example.net&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Et necessitatibus similique qui dolorum inventore fuga molestiae quas. Explicabo aut ea sint. Reprehenderit consequatur provident soluta quas. Praesentium quos est vel vel.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;1980-05-24T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 9,
-            &quot;name&quot;: &quot;Anita Hermiston&quot;,
-            &quot;email&quot;: &quot;ortiz.imani@example.org&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Error aut enim ut dignissimos dolorum. Sint rem harum quibusdam. Quibusdam amet cumque aut cupiditate perspiciatis corporis aut blanditiis. Officia labore et occaecati temporibus dolor quis.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2004-02-22T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 10,
-            &quot;name&quot;: &quot;Bill Wiegand&quot;,
-            &quot;email&quot;: &quot;mollie.wunsch@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Veritatis et accusamus pariatur in. Nam voluptatem eius quia excepturi qui doloribus eius. Eaque sapiente qui magni tempora est.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1984-07-21T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 11,
-            &quot;name&quot;: &quot;Johanna Dickinson&quot;,
-            &quot;email&quot;: &quot;lakin.chaim@example.org&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Dolorem iste ea quia velit. Et aut commodi animi odio. Error ex ea et est minus et. Rerum praesentium omnis in et qui.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2021-01-02T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 12,
-            &quot;name&quot;: &quot;Otho Donnelly&quot;,
-            &quot;email&quot;: &quot;gustave.gottlieb@example.net&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Eum libero et nesciunt. Odit ut consequuntur quibusdam et dignissimos similique. Eveniet sapiente qui blanditiis necessitatibus.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1993-06-20T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 13,
-            &quot;name&quot;: &quot;Prof. Joe Sporer PhD&quot;,
-            &quot;email&quot;: &quot;simonis.rene@example.net&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Est pariatur harum autem id ea rerum. Eos sit amet quis eius. Qui aperiam nostrum id dicta.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2016-06-16T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 14,
-            &quot;name&quot;: &quot;Fleta Kris&quot;,
-            &quot;email&quot;: &quot;bryon.baumbach@example.org&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Velit et quasi molestiae omnis voluptatem. Temporibus dicta est fugit esse sequi. Voluptatem ipsum eum atque corrupti vel quisquam. Harum corporis sint repellendus omnis non officiis.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;1980-05-30T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 15,
-            &quot;name&quot;: &quot;Rogelio Abbott&quot;,
-            &quot;email&quot;: &quot;kimberly52@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Temporibus iste corrupti pariatur ab vel quis nesciunt quia. Dolorum perferendis ut quo aut quo deserunt quia. Hic atque quae est. Et id pariatur debitis distinctio ut temporibus.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1975-11-29T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 16,
-            &quot;name&quot;: &quot;Dr. Milo Kub IV&quot;,
-            &quot;email&quot;: &quot;marilou72@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Pariatur quod ut quaerat. Labore tempora ut quis qui in ipsum. Odit quisquam consequatur ut sed. Impedit rerum ea distinctio cumque.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1997-06-06T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 17,
-            &quot;name&quot;: &quot;Dr. Kaden Fisher&quot;,
-            &quot;email&quot;: &quot;kimberly.halvorson@example.net&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Porro inventore maiores qui qui est necessitatibus ab. Eos voluptatem vel iste fugiat omnis. Numquam qui aut quia est.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2019-12-14T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 18,
-            &quot;name&quot;: &quot;Schuyler Douglas&quot;,
-            &quot;email&quot;: &quot;darby.zboncak@example.org&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Enim et aut ea ratione saepe. Voluptate tenetur blanditiis enim natus non ab sed. Vel soluta ut a laborum omnis itaque magni. Sit sunt dolor magni dolor illo aut.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2014-07-14T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 19,
-            &quot;name&quot;: &quot;Dr. Casey VonRueden&quot;,
-            &quot;email&quot;: &quot;josiah.graham@example.org&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Perferendis maiores accusamus ratione voluptas dicta. Earum voluptatum incidunt voluptas autem. Recusandae odio ea doloremque.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2013-02-26T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 20,
-            &quot;name&quot;: &quot;Maia Jakubowski MD&quot;,
-            &quot;email&quot;: &quot;adams.loraine@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Asperiores non quibusdam omnis quia. Voluptas vero ad itaque aut debitis temporibus sit. Saepe ut sit ad eveniet totam.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2007-06-12T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 21,
-            &quot;name&quot;: &quot;Maia Langosh&quot;,
-            &quot;email&quot;: &quot;vance77@example.org&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;A fugit quae nulla assumenda officiis voluptatem. Ipsam explicabo qui veniam doloremque quo ea.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1970-07-15T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 22,
-            &quot;name&quot;: &quot;Samantha Koss&quot;,
-            &quot;email&quot;: &quot;rbartoletti@example.org&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Ea consectetur iusto est voluptatem. Aut velit autem eaque qui commodi. Cum sequi sint quia odit possimus ut. Ea non quia ipsa quaerat.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1980-04-29T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 23,
-            &quot;name&quot;: &quot;Damon Fritsch&quot;,
-            &quot;email&quot;: &quot;emard.chelsea@example.org&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Iusto nobis alias qui odio adipisci. Harum tempora minus quia omnis qui. Earum sint aperiam commodi molestias cupiditate ut.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2010-01-13T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 24,
-            &quot;name&quot;: &quot;Ole Schoen&quot;,
-            &quot;email&quot;: &quot;halvorson.bonita@example.net&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Magnam et dolores nesciunt quia rerum nihil. Natus excepturi vitae porro vitae quo ullam eos velit. Sint rerum id ex consequatur doloribus.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2005-12-08T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 25,
-            &quot;name&quot;: &quot;Leonora Flatley&quot;,
-            &quot;email&quot;: &quot;emmy25@example.net&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Ut rem et atque sed itaque suscipit earum. Neque sint et ut quidem.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2005-07-17T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 26,
-            &quot;name&quot;: &quot;Gwendolyn Wiegand MD&quot;,
-            &quot;email&quot;: &quot;rudolph.monahan@example.com&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Quos fugiat aut non. Omnis inventore dolorem temporibus nostrum saepe. Nulla illo in omnis voluptatem voluptate maiores dolorem. Corporis vitae esse et voluptas iure asperiores id fugit.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2013-07-19T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 27,
-            &quot;name&quot;: &quot;Gail Rutherford&quot;,
-            &quot;email&quot;: &quot;annabel.haley@example.net&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Ut tempore quia nemo corrupti. Sapiente exercitationem quibusdam perspiciatis.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2003-08-11T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 28,
-            &quot;name&quot;: &quot;Cade Nikolaus&quot;,
-            &quot;email&quot;: &quot;vandervort.gisselle@example.org&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Aliquam adipisci tempore omnis in consequuntur inventore ut. Ducimus et eaque aut vel blanditiis cupiditate. Aut et a ratione perspiciatis culpa voluptatem.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;2008-02-13T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 29,
-            &quot;name&quot;: &quot;Ms. Estefania Robel&quot;,
-            &quot;email&quot;: &quot;simonis.luella@example.org&quot;,
-            &quot;status&quot;: &quot;Active&quot;,
-            &quot;message&quot;: &quot;Quasi ducimus fugiat iste laboriosam. Voluptas odit sit officia enim necessitatibus voluptatibus ad. Rem consectetur distinctio ex.&quot;,
-            &quot;comment&quot;: &quot;&quot;,
-            &quot;created_at&quot;: &quot;1982-08-21T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        },
-        {
-            &quot;id&quot;: 30,
-            &quot;name&quot;: &quot;Abbigail Purdy&quot;,
-            &quot;email&quot;: &quot;mikayla.stroman@example.com&quot;,
-            &quot;status&quot;: &quot;Resolved&quot;,
-            &quot;message&quot;: &quot;Modi dolorum autem repellendus eligendi iusto error qui. Facere quia sed non dicta eaque consequuntur. Numquam dolor libero atque ut.&quot;,
-            &quot;comment&quot;: &quot;Comment text. Comment text.&quot;,
-            &quot;created_at&quot;: &quot;2021-01-14T00:00:00.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2022-03-30T14:04:02.000000Z&quot;
-        }
-    ]
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
 }</code>
  </pre>
     </span>
@@ -590,7 +195,7 @@ access-control-allow-origin: *
 </span>
 <form id="form-GETapi-requests" data-method="GET"
       data-path="api/requests"
-      data-authed="0"
+      data-authed="1"
       data-hasfiles="0"
       data-isarraybody="0"
       data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
@@ -617,13 +222,21 @@ access-control-allow-origin: *
             <small class="badge badge-green">GET</small>
             <b><code>api/requests</code></b>
         </p>
-                        <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                <p>
+            <label id="auth-GETapi-requests" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-requests"
+                                                                data-component="header"></label>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
                     <p>
                 <b><code>sort_date</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
                 <input type="text"
                name="sort_date"
                data-endpoint="GETapi-requests"
-               value="quae"
+               value="deleniti"
                data-component="query" hidden>
     <br>
 <p>Sorting by created. Values: new, old.</p>
@@ -633,7 +246,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="sort_status"
                data-endpoint="GETapi-requests"
-               value="autem"
+               value="sunt"
                data-component="query" hidden>
     <br>
 <p>Sorting by status. Values: active, resolved.</p>
@@ -643,7 +256,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="start"
                data-endpoint="GETapi-requests"
-               value="aspernatur"
+               value="sequi"
                data-component="query" hidden>
     <br>
 <p>Start of date filter. Values: Carbon compatible string.</p>
@@ -654,7 +267,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="end"
                data-endpoint="GETapi-requests"
-               value="qui"
+               value="rerum"
                data-component="query" hidden>
     <br>
 <p>End of date filter. Values: Carbon compatible string.</p>
@@ -665,12 +278,256 @@ access-control-allow-origin: *
                 <input type="text"
                name="filter_status"
                data-endpoint="GETapi-requests"
-               value="esse"
+               value="ratione"
                data-component="query" hidden>
     <br>
 <p>Filter by status. Values: active, resolved.</p>
             </p>
                 </form>
+
+            <h2 id="endpoints-POSTapi-register">Register client.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-register">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://backend.localhost/api/register" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"name\": \"gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx\",
+    \"email\": \"btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy\",
+    \"password\": \"aplssps\",
+    \"password_confirmation\": \"ab\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://backend.localhost/api/register"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx",
+    "email": "btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy",
+    "password": "aplssps",
+    "password_confirmation": "ab"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-register">
+</span>
+<span id="execution-results-POSTapi-register" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-register"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-register"></code></pre>
+</span>
+<span id="execution-error-POSTapi-register" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-register"></code></pre>
+</span>
+<form id="form-POSTapi-register" data-method="POST"
+      data-path="api/register"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register"
+                    onclick="tryItOut('POSTapi-register');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register"
+                    onclick="cancelTryOut('POSTapi-register');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-register"
+               value="gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-register"
+               value="btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-register"
+               value="aplssps"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
+                <p>
+            <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password_confirmation"
+               data-endpoint="POSTapi-register"
+               value="ab"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
+        </form>
+
+            <h2 id="endpoints-POSTapi-login">Login client.</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-login">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://backend.localhost/api/login" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"email\": \"kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq\",
+    \"password\": \"tek\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://backend.localhost/api/login"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "email": "kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq",
+    "password": "tek"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-login">
+</span>
+<span id="execution-results-POSTapi-login" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-login"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-login"></code></pre>
+</span>
+<span id="execution-error-POSTapi-login" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-login"></code></pre>
+</span>
+<form id="form-POSTapi-login" data-method="POST"
+      data-path="api/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-login"
+                    onclick="tryItOut('POSTapi-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-login"
+                    onclick="cancelTryOut('POSTapi-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-login" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/login</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-login"
+               value="kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-login"
+               value="tek"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
+        </form>
 
     
 

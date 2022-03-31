@@ -17,8 +17,7 @@ class RequestFactory extends Factory
         $resolved = rand(true, false);
 
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
+            'user_id' => 1234,
             'status' => $resolved ? Request::STATUS_RESOLVED : Request::STATUS_ACTIVE,
             'message' => $this->faker->text,
             'comment' => $resolved ? 'Comment text. Comment text.' : '',

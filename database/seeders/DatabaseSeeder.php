@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Request;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Request::factory(30)->create();
+        User::factory(30)
+            ->has(
+                Role::factory()
+                    ->state(function (array $attributes, User $user) {
+                        return ['user_id' => $user->id];
+                    }))
+            ->has(
+                Request::factory()
+                    ->state(function (array $attributes, User $user) {
+                        return ['user_id' => $user->id];
+                    }))
+            ->create()
+            ->each(function (User $user) {
+                $user->createToken('Client');
+            });
     }
 }

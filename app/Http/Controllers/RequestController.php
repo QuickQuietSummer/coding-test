@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\RequestFormRequest;
+use App\Models\Role;
+use App\Models\User;
 use App\Repositories\RequestRepository;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request as HttpRequest;
 use Illuminate\Support\Facades\Response;
 
 class RequestController extends Controller
@@ -17,7 +18,9 @@ class RequestController extends Controller
     }
 
     /**
-     * Get all requests
+     * Get all requests.
+     * Only for client.
+     * @authenticated
      *
      * @queryParam sort_date string Sorting by created. Values: new, old.
      * @queryParam sort_status string Sorting by status. Values: active, resolved.
@@ -31,8 +34,13 @@ class RequestController extends Controller
      *
      * @queryParam filter_status string Filter by status. Values: active, resolved.
      */
-    public function index(Request $httpRequest)
+    public function index(HttpRequest $httpRequest)
     {
+        /**
+         * @var $user User
+         */
+        $user = $httpRequest->user();
+        if ($user->role->type != Role::EMPLOYEE) abort(401,'Only for employees');
         $sortDate = $httpRequest->get('sort_date', null);
         $sortStatus = $httpRequest->get('sort_status', null);
         $start = $httpRequest->get('start', null);

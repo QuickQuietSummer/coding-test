@@ -7,11 +7,61 @@ servers:
   -
     url: 'http://backend.localhost'
 paths:
-  /api/user:
+  /api/requests:
     get:
-      summary: ''
-      description: ''
+      summary: 'Get all requests.'
+      description: 'Only for client.'
       parameters:
+        -
+          in: query
+          name: sort_date
+          description: 'Sorting by created. Values: new, old.'
+          example: deleniti
+          required: false
+          schema:
+            type: string
+            description: 'Sorting by created. Values: new, old.'
+            example: deleniti
+        -
+          in: query
+          name: sort_status
+          description: 'Sorting by status. Values: active, resolved.'
+          example: sunt
+          required: false
+          schema:
+            type: string
+            description: 'Sorting by status. Values: active, resolved.'
+            example: sunt
+        -
+          in: query
+          name: start
+          description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
+          example: sequi
+          required: false
+          schema:
+            type: string
+            description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
+            example: sequi
+        -
+          in: query
+          name: end
+          description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
+          example: rerum
+          required: false
+          schema:
+            type: string
+            description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
+            example: rerum
+        -
+          in: query
+          name: filter_status
+          description: 'Filter by status. Values: active, resolved.'
+          example: ratione
+          required: false
+          schema:
+            type: string
+            description: 'Filter by status. Values: active, resolved.'
+            example: ratione
         -
           in: header
           name: Content-Type
@@ -41,62 +91,11 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
-      security: []
-  /api/requests:
-    get:
-      summary: 'Get all requests'
+  /api/register:
+    post:
+      summary: 'Register client.'
       description: ''
       parameters:
-        -
-          in: query
-          name: sort_date
-          description: 'Sorting by created. Values: new, old.'
-          example: quae
-          required: false
-          schema:
-            type: string
-            description: 'Sorting by created. Values: new, old.'
-            example: quae
-        -
-          in: query
-          name: sort_status
-          description: 'Sorting by status. Values: active, resolved.'
-          example: autem
-          required: false
-          schema:
-            type: string
-            description: 'Sorting by status. Values: active, resolved.'
-            example: autem
-        -
-          in: query
-          name: start
-          description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-          example: aspernatur
-          required: false
-          schema:
-            type: string
-            description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-            example: aspernatur
-        -
-          in: query
-          name: end
-          description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-          example: qui
-          required: false
-          schema:
-            type: string
-            description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-            example: qui
-        -
-          in: query
-          name: filter_status
-          description: 'Filter by status. Values: active, resolved.'
-          example: esse
-          required: false
-          schema:
-            type: string
-            description: 'Filter by status. Values: active, resolved.'
-            example: esse
         -
           in: header
           name: Content-Type
@@ -111,567 +110,78 @@ paths:
           example: application/json
           schema:
             type: string
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: OK
-                  data:
-                    -
-                      id: 1
-                      name: 'Norma Parisian DDS'
-                      email: arvid46@example.net
-                      status: Active
-                      message: 'Voluptatem sed veritatis minima illum placeat est. Omnis aut voluptatem fugiat dicta aut nemo. Iure et ullam consequatur dolores delectus a.'
-                      comment: ''
-                      created_at: '1970-09-20T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 2
-                      name: 'Tressa Botsford'
-                      email: jreinger@example.org
-                      status: Resolved
-                      message: 'Numquam voluptas corporis in quia quia temporibus architecto. Omnis harum tempore molestiae saepe excepturi. Explicabo voluptates blanditiis impedit voluptatum.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '1989-02-04T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 3
-                      name: 'Mrs. Estella Watsica III'
-                      email: boehm.alford@example.com
-                      status: Active
-                      message: 'Fugit nobis quisquam esse quae. Corrupti dolorem velit a. Sint quia minus commodi.'
-                      comment: ''
-                      created_at: '1999-08-06T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 4
-                      name: 'Yesenia Hahn IV'
-                      email: jonathon.gutkowski@example.com
-                      status: Active
-                      message: 'Ea qui delectus dolor quia maiores et reiciendis quaerat. Eius maiores aliquam sed omnis nihil quae ea dolores. Repellat voluptatem molestiae ipsam placeat omnis praesentium accusamus.'
-                      comment: ''
-                      created_at: '1994-04-01T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 5
-                      name: 'Prof. Payton Hermiston II'
-                      email: katharina.morissette@example.net
-                      status: Active
-                      message: 'Quia pariatur doloremque ut dolorem ut maxime. Vel dolor adipisci voluptatem est expedita. Quibusdam ut et optio quidem. Quidem non minima placeat. Rerum id soluta doloribus non sequi optio quia.'
-                      comment: ''
-                      created_at: '2020-07-09T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 6
-                      name: 'Dax Lueilwitz'
-                      email: sierra.abshire@example.net
-                      status: Resolved
-                      message: 'Cumque doloribus praesentium quia earum blanditiis ut. Ut delectus commodi ex et vitae quo autem atque. Autem magni dolor quia omnis rerum eveniet.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '1992-09-19T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 7
-                      name: 'Miss Else Kling DDS'
-                      email: agoodwin@example.org
-                      status: Resolved
-                      message: 'Impedit sint ipsa est quo laboriosam. Vero voluptas optio voluptatem saepe nemo deleniti.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2012-10-05T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 8
-                      name: 'Miss Dora Ruecker'
-                      email: casandra83@example.net
-                      status: Resolved
-                      message: 'Et necessitatibus similique qui dolorum inventore fuga molestiae quas. Explicabo aut ea sint. Reprehenderit consequatur provident soluta quas. Praesentium quos est vel vel.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '1980-05-24T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 9
-                      name: 'Anita Hermiston'
-                      email: ortiz.imani@example.org
-                      status: Active
-                      message: 'Error aut enim ut dignissimos dolorum. Sint rem harum quibusdam. Quibusdam amet cumque aut cupiditate perspiciatis corporis aut blanditiis. Officia labore et occaecati temporibus dolor quis.'
-                      comment: ''
-                      created_at: '2004-02-22T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 10
-                      name: 'Bill Wiegand'
-                      email: mollie.wunsch@example.com
-                      status: Active
-                      message: 'Veritatis et accusamus pariatur in. Nam voluptatem eius quia excepturi qui doloribus eius. Eaque sapiente qui magni tempora est.'
-                      comment: ''
-                      created_at: '1984-07-21T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 11
-                      name: 'Johanna Dickinson'
-                      email: lakin.chaim@example.org
-                      status: Active
-                      message: 'Dolorem iste ea quia velit. Et aut commodi animi odio. Error ex ea et est minus et. Rerum praesentium omnis in et qui.'
-                      comment: ''
-                      created_at: '2021-01-02T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 12
-                      name: 'Otho Donnelly'
-                      email: gustave.gottlieb@example.net
-                      status: Active
-                      message: 'Eum libero et nesciunt. Odit ut consequuntur quibusdam et dignissimos similique. Eveniet sapiente qui blanditiis necessitatibus.'
-                      comment: ''
-                      created_at: '1993-06-20T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 13
-                      name: 'Prof. Joe Sporer PhD'
-                      email: simonis.rene@example.net
-                      status: Active
-                      message: 'Est pariatur harum autem id ea rerum. Eos sit amet quis eius. Qui aperiam nostrum id dicta.'
-                      comment: ''
-                      created_at: '2016-06-16T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 14
-                      name: 'Fleta Kris'
-                      email: bryon.baumbach@example.org
-                      status: Resolved
-                      message: 'Velit et quasi molestiae omnis voluptatem. Temporibus dicta est fugit esse sequi. Voluptatem ipsum eum atque corrupti vel quisquam. Harum corporis sint repellendus omnis non officiis.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '1980-05-30T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 15
-                      name: 'Rogelio Abbott'
-                      email: kimberly52@example.com
-                      status: Active
-                      message: 'Temporibus iste corrupti pariatur ab vel quis nesciunt quia. Dolorum perferendis ut quo aut quo deserunt quia. Hic atque quae est. Et id pariatur debitis distinctio ut temporibus.'
-                      comment: ''
-                      created_at: '1975-11-29T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 16
-                      name: 'Dr. Milo Kub IV'
-                      email: marilou72@example.com
-                      status: Active
-                      message: 'Pariatur quod ut quaerat. Labore tempora ut quis qui in ipsum. Odit quisquam consequatur ut sed. Impedit rerum ea distinctio cumque.'
-                      comment: ''
-                      created_at: '1997-06-06T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 17
-                      name: 'Dr. Kaden Fisher'
-                      email: kimberly.halvorson@example.net
-                      status: Resolved
-                      message: 'Porro inventore maiores qui qui est necessitatibus ab. Eos voluptatem vel iste fugiat omnis. Numquam qui aut quia est.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2019-12-14T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 18
-                      name: 'Schuyler Douglas'
-                      email: darby.zboncak@example.org
-                      status: Resolved
-                      message: 'Enim et aut ea ratione saepe. Voluptate tenetur blanditiis enim natus non ab sed. Vel soluta ut a laborum omnis itaque magni. Sit sunt dolor magni dolor illo aut.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2014-07-14T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 19
-                      name: 'Dr. Casey VonRueden'
-                      email: josiah.graham@example.org
-                      status: Resolved
-                      message: 'Perferendis maiores accusamus ratione voluptas dicta. Earum voluptatum incidunt voluptas autem. Recusandae odio ea doloremque.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2013-02-26T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 20
-                      name: 'Maia Jakubowski MD'
-                      email: adams.loraine@example.com
-                      status: Active
-                      message: 'Asperiores non quibusdam omnis quia. Voluptas vero ad itaque aut debitis temporibus sit. Saepe ut sit ad eveniet totam.'
-                      comment: ''
-                      created_at: '2007-06-12T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 21
-                      name: 'Maia Langosh'
-                      email: vance77@example.org
-                      status: Active
-                      message: 'A fugit quae nulla assumenda officiis voluptatem. Ipsam explicabo qui veniam doloremque quo ea.'
-                      comment: ''
-                      created_at: '1970-07-15T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 22
-                      name: 'Samantha Koss'
-                      email: rbartoletti@example.org
-                      status: Active
-                      message: 'Ea consectetur iusto est voluptatem. Aut velit autem eaque qui commodi. Cum sequi sint quia odit possimus ut. Ea non quia ipsa quaerat.'
-                      comment: ''
-                      created_at: '1980-04-29T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 23
-                      name: 'Damon Fritsch'
-                      email: emard.chelsea@example.org
-                      status: Resolved
-                      message: 'Iusto nobis alias qui odio adipisci. Harum tempora minus quia omnis qui. Earum sint aperiam commodi molestias cupiditate ut.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2010-01-13T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 24
-                      name: 'Ole Schoen'
-                      email: halvorson.bonita@example.net
-                      status: Active
-                      message: 'Magnam et dolores nesciunt quia rerum nihil. Natus excepturi vitae porro vitae quo ullam eos velit. Sint rerum id ex consequatur doloribus.'
-                      comment: ''
-                      created_at: '2005-12-08T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 25
-                      name: 'Leonora Flatley'
-                      email: emmy25@example.net
-                      status: Active
-                      message: 'Ut rem et atque sed itaque suscipit earum. Neque sint et ut quidem.'
-                      comment: ''
-                      created_at: '2005-07-17T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 26
-                      name: 'Gwendolyn Wiegand MD'
-                      email: rudolph.monahan@example.com
-                      status: Active
-                      message: 'Quos fugiat aut non. Omnis inventore dolorem temporibus nostrum saepe. Nulla illo in omnis voluptatem voluptate maiores dolorem. Corporis vitae esse et voluptas iure asperiores id fugit.'
-                      comment: ''
-                      created_at: '2013-07-19T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 27
-                      name: 'Gail Rutherford'
-                      email: annabel.haley@example.net
-                      status: Resolved
-                      message: 'Ut tempore quia nemo corrupti. Sapiente exercitationem quibusdam perspiciatis.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2003-08-11T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 28
-                      name: 'Cade Nikolaus'
-                      email: vandervort.gisselle@example.org
-                      status: Active
-                      message: 'Aliquam adipisci tempore omnis in consequuntur inventore ut. Ducimus et eaque aut vel blanditiis cupiditate. Aut et a ratione perspiciatis culpa voluptatem.'
-                      comment: ''
-                      created_at: '2008-02-13T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 29
-                      name: 'Ms. Estefania Robel'
-                      email: simonis.luella@example.org
-                      status: Active
-                      message: 'Quasi ducimus fugiat iste laboriosam. Voluptas odit sit officia enim necessitatibus voluptatibus ad. Rem consectetur distinctio ex.'
-                      comment: ''
-                      created_at: '1982-08-21T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                    -
-                      id: 30
-                      name: 'Abbigail Purdy'
-                      email: mikayla.stroman@example.com
-                      status: Resolved
-                      message: 'Modi dolorum autem repellendus eligendi iusto error qui. Facere quia sed non dicta eaque consequuntur. Numquam dolor libero atque ut.'
-                      comment: 'Comment text. Comment text.'
-                      created_at: '2021-01-14T00:00:00.000000Z'
-                      updated_at: '2022-03-30T14:04:02.000000Z'
-                properties:
-                  message:
-                    type: string
-                    example: OK
-                  data:
-                    type: array
-                    example:
-                      -
-                        id: 1
-                        name: 'Norma Parisian DDS'
-                        email: arvid46@example.net
-                        status: Active
-                        message: 'Voluptatem sed veritatis minima illum placeat est. Omnis aut voluptatem fugiat dicta aut nemo. Iure et ullam consequatur dolores delectus a.'
-                        comment: ''
-                        created_at: '1970-09-20T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 2
-                        name: 'Tressa Botsford'
-                        email: jreinger@example.org
-                        status: Resolved
-                        message: 'Numquam voluptas corporis in quia quia temporibus architecto. Omnis harum tempore molestiae saepe excepturi. Explicabo voluptates blanditiis impedit voluptatum.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '1989-02-04T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 3
-                        name: 'Mrs. Estella Watsica III'
-                        email: boehm.alford@example.com
-                        status: Active
-                        message: 'Fugit nobis quisquam esse quae. Corrupti dolorem velit a. Sint quia minus commodi.'
-                        comment: ''
-                        created_at: '1999-08-06T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 4
-                        name: 'Yesenia Hahn IV'
-                        email: jonathon.gutkowski@example.com
-                        status: Active
-                        message: 'Ea qui delectus dolor quia maiores et reiciendis quaerat. Eius maiores aliquam sed omnis nihil quae ea dolores. Repellat voluptatem molestiae ipsam placeat omnis praesentium accusamus.'
-                        comment: ''
-                        created_at: '1994-04-01T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 5
-                        name: 'Prof. Payton Hermiston II'
-                        email: katharina.morissette@example.net
-                        status: Active
-                        message: 'Quia pariatur doloremque ut dolorem ut maxime. Vel dolor adipisci voluptatem est expedita. Quibusdam ut et optio quidem. Quidem non minima placeat. Rerum id soluta doloribus non sequi optio quia.'
-                        comment: ''
-                        created_at: '2020-07-09T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 6
-                        name: 'Dax Lueilwitz'
-                        email: sierra.abshire@example.net
-                        status: Resolved
-                        message: 'Cumque doloribus praesentium quia earum blanditiis ut. Ut delectus commodi ex et vitae quo autem atque. Autem magni dolor quia omnis rerum eveniet.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '1992-09-19T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 7
-                        name: 'Miss Else Kling DDS'
-                        email: agoodwin@example.org
-                        status: Resolved
-                        message: 'Impedit sint ipsa est quo laboriosam. Vero voluptas optio voluptatem saepe nemo deleniti.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2012-10-05T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 8
-                        name: 'Miss Dora Ruecker'
-                        email: casandra83@example.net
-                        status: Resolved
-                        message: 'Et necessitatibus similique qui dolorum inventore fuga molestiae quas. Explicabo aut ea sint. Reprehenderit consequatur provident soluta quas. Praesentium quos est vel vel.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '1980-05-24T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 9
-                        name: 'Anita Hermiston'
-                        email: ortiz.imani@example.org
-                        status: Active
-                        message: 'Error aut enim ut dignissimos dolorum. Sint rem harum quibusdam. Quibusdam amet cumque aut cupiditate perspiciatis corporis aut blanditiis. Officia labore et occaecati temporibus dolor quis.'
-                        comment: ''
-                        created_at: '2004-02-22T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 10
-                        name: 'Bill Wiegand'
-                        email: mollie.wunsch@example.com
-                        status: Active
-                        message: 'Veritatis et accusamus pariatur in. Nam voluptatem eius quia excepturi qui doloribus eius. Eaque sapiente qui magni tempora est.'
-                        comment: ''
-                        created_at: '1984-07-21T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 11
-                        name: 'Johanna Dickinson'
-                        email: lakin.chaim@example.org
-                        status: Active
-                        message: 'Dolorem iste ea quia velit. Et aut commodi animi odio. Error ex ea et est minus et. Rerum praesentium omnis in et qui.'
-                        comment: ''
-                        created_at: '2021-01-02T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 12
-                        name: 'Otho Donnelly'
-                        email: gustave.gottlieb@example.net
-                        status: Active
-                        message: 'Eum libero et nesciunt. Odit ut consequuntur quibusdam et dignissimos similique. Eveniet sapiente qui blanditiis necessitatibus.'
-                        comment: ''
-                        created_at: '1993-06-20T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 13
-                        name: 'Prof. Joe Sporer PhD'
-                        email: simonis.rene@example.net
-                        status: Active
-                        message: 'Est pariatur harum autem id ea rerum. Eos sit amet quis eius. Qui aperiam nostrum id dicta.'
-                        comment: ''
-                        created_at: '2016-06-16T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 14
-                        name: 'Fleta Kris'
-                        email: bryon.baumbach@example.org
-                        status: Resolved
-                        message: 'Velit et quasi molestiae omnis voluptatem. Temporibus dicta est fugit esse sequi. Voluptatem ipsum eum atque corrupti vel quisquam. Harum corporis sint repellendus omnis non officiis.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '1980-05-30T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 15
-                        name: 'Rogelio Abbott'
-                        email: kimberly52@example.com
-                        status: Active
-                        message: 'Temporibus iste corrupti pariatur ab vel quis nesciunt quia. Dolorum perferendis ut quo aut quo deserunt quia. Hic atque quae est. Et id pariatur debitis distinctio ut temporibus.'
-                        comment: ''
-                        created_at: '1975-11-29T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 16
-                        name: 'Dr. Milo Kub IV'
-                        email: marilou72@example.com
-                        status: Active
-                        message: 'Pariatur quod ut quaerat. Labore tempora ut quis qui in ipsum. Odit quisquam consequatur ut sed. Impedit rerum ea distinctio cumque.'
-                        comment: ''
-                        created_at: '1997-06-06T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 17
-                        name: 'Dr. Kaden Fisher'
-                        email: kimberly.halvorson@example.net
-                        status: Resolved
-                        message: 'Porro inventore maiores qui qui est necessitatibus ab. Eos voluptatem vel iste fugiat omnis. Numquam qui aut quia est.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2019-12-14T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 18
-                        name: 'Schuyler Douglas'
-                        email: darby.zboncak@example.org
-                        status: Resolved
-                        message: 'Enim et aut ea ratione saepe. Voluptate tenetur blanditiis enim natus non ab sed. Vel soluta ut a laborum omnis itaque magni. Sit sunt dolor magni dolor illo aut.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2014-07-14T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 19
-                        name: 'Dr. Casey VonRueden'
-                        email: josiah.graham@example.org
-                        status: Resolved
-                        message: 'Perferendis maiores accusamus ratione voluptas dicta. Earum voluptatum incidunt voluptas autem. Recusandae odio ea doloremque.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2013-02-26T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 20
-                        name: 'Maia Jakubowski MD'
-                        email: adams.loraine@example.com
-                        status: Active
-                        message: 'Asperiores non quibusdam omnis quia. Voluptas vero ad itaque aut debitis temporibus sit. Saepe ut sit ad eveniet totam.'
-                        comment: ''
-                        created_at: '2007-06-12T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 21
-                        name: 'Maia Langosh'
-                        email: vance77@example.org
-                        status: Active
-                        message: 'A fugit quae nulla assumenda officiis voluptatem. Ipsam explicabo qui veniam doloremque quo ea.'
-                        comment: ''
-                        created_at: '1970-07-15T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 22
-                        name: 'Samantha Koss'
-                        email: rbartoletti@example.org
-                        status: Active
-                        message: 'Ea consectetur iusto est voluptatem. Aut velit autem eaque qui commodi. Cum sequi sint quia odit possimus ut. Ea non quia ipsa quaerat.'
-                        comment: ''
-                        created_at: '1980-04-29T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 23
-                        name: 'Damon Fritsch'
-                        email: emard.chelsea@example.org
-                        status: Resolved
-                        message: 'Iusto nobis alias qui odio adipisci. Harum tempora minus quia omnis qui. Earum sint aperiam commodi molestias cupiditate ut.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2010-01-13T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 24
-                        name: 'Ole Schoen'
-                        email: halvorson.bonita@example.net
-                        status: Active
-                        message: 'Magnam et dolores nesciunt quia rerum nihil. Natus excepturi vitae porro vitae quo ullam eos velit. Sint rerum id ex consequatur doloribus.'
-                        comment: ''
-                        created_at: '2005-12-08T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 25
-                        name: 'Leonora Flatley'
-                        email: emmy25@example.net
-                        status: Active
-                        message: 'Ut rem et atque sed itaque suscipit earum. Neque sint et ut quidem.'
-                        comment: ''
-                        created_at: '2005-07-17T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 26
-                        name: 'Gwendolyn Wiegand MD'
-                        email: rudolph.monahan@example.com
-                        status: Active
-                        message: 'Quos fugiat aut non. Omnis inventore dolorem temporibus nostrum saepe. Nulla illo in omnis voluptatem voluptate maiores dolorem. Corporis vitae esse et voluptas iure asperiores id fugit.'
-                        comment: ''
-                        created_at: '2013-07-19T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 27
-                        name: 'Gail Rutherford'
-                        email: annabel.haley@example.net
-                        status: Resolved
-                        message: 'Ut tempore quia nemo corrupti. Sapiente exercitationem quibusdam perspiciatis.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2003-08-11T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 28
-                        name: 'Cade Nikolaus'
-                        email: vandervort.gisselle@example.org
-                        status: Active
-                        message: 'Aliquam adipisci tempore omnis in consequuntur inventore ut. Ducimus et eaque aut vel blanditiis cupiditate. Aut et a ratione perspiciatis culpa voluptatem.'
-                        comment: ''
-                        created_at: '2008-02-13T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 29
-                        name: 'Ms. Estefania Robel'
-                        email: simonis.luella@example.org
-                        status: Active
-                        message: 'Quasi ducimus fugiat iste laboriosam. Voluptas odit sit officia enim necessitatibus voluptatibus ad. Rem consectetur distinctio ex.'
-                        comment: ''
-                        created_at: '1982-08-21T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                      -
-                        id: 30
-                        name: 'Abbigail Purdy'
-                        email: mikayla.stroman@example.com
-                        status: Resolved
-                        message: 'Modi dolorum autem repellendus eligendi iusto error qui. Facere quia sed non dicta eaque consequuntur. Numquam dolor libero atque ut.'
-                        comment: 'Comment text. Comment text.'
-                        created_at: '2021-01-14T00:00:00.000000Z'
-                        updated_at: '2022-03-30T14:04:02.000000Z'
-                    items:
-                      type: object
+      responses: {  }
       tags:
         - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: aplssps
+                password_confirmation:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: ab
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+      security: []
+  /api/login:
+    post:
+      summary: 'Login client.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: tek
+              required:
+                - email
+                - password
       security: []
 tags:
   -
