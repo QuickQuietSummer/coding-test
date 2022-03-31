@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterService
 {
+    /**
+     * Return token string if ok
+     */
     public function registerClient(string $name, string $email, string $password): string
     {
         $user = $this->register($name, $email, $password);
