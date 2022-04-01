@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\LoginFormRequest;
-use App\Http\Requests\RegisterFormRequest;
+use App\Http\Requests\Auth\LoginFormRequest;
+use App\Http\Requests\Auth\RegisterFormRequest;
 use App\Services\Auth\LoginService;
 use App\Services\Auth\RegisterService;
 use Illuminate\Support\Facades\Response;
@@ -20,7 +20,8 @@ class AuthController
     }
 
     /**
-     * Login client.
+     * Login
+     * @group Auth
      */
     public function login(LoginFormRequest $request)
     {
@@ -37,13 +38,32 @@ class AuthController
     }
 
     /**
-     * Register client.
+     * Register client
+     * @group Auth
      */
-    public function register(RegisterFormRequest $request)
+    public function registerClient(RegisterFormRequest $request)
     {
         $validatedData = $request->validated();
 
         $token = $this->registerService->registerClient($validatedData['name'], $validatedData['email'], $validatedData['password']);
+        return Response::json([
+            'message' => 'Registered',
+            'data' => [
+                'access_token' => $token,
+                'token_type' => 'Bearer',
+            ]
+        ], 201);
+    }
+
+    /**
+     * Register employee
+     * @group Auth
+     */
+    public function registerEmployee(RegisterFormRequest $request)
+    {
+        $validatedData = $request->validated();
+
+        $token = $this->registerService->registerEmployee($validatedData['name'], $validatedData['email'], $validatedData['password']);
         return Response::json([
             'message' => 'Registered',
             'data' => [

@@ -1,20 +1,22 @@
 <?php
 
-namespace Tests\Feature\Requests;
+namespace Tests\Feature\Request;
 
 use App\Models\Request;
 use App\Models\Role;
-use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\Feature\Request\Traits\ActingAsRole;
 use Tests\TestCase;
 
 class RequestGetTest extends TestCase
 {
     use DatabaseMigrations;
+    use ActingAsRole;
 
     public function test_that_entry_point_available()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         $this->json('GET', '/api/requests/')->assertStatus(200);
     }
 
@@ -23,7 +25,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_incorrect_sort_and_filter_is_just_no_sort_and_is_200()
     {
-
+        $this->actingAsRole(Role::EMPLOYEE);
         $this->json('GET', '/api/requests/', ['sort_status' => 'incorrect active or resolved'])
             ->assertStatus(200);
 
@@ -39,6 +41,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_response_exact_structure()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         Request::factory()->createOne(['status' => Request::STATUS_RESOLVED])->toArray();
         $this->json('GET', '/api/requests/')->assertJsonStructure([
             'message',
@@ -61,6 +64,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_requests_sorting_by_active()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         $resolvedRequest = Request::factory()->createOne(['status' => Request::STATUS_RESOLVED])->toArray();
         $activeRequest = Request::factory()->createOne(['status' => Request::STATUS_ACTIVE])->toArray();
 
@@ -75,6 +79,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_requests_sorting_by_resolved()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         $activeRequest = Request::factory()->createOne([
             'status' => Request::STATUS_ACTIVE
         ])->toArray();
@@ -93,6 +98,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_requests_sorting_by_date()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         $request0 = Request::factory()->createOne(['created_at' => Carbon::create(2015)])->toArray();
         $request1 = Request::factory()->createOne(['created_at' => Carbon::create(2016)])->toArray();
 
@@ -117,6 +123,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_requests_filtering_by_date()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         $request15 = Request::factory()->createOne(['created_at' => Carbon::create(2015)])->toArray();
         $request16 = Request::factory()->createOne(['created_at' => Carbon::create(2016)])->toArray();
         $request18 = Request::factory()->createOne(['created_at' => Carbon::create(2018)])->toArray();
@@ -141,6 +148,7 @@ class RequestGetTest extends TestCase
      */
     public function test_that_requests_filtering_by_status()
     {
+        $this->actingAsRole(Role::EMPLOYEE);
         $requestResolved = Request::factory()->createOne(['status' => Request::STATUS_RESOLVED])->toArray();
         $requestActive = Request::factory()->createOne(['status' => Request::STATUS_ACTIVE])->toArray();
         $actualRequests = $this->json('GET', '/api/requests/', ['filter_status' => 'resolved'])['data'];
@@ -150,26 +158,12 @@ class RequestGetTest extends TestCase
 
     public function test_that_only_employee_can_get_all_requests()
     {
+        $this->json('GET', '/api/requests/')->assertStatus(401);
+
         $this->actingAsRole(Role::CLIENT);
         $this->json('GET', '/api/requests/')->assertStatus(401);
 
         $this->actingAsRole(Role::EMPLOYEE);
         $this->json('GET', '/api/requests/')->assertStatus(200);
-    }
-
-    private function actingAsRole($role)
-    {
-        $user = User::factory()->has(Role::factory()
-            ->state(function (array $attributes, User $user) use ($role) {
-                return ['user_id' => $user->id, 'type' => $role];
-            }))
-            ->createOne();
-        $this->actingAs($user);
-    }
-
-    protected function setUp(): void
-    {
-        parent::setUp();
-        $this->actingAsRole(Role::EMPLOYEE);
     }
 }

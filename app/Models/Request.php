@@ -30,8 +30,15 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Request extends Model
 {
+    use HasFactory;
+
     public const STATUS_ACTIVE = 'Active';
     public const STATUS_RESOLVED = 'Resolved';
 
-    use HasFactory;
+    protected $fillable = [
+        'status',
+        'message',
+        'comment',
+    ];
+
 }

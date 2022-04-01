@@ -9,16 +9,24 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginService
 {
-    /**
-     * Return token string if ok
-     * @return string
-     */
+    private TokenIssuer $tokenIssuer;
+
+    public function __construct(TokenIssuer $tokenIssuer)
+    {
+        $this->tokenIssuer = $tokenIssuer;
+    }
+
     public function login($email, $password): string
     {
-        $user = User::whereEmail($email)->wherePassword(Hash::make($password))
-            ->firstOr(function () {
-                abort(401);
-            });
-        return $user->tokens;
+        $user = User::whereEmail($email)->firstOr(function () {
+            return abort(404, 'Account not found');
+        });
+        if (Hash::check($password, $user->password) === false) {
+            return abort(401, 'Wrong credentials');
+        }
+
+        $this->tokenIssuer->revokeAllTokens($user);
+
+        return $this->tokenIssuer->createToken($user);
     }
 }

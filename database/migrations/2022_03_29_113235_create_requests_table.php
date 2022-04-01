@@ -18,7 +18,7 @@ class CreateRequestsTable extends Migration
             $table->foreignId('user_id');
             $table->enum('status', ['Active', 'Resolved']);
             $table->text('message');
-            $table->text('comment');
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }

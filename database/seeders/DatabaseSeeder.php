@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Request;
 use App\Models\Role;
 use App\Models\User;
+use App\Services\Auth\TokenIssuer;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,7 +15,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(TokenIssuer $tokenIssuer)
     {
         User::factory(30)
             ->has(
@@ -28,8 +29,8 @@ class DatabaseSeeder extends Seeder
                         return ['user_id' => $user->id];
                     }))
             ->create()
-            ->each(function (User $user) {
-                $user->createToken('Client');
+            ->each(function (User $user) use ($tokenIssuer) {
+                $tokenIssuer->createToken($user);
             });
     }
 }

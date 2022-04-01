@@ -1,78 +1,42 @@
-name: Endpoints
+name: Auth
 description: ''
 endpoints:
-  -
-    httpMethods:
-      - GET
-    uri: api/requests
+  - httpMethods:
+      - POST
+    uri: api/login
     metadata:
-      title: 'Get all requests.'
-      description: 'Only for client.'
-      authenticated: true
-      custom: []
+      title: Login
+      description: ''
+      authenticated: false
+      custom: [ ]
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: []
-    queryParameters:
-      sort_date:
-        name: sort_date
-        description: 'Sorting by created. Values: new, old.'
-        required: false
-        example: deleniti
+    urlParameters: [ ]
+    queryParameters: [ ]
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec
         type: string
-        custom: []
-      sort_status:
-        name: sort_status
-        description: 'Sorting by status. Values: active, resolved.'
-        required: false
-        example: sunt
+        custom: [ ]
+      password:
+        name: password
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: uuqjbu
         type: string
-        custom: []
-      start:
-        name: start
-        description: |-
-          Start of date filter. Values: Carbon compatible string.
-
-          For example: 2010-1-1 00:00:00
-        required: false
-        example: sequi
-        type: string
-        custom: []
-      end:
-        name: end
-        description: |-
-          End of date filter. Values: Carbon compatible string.
-
-          For example: 2020-12-25 12:45:16
-        required: false
-        example: rerum
-        type: string
-        custom: []
-      filter_status:
-        name: filter_status
-        description: 'Filter by status. Values: active, resolved.'
-        required: false
-        example: ratione
-        type: string
-        custom: []
-    bodyParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-    responseFields: []
+        custom: [ ]
+    responses: [ ]
+    responseFields: [ ]
   -
     httpMethods:
       - POST
-    uri: api/register
+    uri: api/register-client
     metadata:
-      title: 'Register client.'
+      title: 'Register client'
       description: ''
       authenticated: false
       custom: []
@@ -86,28 +50,28 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx
+        example: lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy
+        example: ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: aplssps
+        example: ''
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'Must be at least 8 characters.'
         required: true
-        example: ab
+        example: bqskd
         type: string
         custom: []
     responses: []
@@ -115,9 +79,9 @@ endpoints:
   -
     httpMethods:
       - POST
-    uri: api/login
+    uri: api/register-employee
     metadata:
-      title: 'Login client.'
+      title: 'Register employee'
       description: ''
       authenticated: false
       custom: []
@@ -127,19 +91,33 @@ endpoints:
     urlParameters: []
     queryParameters: []
     bodyParameters:
+      name:
+        name: name
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu
+        type: string
+        custom: [ ]
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq
+        example: lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb
         type: string
-        custom: []
+        custom: [ ]
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: tek
+        example: ''
         type: string
-        custom: []
+        custom: [ ]
+      password_confirmation:
+        name: password_confirmation
+        description: 'Must be at least 8 characters.'
+        required: true
+        example: mcyovwg
+        type: string
+        custom: [ ]
     responses: []
     responseFields: []

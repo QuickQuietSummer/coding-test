@@ -1,0 +1,27 @@
+name: 'Client api'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/requests
+    metadata:
+      title: 'Create new request'
+      description: 'Only for clients'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      message:
+        name: message
+        description: 'Message of request. Must not be greater than 255 characters.'
+        required: true
+        example: zu
+        type: string
+        custom: []
+    responses: []
+    responseFields: []

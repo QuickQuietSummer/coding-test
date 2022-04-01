@@ -38,6 +38,8 @@ use Laravel\Sanctum\HasApiTokens;
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Request[] $request
  * @property-read int|null $request_count
  * @property-read \App\Models\Role|null $role
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Request[] $requests
+ * @property-read int|null $requests_count
  */
 class User extends Authenticatable
 {

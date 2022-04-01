@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b63d44b11f5b346b075f2b3e2fe60ae6",
+    "content-hash": "4ee42a5dd866bc8104f9a7d6414dd85c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -9012,6 +9012,59 @@
                 }
             ],
             "time": "2021-07-28T10:34:58+00:00"
+        },
+        {
+            "name": "tkeer/mailbase",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tkeer/mailbase.git",
+                "reference": "4e2a61ac75f2c0d051d238392535ec3be9668329"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tkeer/mailbase/zipball/4e2a61ac75f2c0d051d238392535ec3be9668329",
+                "reference": "4e2a61ac75f2c0d051d238392535ec3be9668329",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tkeer\\Mailbase\\MailbaseServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tkeer\\Mailbase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "taukeer",
+                    "email": "taukeer.liaqat@gmail.com"
+                }
+            ],
+            "description": "Catch laravel emails for local development",
+            "keywords": [
+                "development",
+                "laravel",
+                "local",
+                "mail"
+            ],
+            "support": {
+                "issues": "https://github.com/tkeer/mailbase/issues",
+                "source": "https://github.com/tkeer/mailbase/tree/v1.4.0"
+            },
+            "time": "2021-05-30T11:37:48+00:00"
         }
     ],
     "aliases": [],

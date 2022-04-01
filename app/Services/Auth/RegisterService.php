@@ -9,31 +9,34 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterService
 {
-    /**
-     * Return token string if ok
-     */
+    private TokenIssuer $tokenIssuer;
+
+    public function __construct(TokenIssuer $tokenIssuer)
+    {
+        $this->tokenIssuer = $tokenIssuer;
+    }
+
     public function registerClient(string $name, string $email, string $password): string
     {
         $user = $this->register($name, $email, $password);
         Role::create(['user_id' => $user->id, 'type' => Role::CLIENT]);
-        return $user->createToken('auth_token')->plainTextToken;
-    }
-
-    private function register(string $name, string $email, string $password): User
-    {
-        return User::create([
-            'name' => $name,
-            'email' => $email,
-            'password' => Hash::make($password),
-        ]);
+        return $this->tokenIssuer->createToken($user);
     }
 
     public function registerEmployee(string $name, string $email, string $password): string
     {
         $user = $this->register($name, $email, $password);
         Role::create(['user_id' => $user->id, 'type' => Role::EMPLOYEE]);
-        return $user->createToken('auth_token', ['create-request'])->plainTextToken;
+        return $this->tokenIssuer->createToken($user);
     }
 
-
+    private function register(string $name, string $email, string $password): User
+    {
+        if (User::whereEmail($email)->exists()) return abort(422, 'Email already exists');
+        return User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => Hash::make($password),
+        ]);
+    }
 }

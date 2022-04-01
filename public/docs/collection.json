@@ -10,17 +10,150 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "7ceec3ab-16ce-4e6a-92c0-d2c9258c3126",
+        "_postman_id": "478e188a-32dd-44c2-83bd-19d01d97accf",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Endpoints",
+            "name": "Auth",
             "description": "",
             "item": [
                 {
-                    "name": "Get all requests.",
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec\",\"password\":\"uuqjbu\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Register client",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register-client",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register-client"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz\",\"email\":\"ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku\",\"password\":\"\",\"password_confirmation\":\"bqskd\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Register employee",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register-employee",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/register-employee"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu\",\"email\":\"lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb\",\"password\":\"\",\"password_confirmation\":\"mcyovwg\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Client api",
+            "description": "",
+            "item": [
+                {
+                    "name": "Create new request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/requests",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/requests"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"message\":\"zu\"}"
+                        },
+                        "description": "Only for clients"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Employee api",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get all requests",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -28,36 +161,36 @@
                             "query": [
                                 {
                                     "key": "sort_date",
-                                    "value": "deleniti",
+                                    "value": "quaerat",
                                     "description": "Sorting by created. Values: new, old.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sort_status",
-                                    "value": "sunt",
+                                    "value": "nam",
                                     "description": "Sorting by status. Values: active, resolved.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "start",
-                                    "value": "sequi",
+                                    "value": "eos",
                                     "description": "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00",
                                     "disabled": false
                                 },
                                 {
                                     "key": "end",
-                                    "value": "rerum",
+                                    "value": "repellendus",
                                     "description": "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16",
                                     "disabled": false
                                 },
                                 {
                                     "key": "filter_status",
-                                    "value": "ratione",
+                                    "value": "vero",
                                     "description": "Filter by status. Values: active, resolved.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/requests?sort_date=deleniti&sort_status=sunt&start=sequi&end=rerum&filter_status=ratione"
+                            "raw": "{{baseUrl}}\/api\/requests?sort_date=quaerat&sort_status=nam&start=eos&end=repellendus&filter_status=vero"
                         },
                         "method": "GET",
                         "header": [
@@ -71,7 +204,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "Only for client."
+                        "description": "Only for employees."
                     },
                     "response": [
                         {
@@ -96,15 +229,23 @@
                     ]
                 },
                 {
-                    "name": "Register client.",
+                    "name": "Resolve request with comment",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
-                            "path": "api\/register",
+                            "path": "api\/requests\/:id",
                             "query": [],
-                            "raw": "{{baseUrl}}\/api\/register"
+                            "raw": "{{baseUrl}}\/api\/requests\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "10",
+                                    "description": "The ID of the request."
+                                }
+                            ]
                         },
-                        "method": "POST",
+                        "method": "PUT",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -117,43 +258,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx\",\"email\":\"btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy\",\"password\":\"aplssps\",\"password_confirmation\":\"ab\"}"
+                            "raw": "{\"comment\":\"ubxdfxldnwjqc\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Login client.",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq\",\"password\":\"tek\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": "Only for employee"
                     },
                     "response": []
                 }

@@ -7,63 +7,51 @@ servers:
   -
     url: 'http://backend.localhost'
 paths:
-  /api/requests:
-    get:
-      summary: 'Get all requests.'
-      description: 'Only for client.'
+  /api/login:
+    post:
+      summary: Login
+      description: ''
       parameters:
-        -
-          in: query
-          name: sort_date
-          description: 'Sorting by created. Values: new, old.'
-          example: deleniti
-          required: false
+        - in: header
+          name: Content-Type
+          description: ''
+          example: application/json
           schema:
             type: string
-            description: 'Sorting by created. Values: new, old.'
-            example: deleniti
-        -
-          in: query
-          name: sort_status
-          description: 'Sorting by status. Values: active, resolved.'
-          example: sunt
-          required: false
+        - in: header
+          name: Accept
+          description: ''
+          example: application/json
           schema:
             type: string
-            description: 'Sorting by status. Values: active, resolved.'
-            example: sunt
-        -
-          in: query
-          name: start
-          description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-          example: sequi
-          required: false
-          schema:
-            type: string
-            description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-            example: sequi
-        -
-          in: query
-          name: end
-          description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-          example: rerum
-          required: false
-          schema:
-            type: string
-            description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-            example: rerum
-        -
-          in: query
-          name: filter_status
-          description: 'Filter by status. Values: active, resolved.'
-          example: ratione
-          required: false
-          schema:
-            type: string
-            description: 'Filter by status. Values: active, resolved.'
-            example: ratione
-        -
-          in: header
+      responses: { }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: uuqjbu
+              required:
+                - email
+                - password
+      security: [ ]
+  /api/register-client:
+    post:
+      summary: 'Register client'
+      description: ''
+      parameters:
+        - in: header
           name: Content-Type
           description: ''
           example: application/json
@@ -71,6 +59,182 @@ paths:
             type: string
         -
           in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: ''
+                password_confirmation:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: bqskd
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+      security: []
+  /api/register-employee:
+    post:
+      summary: 'Register employee'
+      description: ''
+      parameters:
+        - in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: ''
+                password_confirmation:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: mcyovwg
+              required:
+                - name
+                - email
+                - password
+                - password_confirmation
+      security: [ ]
+  /api/requests:
+    post:
+      summary: 'Create new request'
+      description: 'Only for clients'
+      parameters:
+        - in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        - in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: { }
+      tags:
+        - 'Client api'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: 'Message of request. Must not be greater than 255 characters.'
+                  example: zu
+              required:
+                - message
+    get:
+      summary: 'Get all requests'
+      description: 'Only for employees.'
+      parameters:
+        - in: query
+          name: sort_date
+          description: 'Sorting by created. Values: new, old.'
+          example: quaerat
+          required: false
+          schema:
+            type: string
+            description: 'Sorting by created. Values: new, old.'
+            example: quaerat
+        - in: query
+          name: sort_status
+          description: 'Sorting by status. Values: active, resolved.'
+          example: nam
+          required: false
+          schema:
+            type: string
+            description: 'Sorting by status. Values: active, resolved.'
+            example: nam
+        - in: query
+          name: start
+          description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
+          example: eos
+          required: false
+          schema:
+            type: string
+            description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
+            example: eos
+        - in: query
+          name: end
+          description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
+          example: repellendus
+          required: false
+          schema:
+            type: string
+            description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
+            example: repellendus
+        - in: query
+          name: filter_status
+          description: 'Filter by status. Values: active, resolved.'
+          example: vero
+          required: false
+          schema:
+            type: string
+            description: 'Filter by status. Values: active, resolved.'
+            example: vero
+        - in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        - in: header
           name: Accept
           description: ''
           example: application/json
@@ -90,29 +254,27 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
-  /api/register:
-    post:
-      summary: 'Register client.'
-      description: ''
+        - 'Employee api'
+  '/api/requests/{id}':
+    put:
+      summary: 'Resolve request with comment'
+      description: 'Only for employee'
       parameters:
-        -
-          in: header
+        - in: header
           name: Content-Type
           description: ''
           example: application/json
           schema:
             type: string
-        -
-          in: header
+        - in: header
           name: Accept
           description: ''
           example: application/json
           schema:
             type: string
-      responses: {  }
+      responses: { }
       tags:
-        - Endpoints
+        - 'Employee api'
       requestBody:
         required: true
         content:
@@ -120,70 +282,24 @@ paths:
             schema:
               type: object
               properties:
-                name:
+                comment:
                   type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: gqtokxpsgwpewxzyfrpkhzowagjvmjyxjfntpoeaqfxseiowbcwysmupgavogkmqmcdeldtmscvhoiilbkbdnvbzxvjehxtdpikvuxhqhyjbgccigyuzhxjhvwfjoikrainxsx
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: btrrdoonerslfrergkwzrozylxnzjcungmdfciqyeclucajissgudamrhpnbouimhkyblycduqhgypkycxjnilhpikvhfdzutxxgbtczvbeekndmpdgnmgvyjihqmjhhtxajkbrolqcphlwmmzrbatqtmvofmmaawlfzjrukymhwjpwuwthtpquvmxuclmvmafqyyloqbjtidrphyoyacy
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters.'
-                  example: aplssps
-                password_confirmation:
-                  type: string
-                  description: 'Must be at least 8 characters.'
-                  example: ab
+                  description: 'Comment of resolve. Must not be greater than 255 characters.'
+                  example: ubxdfxldnwjqc
               required:
-                - name
-                - email
-                - password
-                - password_confirmation
-      security: []
-  /api/login:
-    post:
-      summary: 'Login client.'
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Endpoints
-      requestBody:
+                - comment
+    parameters:
+      - in: path
+        name: id
+        description: 'The ID of the request.'
+        example: 10
         required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: kewgocfnuidochkmpuaiukyaurtmxyjbrmwudqlqfohbvzcjqhfqaztbjypkbbaecnklbhlyheudwbcmuqmfxtokzekdrkmnwjjnsaoqqgqksmnyhmajfhunnatdtpgarognymxzyyjmphijnpshzgsfrezzbaubpbkbhpafbsaqozgppckiqosladgvrxxqzcamtcqkosmkngxzcajq
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters.'
-                  example: tek
-              required:
-                - email
-                - password
-      security: []
+        schema:
+          type: integer
 tags:
-  -
-    name: Endpoints
+  - name: Auth
+    description: ''
+  - name: 'Client api'
+    description: ''
+  - name: 'Employee api'
     description: ''
