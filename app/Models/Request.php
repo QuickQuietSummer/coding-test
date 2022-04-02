@@ -27,6 +27,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Request whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\Assignment|null $assignment
+ * @property-read \App\Models\User|null $user
  */
 class Request extends Model
 {
@@ -41,4 +43,13 @@ class Request extends Model
         'comment',
     ];
 
+    public function assignment()
+    {
+        return $this->hasOne(Assignment::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

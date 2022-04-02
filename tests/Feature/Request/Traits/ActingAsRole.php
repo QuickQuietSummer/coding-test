@@ -7,7 +7,9 @@ use App\Models\User;
 
 trait ActingAsRole
 {
-    private function actingAsRole($role)
+    private User $currentUserWithRole;
+
+    private function actingAsRole($role) : User
     {
         $user = User::factory()->has(Role::factory()
             ->state(function (array $attributes, User $user) use ($role) {
@@ -15,5 +17,6 @@ trait ActingAsRole
             }))
             ->createOne();
         $this->actingAs($user);
+        return $user;
     }
 }

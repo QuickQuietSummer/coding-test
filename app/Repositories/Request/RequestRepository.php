@@ -2,10 +2,12 @@
 
 namespace App\Repositories\Request;
 
+use App\Models\Assignment;
 use App\Models\Request;
 use Carbon\Carbon;
 use Carbon\Exceptions\InvalidFormatException;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class RequestRepository
 {
@@ -24,14 +26,26 @@ class RequestRepository
         string|null $start,
         string|null $end,
         string|null $filterStatus,
+        bool|null $assignedToMe,
     ): array
     {
         $builder = Request::query();
+        $builder = $this->filterAssignedToMe($builder, $assignedToMe, Auth::id());
         $builder = $this->filterStatus($builder, $filterStatus);
         $builder = $this->sort($builder, 'status', $sortStatusValue, $this->statusDictionary);
         $builder = $this->filterDate($builder, $start, $end);
         $builder = $this->sort($builder, 'created_at', $sortDateValue, $this->dateDictionary);
         return $builder->get()->toArray();
+    }
+
+    private function filterAssignedToMe(Builder $builder, bool|null $assignedToMe, int $employeeId)
+    {
+        if (!$assignedToMe) {
+            return $builder;
+        }
+        return $builder->whereHas('assignment', function ($q) use ($employeeId) {
+            $q->where('user_id', '=', $employeeId);
+        });
     }
 
     private function filterStatus(Builder $builder, string|null $status)

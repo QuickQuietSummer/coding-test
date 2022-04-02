@@ -12,19 +12,21 @@ paths:
       summary: Login
       description: ''
       parameters:
-        - in: header
+        -
+          in: header
           name: Content-Type
           description: ''
           example: application/json
           schema:
             type: string
-        - in: header
+        -
+          in: header
           name: Accept
           description: ''
           example: application/json
           schema:
             type: string
-      responses: { }
+      responses: {  }
       tags:
         - Auth
       requestBody:
@@ -37,21 +39,22 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec
+                  example: ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: uuqjbu
+                  example: pznm
               required:
                 - email
                 - password
-      security: [ ]
+      security: []
   /api/register-client:
     post:
       summary: 'Register client'
       description: ''
       parameters:
-        - in: header
+        -
+          in: header
           name: Content-Type
           description: ''
           example: application/json
@@ -77,19 +80,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz
+                  example: shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku
+                  example: rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: ''
+                  example: 'n'
                 password_confirmation:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: bqskd
+                  example: l
               required:
                 - name
                 - email
@@ -101,7 +104,8 @@ paths:
       summary: 'Register employee'
       description: ''
       parameters:
-        - in: header
+        -
+          in: header
           name: Content-Type
           description: ''
           example: application/json
@@ -127,43 +131,45 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu
+                  example: ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb
+                  example: kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: ''
+                  example: abdbw
                 password_confirmation:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: mcyovwg
+                  example: qofmht
               required:
                 - name
                 - email
                 - password
                 - password_confirmation
-      security: [ ]
+      security: []
   /api/requests:
     post:
       summary: 'Create new request'
       description: 'Only for clients'
       parameters:
-        - in: header
+        -
+          in: header
           name: Content-Type
           description: ''
           example: application/json
           schema:
             type: string
-        - in: header
+        -
+          in: header
           name: Accept
           description: ''
           example: application/json
           schema:
             type: string
-      responses: { }
+      responses: {  }
       tags:
         - 'Client api'
       requestBody:
@@ -176,65 +182,82 @@ paths:
                 message:
                   type: string
                   description: 'Message of request. Must not be greater than 255 characters.'
-                  example: zu
+                  example: cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr
               required:
                 - message
     get:
       summary: 'Get all requests'
       description: 'Only for employees.'
       parameters:
-        - in: query
+        -
+          in: query
           name: sort_date
           description: 'Sorting by created. Values: new, old.'
-          example: quaerat
+          example: assumenda
           required: false
           schema:
             type: string
             description: 'Sorting by created. Values: new, old.'
-            example: quaerat
-        - in: query
+            example: assumenda
+        -
+          in: query
           name: sort_status
           description: 'Sorting by status. Values: active, resolved.'
-          example: nam
+          example: asperiores
           required: false
           schema:
             type: string
             description: 'Sorting by status. Values: active, resolved.'
-            example: nam
-        - in: query
+            example: asperiores
+        -
+          in: query
           name: start
           description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-          example: eos
+          example: sint
           required: false
           schema:
             type: string
             description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-            example: eos
-        - in: query
+            example: sint
+        -
+          in: query
           name: end
           description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-          example: repellendus
+          example: voluptas
           required: false
           schema:
             type: string
             description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-            example: repellendus
-        - in: query
+            example: voluptas
+        -
+          in: query
           name: filter_status
           description: 'Filter by status. Values: active, resolved.'
-          example: vero
+          example: dignissimos
           required: false
           schema:
             type: string
             description: 'Filter by status. Values: active, resolved.'
-            example: vero
-        - in: header
+            example: dignissimos
+        -
+          in: query
+          name: assigned_to_me
+          description: 'Filter only requests assigned to your employee account.'
+          example: true
+          required: false
+          schema:
+            type: boolean
+            description: 'Filter only requests assigned to your employee account.'
+            example: true
+        -
+          in: header
           name: Content-Type
           description: ''
           example: application/json
           schema:
             type: string
-        - in: header
+        -
+          in: header
           name: Accept
           description: ''
           example: application/json
@@ -255,24 +278,101 @@ paths:
                     example: Unauthenticated.
       tags:
         - 'Employee api'
-  '/api/requests/{id}':
-    put:
-      summary: 'Resolve request with comment'
-      description: 'Only for employee'
+  /api/request-contact:
+    post:
+      summary: 'Contact with client who initiate request'
+      description: 'Only for employees'
       parameters:
-        - in: header
+        -
+          in: header
           name: Content-Type
           description: ''
           example: application/json
           schema:
             type: string
-        - in: header
+        -
+          in: header
           name: Accept
           description: ''
           example: application/json
           schema:
             type: string
-      responses: { }
+      responses: {  }
+      tags:
+        - 'Employee api'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                request_id:
+                  type: integer
+                  description: ''
+                  example: 18
+                message:
+                  type: string
+                  description: 'Must not be greater than 10000 characters.'
+                  example: wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd
+              required:
+                - request_id
+                - message
+  /api/assignments:
+    post:
+      summary: 'Assign request for responsible employee'
+      description: 'Only for employees'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Employee api'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                request_id:
+                  type: integer
+                  description: ''
+                  example: 19
+              required:
+                - request_id
+  '/api/requests/{id}':
+    put:
+      summary: 'Resolve request with comment'
+      description: 'Only for employee'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
       tags:
         - 'Employee api'
       requestBody:
@@ -284,22 +384,26 @@ paths:
               properties:
                 comment:
                   type: string
-                  description: 'Comment of resolve. Must not be greater than 255 characters.'
-                  example: ubxdfxldnwjqc
+                  description: 'Comment of resolve. Must not be greater than 10000 characters.'
+                  example: wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy
               required:
                 - comment
     parameters:
-      - in: path
+      -
+        in: path
         name: id
         description: 'The ID of the request.'
-        example: 10
+        example: 14
         required: true
         schema:
           type: integer
 tags:
-  - name: Auth
+  -
+    name: Auth
     description: ''
-  - name: 'Client api'
+  -
+    name: 'Client api'
     description: ''
-  - name: 'Employee api'
+  -
+    name: 'Employee api'
     description: ''

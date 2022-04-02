@@ -150,7 +150,7 @@ class RequestGetTest extends TestCase
     {
         $this->actingAsRole(Role::EMPLOYEE);
         $requestResolved = Request::factory()->createOne(['status' => Request::STATUS_RESOLVED])->toArray();
-        $requestActive = Request::factory()->createOne(['status' => Request::STATUS_ACTIVE])->toArray();
+        Request::factory()->createOne(['status' => Request::STATUS_ACTIVE])->toArray();
         $actualRequests = $this->json('GET', '/api/requests/', ['filter_status' => 'resolved'])['data'];
         self::assertCount(1, $actualRequests);
         self::assertTrue($actualRequests[0]['id'] == $requestResolved['id']);

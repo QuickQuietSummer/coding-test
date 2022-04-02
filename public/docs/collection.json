@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "478e188a-32dd-44c2-83bd-19d01d97accf",
+        "_postman_id": "546d01df-f1a8-42de-b9a6-7af7dc9e7ed5",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec\",\"password\":\"uuqjbu\"}"
+                            "raw": "{\"email\":\"ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg\",\"password\":\"pznm\"}"
                         },
                         "description": "",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz\",\"email\":\"ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku\",\"password\":\"\",\"password_confirmation\":\"bqskd\"}"
+                            "raw": "{\"name\":\"shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg\",\"email\":\"rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm\",\"password\":\"n\",\"password_confirmation\":\"l\"}"
                         },
                         "description": "",
                         "auth": {
@@ -103,7 +103,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu\",\"email\":\"lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb\",\"password\":\"\",\"password_confirmation\":\"mcyovwg\"}"
+                            "raw": "{\"name\":\"ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd\",\"email\":\"kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf\",\"password\":\"abdbw\",\"password_confirmation\":\"qofmht\"}"
                         },
                         "description": "",
                         "auth": {
@@ -140,7 +140,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"message\":\"zu\"}"
+                            "raw": "{\"message\":\"cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr\"}"
                         },
                         "description": "Only for clients"
                     },
@@ -153,6 +153,34 @@
             "description": "",
             "item": [
                 {
+                    "name": "Contact with client who initiate request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/request-contact",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/request-contact"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"request_id\":18,\"message\":\"wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd\"}"
+                        },
+                        "description": "Only for employees"
+                    },
+                    "response": []
+                },
+                {
                     "name": "Get all requests",
                     "request": {
                         "url": {
@@ -161,36 +189,42 @@
                             "query": [
                                 {
                                     "key": "sort_date",
-                                    "value": "quaerat",
+                                    "value": "assumenda",
                                     "description": "Sorting by created. Values: new, old.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sort_status",
-                                    "value": "nam",
+                                    "value": "asperiores",
                                     "description": "Sorting by status. Values: active, resolved.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "start",
-                                    "value": "eos",
+                                    "value": "sint",
                                     "description": "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00",
                                     "disabled": false
                                 },
                                 {
                                     "key": "end",
-                                    "value": "repellendus",
+                                    "value": "voluptas",
                                     "description": "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16",
                                     "disabled": false
                                 },
                                 {
                                     "key": "filter_status",
-                                    "value": "vero",
+                                    "value": "dignissimos",
                                     "description": "Filter by status. Values: active, resolved.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "assigned_to_me",
+                                    "value": "1",
+                                    "description": "Filter only requests assigned to your employee account.",
                                     "disabled": false
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/requests?sort_date=quaerat&sort_status=nam&start=eos&end=repellendus&filter_status=vero"
+                            "raw": "{{baseUrl}}\/api\/requests?sort_date=assumenda&sort_status=asperiores&start=sint&end=voluptas&filter_status=dignissimos&assigned_to_me=1"
                         },
                         "method": "GET",
                         "header": [
@@ -229,6 +263,34 @@
                     ]
                 },
                 {
+                    "name": "Assign request for responsible employee",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/assignments",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/assignments"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"request_id\":19}"
+                        },
+                        "description": "Only for employees"
+                    },
+                    "response": []
+                },
+                {
                     "name": "Resolve request with comment",
                     "request": {
                         "url": {
@@ -240,7 +302,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "10",
+                                    "value": "14",
                                     "description": "The ID of the request."
                                 }
                             ]
@@ -258,7 +320,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"comment\":\"ubxdfxldnwjqc\"}"
+                            "raw": "{\"comment\":\"wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy\"}"
                         },
                         "description": "Only for employee"
                     },

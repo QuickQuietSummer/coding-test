@@ -45,12 +45,12 @@
     </span>
 </a>
 <div class="tocify-wrapper">
-
+    
             <div class="lang-selector">
                                             <button type="button" class="lang-button" data-language-name="bash">bash</button>
                                             <button type="button" class="lang-button" data-language-name="javascript">javascript</button>
                     </div>
-
+    
     <div class="search">
         <input type="text" class="search" id="input-search" placeholder="Search">
     </div>
@@ -60,57 +60,63 @@
                     <li class="tocify-item level-1" data-unique="introduction">
                         <a href="#introduction">Introduction</a>
                     </li>
-
-                                                                            </ul>
-        <ul class="tocify-header" id="tocify-header-1">
-            <li class="tocify-item level-1" data-unique="authenticating-requests">
-                <a href="#authenticating-requests">Authenticating requests</a>
-            </li>
-
-        </ul>
-
-        <ul class="tocify-header" id="tocify-header-2">
-            <li class="tocify-item level-1" data-unique="auth">
-                <a href="#auth">Auth</a>
-            </li>
-            <ul class="tocify-subheader" id="tocify-subheader-auth">
-                <li class="tocify-item level-2" data-unique="auth-POSTapi-login">
-                    <a href="#auth-POSTapi-login">Login</a>
+                                            
+                                                                    </ul>
+                                                <ul id="tocify-header-1" class="tocify-header">
+                    <li class="tocify-item level-1" data-unique="authenticating-requests">
+                        <a href="#authenticating-requests">Authenticating requests</a>
+                    </li>
+                                            
+                                                </ul>
+                    
+                    <ul id="tocify-header-2" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="auth">
+                    <a href="#auth">Auth</a>
                 </li>
-                <li class="tocify-item level-2" data-unique="auth-POSTapi-register-client">
-                    <a href="#auth-POSTapi-register-client">Register client</a>
+                                    <ul id="tocify-subheader-auth" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="auth-POSTapi-login">
+                        <a href="#auth-POSTapi-login">Login</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="auth-POSTapi-register-client">
+                        <a href="#auth-POSTapi-register-client">Register client</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="auth-POSTapi-register-employee">
+                        <a href="#auth-POSTapi-register-employee">Register employee</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-3" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="client-api">
+                    <a href="#client-api">Client api</a>
                 </li>
-                <li class="tocify-item level-2" data-unique="auth-POSTapi-register-employee">
-                    <a href="#auth-POSTapi-register-employee">Register employee</a>
+                                    <ul id="tocify-subheader-client-api" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="client-api-POSTapi-requests">
+                        <a href="#client-api-POSTapi-requests">Create new request</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+                    <ul id="tocify-header-4" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="employee-api">
+                    <a href="#employee-api">Employee api</a>
                 </li>
-            </ul>
-        </ul>
-        <ul class="tocify-header" id="tocify-header-3">
-            <li class="tocify-item level-1" data-unique="client-api">
-                <a href="#client-api">Client api</a>
-            </li>
-            <ul class="tocify-subheader" id="tocify-subheader-client-api">
-                <li class="tocify-item level-2" data-unique="client-api-POSTapi-requests">
-                    <a href="#client-api-POSTapi-requests">Create new request</a>
-                </li>
-            </ul>
-        </ul>
-        <ul class="tocify-header" id="tocify-header-4">
-            <li class="tocify-item level-1" data-unique="employee-api">
-                <a href="#employee-api">Employee api</a>
-            </li>
-            <ul class="tocify-subheader" id="tocify-subheader-employee-api">
-                <li class="tocify-item level-2" data-unique="employee-api-GETapi-requests">
-                    <a href="#employee-api-GETapi-requests">Get all requests</a>
-                </li>
-                <li class="tocify-item level-2" data-unique="employee-api-PUTapi-requests--id-">
-                    <a href="#employee-api-PUTapi-requests--id-">Resolve request with comment</a>
-                </li>
-            </ul>
-        </ul>
-
-
-    </div>
+                                    <ul id="tocify-subheader-employee-api" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="employee-api-POSTapi-request-contact">
+                        <a href="#employee-api-POSTapi-request-contact">Contact with client who initiate request</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="employee-api-GETapi-requests">
+                        <a href="#employee-api-GETapi-requests">Get all requests</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="employee-api-POSTapi-assignments">
+                        <a href="#employee-api-POSTapi-assignments">Assign request for responsible employee</a>
+                    </li>
+                                    <li class="tocify-item level-2" data-unique="employee-api-PUTapi-requests--id-">
+                        <a href="#employee-api-PUTapi-requests--id-">Resolve request with comment</a>
+                    </li>
+                                                    </ul>
+                            </ul>
+        
+                        
+            </div>
 
             <ul class="toc-footer" id="toc-footer">
                             <li><a href="../docs/collection.json">View Postman collection</a></li>
@@ -118,7 +124,7 @@
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-            <li>Last updated: April 1 2022</li>
+        <li>Last updated: April 2 2022</li>
     </ul>
 </div>
 
@@ -129,24 +135,26 @@
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
 You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
-        <blockquote>
-            <p>Base URL</p>
-        </blockquote>
-        <pre><code class="language-yaml">http://backend.localhost</code></pre>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://backend.localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-        <p>This API is not authenticated.</p>
+<p>This API is not authenticated.</p>
 
         <h1 id="auth">Auth</h1>
 
+    
 
-        <h2 id="auth-POSTapi-login">Login</h2>
+            <h2 id="auth-POSTapi-login">Login</h2>
 
-        <p>
-        </p>
+<p>
+</p>
 
 
-        <span id="example-requests-POSTapi-login">
+
+<span id="example-requests-POSTapi-login">
 <blockquote>Example request:</blockquote>
 
 
@@ -156,8 +164,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec\",
-    \"password\": \"uuqjbu\"
+    \"email\": \"ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg\",
+    \"password\": \"pznm\"
 }"
 </code></pre></div>
 
@@ -173,8 +181,8 @@ const headers = {
 };
 
 let body = {
-    "email": "ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec",
-    "password": "uuqjbu"
+    "email": "ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg",
+    "password": "pznm"
 };
 
 fetch(url, {
@@ -185,80 +193,78 @@ fetch(url, {
 
 </span>
 
-        <span id="example-responses-POSTapi-login">
+<span id="example-responses-POSTapi-login">
 </span>
-        <span hidden id="execution-results-POSTapi-login">
+<span id="execution-results-POSTapi-login" hidden>
     <blockquote>Received response<span
-        id="execution-response-status-POSTapi-login"></span>:
+                id="execution-response-status-POSTapi-login"></span>:
     </blockquote>
     <pre class="json"><code id="execution-response-content-POSTapi-login"></code></pre>
 </span>
-        <span hidden id="execution-error-POSTapi-login">
+<span id="execution-error-POSTapi-login" hidden>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-POSTapi-login"></code></pre>
 </span>
-        <form autocomplete="off" data-authed="0"
-              data-hasfiles="0"
-              data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-              data-isarraybody="0"
-              data-method="POST"
-              data-path="api/login"
-              id="form-POSTapi-login"
-              onsubmit="event.preventDefault(); executeTryOut('POSTapi-login', this);">
-            <h3>
-                Request&nbsp;&nbsp;&nbsp;
-                <button id="btn-tryout-POSTapi-login"
-                        onclick="tryItOut('POSTapi-login');"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Try it out ⚡
-                </button>
-                <button hidden
-                        id="btn-canceltryout-POSTapi-login"
-                        onclick="cancelTryOut('POSTapi-login');"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Cancel 🛑
-                </button>&nbsp;&nbsp;
-                <button hidden
-                        id="btn-executetryout-POSTapi-login"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="submit">Send Request 💥
-                </button>
+<form id="form-POSTapi-login" data-method="POST"
+      data-path="api/login"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-login', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-login"
+                    onclick="tryItOut('POSTapi-login');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-login"
+                    onclick="cancelTryOut('POSTapi-login');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-login" hidden>Send Request 💥
+            </button>
             </h3>
             <p>
-                <small class="badge badge-black">POST</small>
-                <b><code>api/login</code></b>
-            </p>
-            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-            <p>
-                <b><code>email</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
-                <input data-component="body"
-                       data-endpoint="POSTapi-login"
-                       hidden
-                       name="email"
-                       type="text"
-                       value="ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec">
-                <br>
-            <p>Must be a valid email address. Must not be greater than 255 characters.</p>
-            </p>
-            <p>
-                <b><code>password</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+            <small class="badge badge-black">POST</small>
+            <b><code>api/login</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="POSTapi-login"
-                       hidden
-                       name="password" value="uuqjbu">
-                <br>
-            <p>Must be at least 8 characters.</p>
-            </p>
+               name="email"
+               data-endpoint="POSTapi-login"
+               value="ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-login"
+               value="pznm"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
         </form>
 
-        <h2 id="auth-POSTapi-register-client">Register client</h2>
+            <h2 id="auth-POSTapi-register-client">Register client</h2>
 
-        <p>
-        </p>
+<p>
+</p>
 
 
-        <span id="example-requests-POSTapi-register-client">
+
+<span id="example-requests-POSTapi-register-client">
 <blockquote>Example request:</blockquote>
 
 
@@ -268,10 +274,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz\",
-    \"email\": \"ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku\",
-    \"password\": \"\",
-    \"password_confirmation\": \"bqskd\"
+    \"name\": \"shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg\",
+    \"email\": \"rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm\",
+    \"password\": \"n\",
+    \"password_confirmation\": \"l\"
 }"
 </code></pre></div>
 
@@ -287,10 +293,10 @@ const headers = {
 };
 
 let body = {
-    "name": "lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz",
-    "email": "ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku",
-    "password": "",
-    "password_confirmation": "bqskd"
+    "name": "shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg",
+    "email": "rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm",
+    "password": "n",
+    "password_confirmation": "l"
 };
 
 fetch(url, {
@@ -301,101 +307,98 @@ fetch(url, {
 
 </span>
 
-        <span id="example-responses-POSTapi-register-client">
+<span id="example-responses-POSTapi-register-client">
 </span>
-        <span hidden id="execution-results-POSTapi-register-client">
+<span id="execution-results-POSTapi-register-client" hidden>
     <blockquote>Received response<span
-        id="execution-response-status-POSTapi-register-client"></span>:
+                id="execution-response-status-POSTapi-register-client"></span>:
     </blockquote>
     <pre class="json"><code id="execution-response-content-POSTapi-register-client"></code></pre>
 </span>
-        <span hidden id="execution-error-POSTapi-register-client">
+<span id="execution-error-POSTapi-register-client" hidden>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-POSTapi-register-client"></code></pre>
 </span>
-        <form autocomplete="off" data-authed="0"
-              data-hasfiles="0"
-              data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-              data-isarraybody="0"
-              data-method="POST"
-              data-path="api/register-client"
-              id="form-POSTapi-register-client"
-              onsubmit="event.preventDefault(); executeTryOut('POSTapi-register-client', this);">
-            <h3>
-                Request&nbsp;&nbsp;&nbsp;
-                <button id="btn-tryout-POSTapi-register-client"
-                        onclick="tryItOut('POSTapi-register-client');"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Try it out ⚡
-                </button>
-                <button hidden
-                        id="btn-canceltryout-POSTapi-register-client"
-                        onclick="cancelTryOut('POSTapi-register-client');"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Cancel 🛑
-                </button>&nbsp;&nbsp;
-                <button hidden
-                        id="btn-executetryout-POSTapi-register-client"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="submit">Send Request 💥
-                </button>
+<form id="form-POSTapi-register-client" data-method="POST"
+      data-path="api/register-client"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register-client', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register-client"
+                    onclick="tryItOut('POSTapi-register-client');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register-client"
+                    onclick="cancelTryOut('POSTapi-register-client');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register-client" hidden>Send Request 💥
+            </button>
             </h3>
             <p>
-                <small class="badge badge-black">POST</small>
-                <b><code>api/register-client</code></b>
-            </p>
-            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-            <p>
-                <b><code>name</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register-client</code></b>
+        </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="POSTapi-register-client"
-                       hidden
-                       name="name"
-                       value="lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz">
-                <br>
-            <p>Must not be greater than 255 characters.</p>
-            </p>
-            <p>
-                <b><code>email</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+               name="name"
+               data-endpoint="POSTapi-register-client"
+               value="shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="POSTapi-register-client"
-                       hidden
-                       name="email"
-                       value="ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku">
-                <br>
-            <p>Must be a valid email address. Must not be greater than 255 characters.</p>
-            </p>
-            <p>
-                <b><code>password</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+               name="email"
+               data-endpoint="POSTapi-register-client"
+               value="rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="POSTapi-register-client"
-                       hidden
-                       name="password" value="">
-                <br>
-            <p>Must be at least 8 characters.</p>
-            </p>
-            <p>
-                <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+               name="password"
+               data-endpoint="POSTapi-register-client"
+               value="n"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
+                <p>
+            <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="POSTapi-register-client"
-                       hidden
-                       name="password_confirmation" value="bqskd">
-                <br>
-            <p>Must be at least 8 characters.</p>
-            </p>
+               name="password_confirmation"
+               data-endpoint="POSTapi-register-client"
+               value="l"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
         </form>
 
-        <h2 id="auth-POSTapi-register-employee">Register employee</h2>
+            <h2 id="auth-POSTapi-register-employee">Register employee</h2>
 
 <p>
 </p>
 
 
-        <span id="example-requests-POSTapi-register-employee">
+
+<span id="example-requests-POSTapi-register-employee">
 <blockquote>Example request:</blockquote>
 
 
@@ -405,10 +408,10 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu\",
-    \"email\": \"lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb\",
-    \"password\": \"\",
-    \"password_confirmation\": \"mcyovwg\"
+    \"name\": \"ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd\",
+    \"email\": \"kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf\",
+    \"password\": \"abdbw\",
+    \"password_confirmation\": \"qofmht\"
 }"
 </code></pre></div>
 
@@ -424,10 +427,10 @@ const headers = {
 };
 
 let body = {
-    "name": "kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu",
-    "email": "lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb",
-    "password": "",
-    "password_confirmation": "mcyovwg"
+    "name": "ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd",
+    "email": "kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf",
+    "password": "abdbw",
+    "password_confirmation": "qofmht"
 };
 
 fetch(url, {
@@ -438,105 +441,103 @@ fetch(url, {
 
 </span>
 
-        <span id="example-responses-POSTapi-register-employee">
+<span id="example-responses-POSTapi-register-employee">
 </span>
-        <span hidden id="execution-results-POSTapi-register-employee">
+<span id="execution-results-POSTapi-register-employee" hidden>
     <blockquote>Received response<span
-        id="execution-response-status-POSTapi-register-employee"></span>:
+                id="execution-response-status-POSTapi-register-employee"></span>:
     </blockquote>
     <pre class="json"><code id="execution-response-content-POSTapi-register-employee"></code></pre>
 </span>
-        <span hidden id="execution-error-POSTapi-register-employee">
+<span id="execution-error-POSTapi-register-employee" hidden>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-POSTapi-register-employee"></code></pre>
 </span>
-        <form autocomplete="off" data-authed="0"
-              data-hasfiles="0"
-              data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-              data-isarraybody="0"
-              data-method="POST"
-              data-path="api/register-employee"
-              id="form-POSTapi-register-employee"
-              onsubmit="event.preventDefault(); executeTryOut('POSTapi-register-employee', this);">
-            <h3>
-                Request&nbsp;&nbsp;&nbsp;
-                <button id="btn-tryout-POSTapi-register-employee"
-                        onclick="tryItOut('POSTapi-register-employee');"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Try it out ⚡
-                </button>
-                <button hidden
-                        id="btn-canceltryout-POSTapi-register-employee"
-                        onclick="cancelTryOut('POSTapi-register-employee');"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Cancel 🛑
-                </button>&nbsp;&nbsp;
-                <button hidden
-                        id="btn-executetryout-POSTapi-register-employee"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="submit">Send Request 💥
-                </button>
+<form id="form-POSTapi-register-employee" data-method="POST"
+      data-path="api/register-employee"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-register-employee', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-register-employee"
+                    onclick="tryItOut('POSTapi-register-employee');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-register-employee"
+                    onclick="cancelTryOut('POSTapi-register-employee');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-register-employee" hidden>Send Request 💥
+            </button>
             </h3>
             <p>
-                <small class="badge badge-black">POST</small>
-                <b><code>api/register-employee</code></b>
-            </p>
-            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-            <p>
-                <b><code>name</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
-                <input data-component="body"
-                       data-endpoint="POSTapi-register-employee"
-                       hidden
-                       name="name"
-                       type="text"
-                       value="kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu">
-                <br>
-            <p>Must not be greater than 255 characters.</p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/register-employee</code></b>
         </p>
-            <p>
-                <b><code>email</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
-                <input data-component="body"
-                       data-endpoint="POSTapi-register-employee"
-                       hidden
-                       name="email"
-                       type="text" value="lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb">
-                <br>
-            <p>Must be a valid email address. Must not be greater than 255 characters.</p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="name"
+               data-endpoint="POSTapi-register-employee"
+               value="ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 255 characters.</p>
         </p>
-            <p>
-                <b><code>password</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
-                <input data-component="body"
-                       data-endpoint="POSTapi-register-employee"
-                       hidden
-                       name="password"
-                       type="text" value="">
-                <br>
-            <p>Must be at least 8 characters.</p>
-            </p>
-            <p>
-                <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
-                <input data-component="body"
-                       data-endpoint="POSTapi-register-employee"
-                       hidden
-                       name="password_confirmation"
-                       type="text" value="mcyovwg">
-                <br>
-            <p>Must be at least 8 characters.</p>
-            </p>
+                <p>
+            <b><code>email</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="email"
+               data-endpoint="POSTapi-register-employee"
+               value="kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf"
+               data-component="body" hidden>
+    <br>
+<p>Must be a valid email address. Must not be greater than 255 characters.</p>
+        </p>
+                <p>
+            <b><code>password</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password"
+               data-endpoint="POSTapi-register-employee"
+               value="abdbw"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
+                <p>
+            <b><code>password_confirmation</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="password_confirmation"
+               data-endpoint="POSTapi-register-employee"
+               value="qofmht"
+               data-component="body" hidden>
+    <br>
+<p>Must be at least 8 characters.</p>
+        </p>
         </form>
 
         <h1 id="client-api">Client api</h1>
 
+    
 
-        <h2 id="client-api-POSTapi-requests">Create new request</h2>
+            <h2 id="client-api-POSTapi-requests">Create new request</h2>
 
-        <p>
-            <small class="badge badge-darkred">requires authentication</small>
-        </p>
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
 
-        <p>Only for clients</p>
+<p>Only for clients</p>
 
-        <span id="example-requests-POSTapi-requests">
+<span id="example-requests-POSTapi-requests">
 <blockquote>Example request:</blockquote>
 
 
@@ -546,7 +547,7 @@ fetch(url, {
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"message\": \"zu\"
+    \"message\": \"cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr\"
 }"
 </code></pre></div>
 
@@ -562,7 +563,7 @@ const headers = {
 };
 
 let body = {
-    "message": "zu"
+    "message": "cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr"
 };
 
 fetch(url, {
@@ -573,88 +574,206 @@ fetch(url, {
 
 </span>
 
-        <span id="example-responses-POSTapi-requests">
+<span id="example-responses-POSTapi-requests">
 </span>
-        <span hidden id="execution-results-POSTapi-requests">
+<span id="execution-results-POSTapi-requests" hidden>
     <blockquote>Received response<span
-        id="execution-response-status-POSTapi-requests"></span>:
+                id="execution-response-status-POSTapi-requests"></span>:
     </blockquote>
     <pre class="json"><code id="execution-response-content-POSTapi-requests"></code></pre>
 </span>
-        <span hidden id="execution-error-POSTapi-requests">
+<span id="execution-error-POSTapi-requests" hidden>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-POSTapi-requests"></code></pre>
 </span>
-        <form autocomplete="off" data-authed="1"
-              data-hasfiles="0"
-              data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-              data-isarraybody="0"
-              data-method="POST"
-              data-path="api/requests"
-              id="form-POSTapi-requests"
-              onsubmit="event.preventDefault(); executeTryOut('POSTapi-requests', this);">
-            <h3>
-                Request&nbsp;&nbsp;&nbsp;
-                <button id="btn-tryout-POSTapi-requests"
-                        onclick="tryItOut('POSTapi-requests');"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Try it out ⚡
-                </button>
-                <button hidden
-                        id="btn-canceltryout-POSTapi-requests"
-                        onclick="cancelTryOut('POSTapi-requests');"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Cancel 🛑
-                </button>&nbsp;&nbsp;
-                <button hidden
-                        id="btn-executetryout-POSTapi-requests"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="submit">Send Request 💥
-                </button>
+<form id="form-POSTapi-requests" data-method="POST"
+      data-path="api/requests"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-requests', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-requests"
+                    onclick="tryItOut('POSTapi-requests');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-requests"
+                    onclick="cancelTryOut('POSTapi-requests');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-requests" hidden>Send Request 💥
+            </button>
             </h3>
             <p>
-                <small class="badge badge-black">POST</small>
-                <b><code>api/requests</code></b>
-            </p>
-            <p>
-                <label hidden id="auth-POSTapi-requests">Authorization header:
-                    <b><code>Bearer </code></b><input data-component="header"
-                                                      data-endpoint="POSTapi-requests"
-                                                      data-prefix="Bearer "
-                                                      name="Authorization"
-                                                      type="text"></label>
-            </p>
-            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-            <p>
-                <b><code>message</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+            <small class="badge badge-black">POST</small>
+            <b><code>api/requests</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-requests" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-requests"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="POSTapi-requests"
-                       hidden
-                       name="message" value="zu">
-                <br>
-            <p>Message of request. Must not be greater than 255 characters.</p>
-            </p>
+               name="message"
+               data-endpoint="POSTapi-requests"
+               value="cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr"
+               data-component="body" hidden>
+    <br>
+<p>Message of request. Must not be greater than 255 characters.</p>
+        </p>
         </form>
 
         <h1 id="employee-api">Employee api</h1>
 
+    
 
-        <h2 id="employee-api-GETapi-requests">Get all requests</h2>
+            <h2 id="employee-api-POSTapi-request-contact">Contact with client who initiate request</h2>
 
-        <p>
-            <small class="badge badge-darkred">requires authentication</small>
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Only for employees</p>
+
+<span id="example-requests-POSTapi-request-contact">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://backend.localhost/api/request-contact" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"request_id\": 18,
+    \"message\": \"wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://backend.localhost/api/request-contact"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "request_id": 18,
+    "message": "wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-request-contact">
+</span>
+<span id="execution-results-POSTapi-request-contact" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-request-contact"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-request-contact"></code></pre>
+</span>
+<span id="execution-error-POSTapi-request-contact" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-request-contact"></code></pre>
+</span>
+<form id="form-POSTapi-request-contact" data-method="POST"
+      data-path="api/request-contact"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-request-contact', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-request-contact"
+                    onclick="tryItOut('POSTapi-request-contact');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-request-contact"
+                    onclick="cancelTryOut('POSTapi-request-contact');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-request-contact" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/request-contact</code></b>
         </p>
+                <p>
+            <label id="auth-POSTapi-request-contact" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-request-contact"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>request_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="request_id"
+               data-endpoint="POSTapi-request-contact"
+               value="18"
+               data-component="body" hidden>
+    <br>
 
-        <p>Only for employees.</p>
+        </p>
+                <p>
+            <b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+                <input type="text"
+               name="message"
+               data-endpoint="POSTapi-request-contact"
+               value="wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd"
+               data-component="body" hidden>
+    <br>
+<p>Must not be greater than 10000 characters.</p>
+        </p>
+        </form>
 
-        <span id="example-requests-GETapi-requests">
+            <h2 id="employee-api-GETapi-requests">Get all requests</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Only for employees.</p>
+
+<span id="example-requests-GETapi-requests">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://backend.localhost/api/requests?sort_date=quaerat&amp;sort_status=nam&amp;start=eos&amp;end=repellendus&amp;filter_status=vero" \
+    --get "http://backend.localhost/api/requests?sort_date=assumenda&amp;sort_status=asperiores&amp;start=sint&amp;end=voluptas&amp;filter_status=dignissimos&amp;assigned_to_me=1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
@@ -665,11 +784,12 @@ fetch(url, {
 );
 
 const params = {
-    "sort_date": "quaerat",
-    "sort_status": "nam",
-    "start": "eos",
-    "end": "repellendus",
-    "filter_status": "vero",
+    "sort_date": "assumenda",
+    "sort_status": "asperiores",
+    "start": "sint",
+    "end": "voluptas",
+    "filter_status": "dignissimos",
+    "assigned_to_me": "1",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -686,7 +806,7 @@ fetch(url, {
 
 </span>
 
-        <span id="example-responses-GETapi-requests">
+<span id="example-responses-GETapi-requests">
             <blockquote>
             <p>Example response (401):</p>
         </blockquote>
@@ -705,136 +825,155 @@ access-control-allow-origin: *
 }</code>
  </pre>
     </span>
-        <span hidden id="execution-results-GETapi-requests">
+<span id="execution-results-GETapi-requests" hidden>
     <blockquote>Received response<span
-        id="execution-response-status-GETapi-requests"></span>:
+                id="execution-response-status-GETapi-requests"></span>:
     </blockquote>
     <pre class="json"><code id="execution-response-content-GETapi-requests"></code></pre>
 </span>
-        <span hidden id="execution-error-GETapi-requests">
+<span id="execution-error-GETapi-requests" hidden>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-GETapi-requests"></code></pre>
 </span>
-        <form autocomplete="off" data-authed="1"
-              data-hasfiles="0"
-              data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-              data-isarraybody="0"
-              data-method="GET"
-              data-path="api/requests"
-              id="form-GETapi-requests"
-              onsubmit="event.preventDefault(); executeTryOut('GETapi-requests', this);">
-            <h3>
-                Request&nbsp;&nbsp;&nbsp;
-                <button id="btn-tryout-GETapi-requests"
-                        onclick="tryItOut('GETapi-requests');"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Try it out ⚡
-                </button>
-                <button hidden
-                        id="btn-canceltryout-GETapi-requests"
-                        onclick="cancelTryOut('GETapi-requests');"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Cancel 🛑
-                </button>&nbsp;&nbsp;
-                <button hidden
-                        id="btn-executetryout-GETapi-requests"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="submit">Send Request 💥
-                </button>
+<form id="form-GETapi-requests" data-method="GET"
+      data-path="api/requests"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-requests', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-requests"
+                    onclick="tryItOut('GETapi-requests');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-requests"
+                    onclick="cancelTryOut('GETapi-requests');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-requests" hidden>Send Request 💥
+            </button>
             </h3>
             <p>
-                <small class="badge badge-green">GET</small>
-                <b><code>api/requests</code></b>
-            </p>
-            <p>
-                <label hidden id="auth-GETapi-requests">Authorization header:
-                    <b><code>Bearer </code></b><input data-component="header"
-                                                      data-endpoint="GETapi-requests"
-                                                      data-prefix="Bearer "
-                                                      name="Authorization"
-                                                      type="text"></label>
-            </p>
-            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
-            <p>
-                <b><code>sort_date</code></b>&nbsp;&nbsp;<small>string</small> <i>optional</i> &nbsp;
-                <input data-component="query"
-                       data-endpoint="GETapi-requests"
-                       hidden
-                       name="sort_date"
-                       type="text" value="quaerat">
-                <br>
-            <p>Sorting by created. Values: new, old.</p>
-            </p>
-            <p>
-                <b><code>sort_status</code></b>&nbsp;&nbsp;<small>string</small> <i>optional</i> &nbsp;
-                <input data-component="query"
-                       data-endpoint="GETapi-requests"
-                       hidden
-                       name="sort_status"
-                       type="text" value="nam">
-                <br>
-            <p>Sorting by status. Values: active, resolved.</p>
-            </p>
-            <p>
-                <b><code>start</code></b>&nbsp;&nbsp;<small>string</small> <i>optional</i> &nbsp;
-                <input data-component="query"
-                       data-endpoint="GETapi-requests"
-                       hidden
-                       name="start"
-                       type="text" value="eos">
-                <br>
-            <p>Start of date filter. Values: Carbon compatible string.</p>
-            <p>For example: 2010-1-1 00:00:00</p>
-            </p>
-            <p>
-                <b><code>end</code></b>&nbsp;&nbsp;<small>string</small> <i>optional</i> &nbsp;
-                <input data-component="query"
-                       data-endpoint="GETapi-requests"
-                       hidden
-                       name="end"
-                       type="text" value="repellendus">
-                <br>
-            <p>End of date filter. Values: Carbon compatible string.</p>
-            <p>For example: 2020-12-25 12:45:16</p>
-            </p>
-            <p>
-                <b><code>filter_status</code></b>&nbsp;&nbsp;<small>string</small> <i>optional</i> &nbsp;
-                <input data-component="query"
-                       data-endpoint="GETapi-requests"
-                       hidden
-                       name="filter_status"
-                       type="text" value="vero">
-                <br>
-            <p>Filter by status. Values: active, resolved.</p>
-            </p>
-        </form>
-
-        <h2 id="employee-api-PUTapi-requests--id-">Resolve request with comment</h2>
-
-        <p>
-            <small class="badge badge-darkred">requires authentication</small>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/requests</code></b>
         </p>
+                <p>
+            <label id="auth-GETapi-requests" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="GETapi-requests"
+                                                                data-component="header"></label>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>sort_date</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="sort_date"
+               data-endpoint="GETapi-requests"
+               value="assumenda"
+               data-component="query" hidden>
+    <br>
+<p>Sorting by created. Values: new, old.</p>
+            </p>
+                    <p>
+                <b><code>sort_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="sort_status"
+               data-endpoint="GETapi-requests"
+               value="asperiores"
+               data-component="query" hidden>
+    <br>
+<p>Sorting by status. Values: active, resolved.</p>
+            </p>
+                    <p>
+                <b><code>start</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="start"
+               data-endpoint="GETapi-requests"
+               value="sint"
+               data-component="query" hidden>
+    <br>
+<p>Start of date filter. Values: Carbon compatible string.</p>
+<p>For example: 2010-1-1 00:00:00</p>
+            </p>
+                    <p>
+                <b><code>end</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="end"
+               data-endpoint="GETapi-requests"
+               value="voluptas"
+               data-component="query" hidden>
+    <br>
+<p>End of date filter. Values: Carbon compatible string.</p>
+<p>For example: 2020-12-25 12:45:16</p>
+            </p>
+                    <p>
+                <b><code>filter_status</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
+                <input type="text"
+               name="filter_status"
+               data-endpoint="GETapi-requests"
+               value="dignissimos"
+               data-component="query" hidden>
+    <br>
+<p>Filter by status. Values: active, resolved.</p>
+            </p>
+                    <p>
+                <b><code>assigned_to_me</code></b>&nbsp;&nbsp;<small>boolean</small>     <i>optional</i> &nbsp;
+                <label data-endpoint="GETapi-requests" hidden>
+            <input type="radio" name="assigned_to_me"
+                   value="1"
+                   data-endpoint="GETapi-requests"
+                   data-component="query"
+            >
+            <code>true</code>
+        </label>
+        <label data-endpoint="GETapi-requests" hidden>
+            <input type="radio" name="assigned_to_me"
+                   value="0"
+                   data-endpoint="GETapi-requests"
+                   data-component="query"
+            >
+            <code>false</code>
+        </label>
+    <br>
+<p>Filter only requests assigned to your employee account.</p>
+            </p>
+                </form>
 
-        <p>Only for employee</p>
+            <h2 id="employee-api-POSTapi-assignments">Assign request for responsible employee</h2>
 
-        <span id="example-requests-PUTapi-requests--id-">
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Only for employees</p>
+
+<span id="example-requests-POSTapi-assignments">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
-    "http://backend.localhost/api/requests/10" \
+    <pre><code class="language-bash">curl --request POST \
+    "http://backend.localhost/api/assignments" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"comment\": \"ubxdfxldnwjqc\"
+    \"request_id\": 19
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://backend.localhost/api/requests/10"
+    "http://backend.localhost/api/assignments"
 );
 
 const headers = {
@@ -843,7 +982,114 @@ const headers = {
 };
 
 let body = {
-    "comment": "ubxdfxldnwjqc"
+    "request_id": 19
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-assignments">
+</span>
+<span id="execution-results-POSTapi-assignments" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-assignments"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-assignments"></code></pre>
+</span>
+<span id="execution-error-POSTapi-assignments" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-assignments"></code></pre>
+</span>
+<form id="form-POSTapi-assignments" data-method="POST"
+      data-path="api/assignments"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-assignments', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-assignments"
+                    onclick="tryItOut('POSTapi-assignments');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-assignments"
+                    onclick="cancelTryOut('POSTapi-assignments');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-assignments" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/assignments</code></b>
+        </p>
+                <p>
+            <label id="auth-POSTapi-assignments" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="POSTapi-assignments"
+                                                                data-component="header"></label>
+        </p>
+                        <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>request_id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="request_id"
+               data-endpoint="POSTapi-assignments"
+               value="19"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+            <h2 id="employee-api-PUTapi-requests--id-">Resolve request with comment</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+<p>Only for employee</p>
+
+<span id="example-requests-PUTapi-requests--id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "http://backend.localhost/api/requests/14" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"comment\": \"wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://backend.localhost/api/requests/14"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "comment": "wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy"
 };
 
 fetch(url, {
@@ -854,86 +1100,86 @@ fetch(url, {
 
 </span>
 
-        <span id="example-responses-PUTapi-requests--id-">
+<span id="example-responses-PUTapi-requests--id-">
 </span>
-        <span hidden id="execution-results-PUTapi-requests--id-">
+<span id="execution-results-PUTapi-requests--id-" hidden>
     <blockquote>Received response<span
-        id="execution-response-status-PUTapi-requests--id-"></span>:
+                id="execution-response-status-PUTapi-requests--id-"></span>:
     </blockquote>
     <pre class="json"><code id="execution-response-content-PUTapi-requests--id-"></code></pre>
 </span>
-        <span hidden id="execution-error-PUTapi-requests--id-">
+<span id="execution-error-PUTapi-requests--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-PUTapi-requests--id-"></code></pre>
 </span>
-        <form autocomplete="off" data-authed="1"
-              data-hasfiles="0"
-              data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
-              data-isarraybody="0"
-              data-method="PUT"
-              data-path="api/requests/{id}"
-              id="form-PUTapi-requests--id-"
-              onsubmit="event.preventDefault(); executeTryOut('PUTapi-requests--id-', this);">
-            <h3>
-                Request&nbsp;&nbsp;&nbsp;
-                <button id="btn-tryout-PUTapi-requests--id-"
-                        onclick="tryItOut('PUTapi-requests--id-');"
-                        style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Try it out ⚡
-                </button>
-                <button hidden
-                        id="btn-canceltryout-PUTapi-requests--id-"
-                        onclick="cancelTryOut('PUTapi-requests--id-');"
-                        style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="button">Cancel 🛑
-                </button>&nbsp;&nbsp;
-                <button hidden
-                        id="btn-executetryout-PUTapi-requests--id-"
-                        style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                        type="submit">Send Request 💥
-                </button>
+<form id="form-PUTapi-requests--id-" data-method="PUT"
+      data-path="api/requests/{id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-requests--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-requests--id-"
+                    onclick="tryItOut('PUTapi-requests--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-requests--id-"
+                    onclick="cancelTryOut('PUTapi-requests--id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-requests--id-" hidden>Send Request 💥
+            </button>
             </h3>
             <p>
-                <small class="badge badge-darkblue">PUT</small>
-                <b><code>api/requests/{id}</code></b>
-            </p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/requests/{id}</code></b>
+        </p>
             <p>
-                <small class="badge badge-purple">PATCH</small>
-                <b><code>api/requests/{id}</code></b>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/requests/{id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PUTapi-requests--id-" hidden>Authorization header:
+                <b><code>Bearer </code></b><input type="text"
+                                                                name="Authorization"
+                                                                data-prefix="Bearer "
+                                                                data-endpoint="PUTapi-requests--id-"
+                                                                data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-requests--id-"
+               value="14"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the request.</p>
             </p>
-            <p>
-                <label hidden id="auth-PUTapi-requests--id-">Authorization header:
-                    <b><code>Bearer </code></b><input data-component="header"
-                                                      data-endpoint="PUTapi-requests--id-"
-                                                      data-prefix="Bearer "
-                                                      name="Authorization"
-                                                      type="text"></label>
-            </p>
-            <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
-            <p>
-                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small> &nbsp;
-                <input data-component="url"
-                       data-endpoint="PUTapi-requests--id-"
-                       hidden
-                       name="id"
-                       type="number" value="10">
-                <br>
-            <p>The ID of the request.</p>
-            </p>
-            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
-            <p>
-                <b><code>comment</code></b>&nbsp;&nbsp;<small>string</small> &nbsp;
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>comment</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
-                       data-component="body"
-                       data-endpoint="PUTapi-requests--id-"
-                       hidden
-                       name="comment" value="ubxdfxldnwjqc">
-                <br>
-            <p>Comment of resolve. Must not be greater than 255 characters.</p>
-            </p>
+               name="comment"
+               data-endpoint="PUTapi-requests--id-"
+               value="wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy"
+               data-component="body" hidden>
+    <br>
+<p>Comment of resolve. Must not be greater than 10000 characters.</p>
+        </p>
         </form>
 
+    
 
+        
     </div>
     <div class="dark-box">
                     <div class="lang-selector">

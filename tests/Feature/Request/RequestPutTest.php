@@ -27,11 +27,12 @@ class RequestPutTest extends TestCase
 
     public function test_that_entry_point_available()
     {
-        $this->actingAsRole(Role::EMPLOYEE);
         self::assertCount(30, Request::all());
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
-        self::assertNotNull($activeRequest);
-        $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $this->comment])
+        $employee = $this->actingAsRole(Role::EMPLOYEE);
+        $request = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
+        $employee->assignments()->create(['request_id' => $request->id]);
+        self::assertNotNull($request);
+        $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $this->comment])
             ->assertStatus(200);
     }
 
@@ -40,10 +41,10 @@ class RequestPutTest extends TestCase
      */
     public function test_that_response_structure_exact()
     {
-        $this->actingAsRole(Role::EMPLOYEE);
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
-        self::assertNotNull($activeRequest);
-        $response = $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $this->comment]);
+        $employee = $this->actingAsRole(Role::EMPLOYEE);
+        $request = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
+        $employee->assignments()->create(['request_id' => $request->id]);
+        $response = $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $this->comment]);
         $response->assertJsonStructure([
             'message',
             'data',
@@ -55,10 +56,10 @@ class RequestPutTest extends TestCase
      */
     public function test_that_resolved_request_cannot_resolve_again()
     {
-        $this->actingAsRole(Role::EMPLOYEE);
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_RESOLVED);
-        self::assertNotNull($activeRequest);
-        $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $this->comment])
+        $employee = $this->actingAsRole(Role::EMPLOYEE);
+        $request = Request::firstWhere('status', '=', Request::STATUS_RESOLVED);
+        $employee->assignments()->create(['request_id' => $request->id]);
+        $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $this->comment])
             ->assertStatus(422);
     }
 
@@ -67,17 +68,16 @@ class RequestPutTest extends TestCase
      */
     public function test_that_request_resolved()
     {
-        $this->actingAsRole(Role::EMPLOYEE);
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
-        self::assertNotNull($activeRequest);
-        $comment = $this->comment;
-        $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $comment]);
+        $employee = $this->actingAsRole(Role::EMPLOYEE);
+        $request = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
+        $employee->assignments()->create(['request_id' => $request->id]);
 
+        $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $this->comment]);
 
-        $activeRequest->refresh();
+        $request->refresh();
 
-        self::assertTrue($activeRequest->status == Request::STATUS_RESOLVED);
-        self::assertTrue($activeRequest->comment == $comment);
+        self::assertTrue($request->status == Request::STATUS_RESOLVED);
+        self::assertTrue($request->comment == $this->comment);
     }
 
     /**
@@ -86,10 +86,11 @@ class RequestPutTest extends TestCase
     public function test_that_event_dispatched_when_resolve()
     {
         Event::fake();
-        $this->actingAsRole(Role::EMPLOYEE);
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
-        self::assertNotNull($activeRequest);
-        $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $this->comment]);
+
+        $employee = $this->actingAsRole(Role::EMPLOYEE);
+        $request = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
+        $employee->assignments()->create(['request_id' => $request->id]);
+        $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $this->comment]);
 
         Event::assertDispatched(RequestResolved::class);
     }
@@ -100,11 +101,12 @@ class RequestPutTest extends TestCase
     public function test_that_mail_sended_when_resolve()
     {
         Mail::fake();
-        $this->actingAsRole(Role::EMPLOYEE);
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
-        self::assertNotNull($activeRequest);
 
-        $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $this->comment]);
+        $employee = $this->actingAsRole(Role::EMPLOYEE);
+        $request = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
+        $employee->assignments()->create(['request_id' => $request->id]);
+
+        $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $this->comment]);
 
         Mail::assertQueued(\App\Mail\RequestResolved::class);
     }
@@ -114,11 +116,11 @@ class RequestPutTest extends TestCase
      */
     public function test_that_only_employee_can_resolve()
     {
-        $this->actingAsRole(Role::CLIENT);
-        $activeRequest = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
-        self::assertNotNull($activeRequest);
+        $client = $this->actingAsRole(Role::CLIENT);
+        $request = Request::firstWhere('status', '=', Request::STATUS_ACTIVE);
+        $client->assignments()->create(['request_id' => $request->id]);
         $comment = $this->comment;
-        $this->json('PUT', 'api/requests/' . $activeRequest->id, ['comment' => $comment])
+        $this->json('PUT', 'api/requests/' . $request->id, ['comment' => $comment])
             ->assertStatus(401);
 
     }
@@ -126,9 +128,21 @@ class RequestPutTest extends TestCase
     /**
      * @depends test_that_entry_point_available
      */
-    public function test_that_can_resolve_only_requests_which_assigned_to_current_employee()
+    public function test_that_cant_resolve_when_not_assigned_to_you()
     {
+        /** @var User $client */
+        $client = User::factory()->has(Role::factory()->state(['type' => Role::CLIENT]))->createOne();
+        $wrongRequestId = $client->requests()->create(['message' => 'hello', 'status' => Request::STATUS_ACTIVE])->id;
 
+
+        /** @var User $anotherEmployee */
+        $anotherEmployee = User::factory()->has(Role::factory()->state(['type' => Role::EMPLOYEE]))->createOne();
+        $anotherEmployee->assignments()->create(['request_id' => $wrongRequestId]);
+
+        $currentEmployee = $this->actingAsRole(Role::EMPLOYEE);
+
+
+        $this->json('PUT', 'api/requests/' . $wrongRequestId, ['comment' => $this->comment])->assertStatus(401);
     }
 
     protected function setUp(): void

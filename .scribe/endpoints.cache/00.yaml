@@ -3,36 +3,37 @@
 name: Auth
 description: ''
 endpoints:
-  - httpMethods:
+  -
+    httpMethods:
       - POST
     uri: api/login
     metadata:
       title: Login
       description: ''
       authenticated: false
-      custom: [ ]
+      custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
-    urlParameters: [ ]
-    queryParameters: [ ]
+    urlParameters: []
+    queryParameters: []
     bodyParameters:
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: ehryqqqkfhchfncopgogizwikskyqabbjrdgxsayctggieujxtpagcryboujxreebryyjyhuzzyyssxicrhezgxelhairsazovhvkzqfaoxlqldaivsgnieyxawzxtjfjtelospsmnxemwdjtizgycfldzsvdlhxcwmekwinahtgvukajlmuvdszzohgqsylkhfujoizolsnfkvvzeoiuijqooqllhgndhgbpmcqqdafrgevfymlfbec
+        example: ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg
         type: string
-        custom: [ ]
+        custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: uuqjbu
+        example: pznm
         type: string
-        custom: [ ]
-    responses: [ ]
-    responseFields: [ ]
+        custom: []
+    responses: []
+    responseFields: []
   -
     httpMethods:
       - POST
@@ -52,28 +53,28 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: lyummliokylfdlofujgbulvoujzowcdahcxfkurxbottyvjkmccfgcbogyxcjysxpruzloupilmsasaaqienupatsiyydcesnquiutdoqibjeqhedxbnotzrxmnlxgivkmjitgvnbehxnoyxoqzgvllzzvjboyotwbkoifeikwqgodmktqmatqozxvtdltuznxyjvcjjwuysjpsobvwaqz
+        example: shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: ytevniqupqbmdiuhgvdvootzgzkjfenrthizdezqqskeajlnilczxhjcvztefkgdpuyclhuyisozzurocrksgpzzbcxdepku
+        example: rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm
         type: string
         custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: ''
+        example: 'n'
         type: string
         custom: []
       password_confirmation:
         name: password_confirmation
         description: 'Must be at least 8 characters.'
         required: true
-        example: bqskd
+        example: l
         type: string
         custom: []
     responses: []
@@ -97,29 +98,29 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: kmyjhxycutlduwxtgjakldqstfmjpvzupaokoppdmzyssxtiodfcicdvjnqoatwpsxcglldkhmlbdtflqjthqlfpzrnykxexdqjcpkjufmfeqjyrnripgvvlvmorivyhxxioyjimmkzvydqsgyvdnpozufvfvbfkecouzrjbgzaaepkwnecnspypbvsu
+        example: ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd
         type: string
-        custom: [ ]
+        custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: lebrsrufdpxxypitlvyalfexhxowteiufumehucesmdavtvcb
+        example: kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf
         type: string
-        custom: [ ]
+        custom: []
       password:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: ''
+        example: abdbw
         type: string
-        custom: [ ]
+        custom: []
       password_confirmation:
         name: password_confirmation
         description: 'Must be at least 8 characters.'
         required: true
-        example: mcyovwg
+        example: qofmht
         type: string
-        custom: [ ]
+        custom: []
     responses: []
     responseFields: []

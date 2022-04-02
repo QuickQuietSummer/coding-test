@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Request\RequestCreateFormRequest;
+use App\Http\Requests\Request\RequestContactFormRequest;
 use App\Http\Requests\Request\RequestPutFormRequest;
+use App\Http\Requests\Request\RequestStoreFormRequest;
 use App\Models\Role;
 use App\Repositories\Request\RequestRepository;
 use App\Services\Request\RequestService;
@@ -22,7 +23,7 @@ class RequestController extends Controller
 
         $this->middleware('auth:sanctum');
         $this->middleware('role:' . Role::CLIENT, ['only' => ['store']]);
-        $this->middleware('role:' . Role::EMPLOYEE, ['only' => ['index', 'update']]);
+        $this->middleware('role:' . Role::EMPLOYEE, ['only' => ['index', 'update', 'contact']]);
     }
 
     /**
@@ -42,6 +43,8 @@ class RequestController extends Controller
      * For example: 2020-12-25 12:45:16
      *
      * @queryParam filter_status string Filter by status. Values: active, resolved.
+     *
+     * @queryParam assigned_to_me bool Filter only requests assigned to your employee account.
      */
     public function index(HttpRequest $httpRequest)
     {
@@ -50,8 +53,9 @@ class RequestController extends Controller
         $start = $httpRequest->get('start');
         $end = $httpRequest->get('end');
         $filterStatus = $httpRequest->get('filter_status');
+        $assignedToMe = $httpRequest->get('assigned_to_me');
 
-        $serviceRequests = $this->requestRepository->getAll($sortDate, $sortStatus, $start, $end, $filterStatus);
+        $serviceRequests = $this->requestRepository->getAll($sortDate, $sortStatus, $start, $end, $filterStatus,$assignedToMe);
 
 
         return Response::json([
@@ -70,7 +74,7 @@ class RequestController extends Controller
     public function update(RequestPutFormRequest $httpRequest, int $id)
     {
         $data = $httpRequest->validated();
-        $requestId = $this->requestService->resolveRequest($id, $data['comment']);
+        $requestId = $this->requestService->resolveRequest($id, $data['comment'], $httpRequest->user());
         return Response::json([
             'message' => 'Resolved',
             'data' => $requestId
@@ -84,7 +88,7 @@ class RequestController extends Controller
      * @authenticated
      * @group Client api
      */
-    public function store(RequestCreateFormRequest $httpRequest)
+    public function store(RequestStoreFormRequest $httpRequest)
     {
         $user = $httpRequest->user();
         $data = $httpRequest->validated();
@@ -96,4 +100,19 @@ class RequestController extends Controller
         ], 201);
     }
 
+    /**
+     * Contact with client who initiate request
+     *
+     * Only for employees
+     * @authenticated
+     * @group Employee api
+     */
+    public function contact(RequestContactFormRequest $httpRequest)
+    {
+        $data = $httpRequest->validated();
+        $this->requestService->contact($data['request_id'], $data['message'], $httpRequest->user());
+        return Response::json([
+            'message' => 'OK',
+        ]);
+    }
 }
