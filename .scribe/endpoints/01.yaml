@@ -20,7 +20,7 @@ endpoints:
         name: message
         description: 'Message of request. Must not be greater than 255 characters.'
         required: true
-        example: cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr
+        example: mkzccqeszselxdngmcnguremdqcvpeogkzecltctvwlscvaetqmapbiejamqewutaldqpstrcbhgkijpfelvxedqusvgimpgecjszenhrcrvtpzqxuqrdxppbgdrefowmjhhqfxnrz
         type: string
         custom: []
     responses: []

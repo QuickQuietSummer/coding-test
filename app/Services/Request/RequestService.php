@@ -59,6 +59,12 @@ class RequestService
         return $request->id;
     }
 
+    /**
+     * Returns id
+     * @param int $id
+     * @param User $employee
+     * @return int
+     */
     public function assignRequest(int $id, User $employee): int
     {
         $request = Request::whereId($id)->firstOr(function () {
@@ -76,18 +82,17 @@ class RequestService
         return $employee->assignments()->create(['request_id' => $id])->id;
     }
 
-
-    public function contact(int $requestId, string $employeeMessage, User $employee): void
+    public function contact(int $requestId, string $employeeMessage, User $employeeFrom): void
     {
         $request = Request::whereId($requestId)->first();
         if ($request === null) {
             abort(404, 'Request not found');
         }
-        $assignedRequest = $employee->assignments()->where('request_id', '=', $requestId)->first();
-        if ($assignedRequest === null || $request->assignment === null || $employee->assignments === null) {
+        $assignedRequest = $employeeFrom->assignments()->where('request_id', '=', $requestId)->first();
+        if ($assignedRequest === null || $request->assignment === null || $employeeFrom->assignments === null) {
             abort(422, 'Not assigned');
         }
-        Mail::to($request->user->email)->queue(new RequestContact($employee->email, $employee->name, $requestId, $employeeMessage));
+        Mail::to($request->user->email)->queue(new RequestContact($employeeFrom->email, $employeeFrom->name, $requestId, $employeeMessage));
 
     }
 }

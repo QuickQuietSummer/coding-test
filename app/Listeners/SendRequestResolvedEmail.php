@@ -9,16 +9,6 @@ use Illuminate\Support\Facades\Mail;
 class SendRequestResolvedEmail
 {
     /**
-     * Create the event listener.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * Handle the event.
      *
      * @param \App\Events\RequestResolved $event

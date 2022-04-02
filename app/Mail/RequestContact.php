@@ -19,7 +19,10 @@ class RequestContact extends Mailable
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param string $fromEmail
+     * @param string $fromName
+     * @param int $requestId
+     * @param string $employeeMessage
      */
     public function __construct(string $fromEmail, string $fromName, int $requestId, string $employeeMessage)
     {

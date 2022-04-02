@@ -2,7 +2,6 @@
 
 namespace App\Repositories\Request;
 
-use App\Models\Assignment;
 use App\Models\Request;
 use Carbon\Carbon;
 use Carbon\Exceptions\InvalidFormatException;

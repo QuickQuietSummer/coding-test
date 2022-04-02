@@ -8,7 +8,7 @@ use App\Services\Auth\LoginService;
 use App\Services\Auth\RegisterService;
 use Illuminate\Support\Facades\Response;
 
-class AuthController
+class AuthController extends Controller
 {
     private RegisterService $registerService;
     private LoginService $loginService;

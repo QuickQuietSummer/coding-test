@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "546d01df-f1a8-42de-b9a6-7af7dc9e7ed5",
+        "_postman_id": "e69a0ee6-7bd4-4116-9973-25bec50ceee4",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -19,37 +19,6 @@
             "name": "Auth",
             "description": "",
             "item": [
-                {
-                    "name": "Login",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/login",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/login"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"email\":\"ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg\",\"password\":\"pznm\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
                 {
                     "name": "Register client",
                     "request": {
@@ -72,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg\",\"email\":\"rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm\",\"password\":\"n\",\"password_confirmation\":\"l\"}"
+                            "raw": "{\"name\":\"ottboriyuirhcbhqbebquhw\",\"email\":\"dwgwmvysbzkwybdreiqpekffyvpzuxrepqabmjjrfryslijxktzlivsxdczpmlqexnuvhkqtchchzoyfilkbpksfykkbiltppcmufwcutojlvtikfyxfbbipouvgisrewxipjdqchjnbchojpoawbonugefiaexjvrulaozazauzxcwgxnrsdnkrnopdnnpomjijmfrukyagafmohlkvjlbmcbpfz\",\"password\":\"y\",\"password_confirmation\":\"e\"}"
                         },
                         "description": "",
                         "auth": {
@@ -103,7 +72,38 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd\",\"email\":\"kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf\",\"password\":\"abdbw\",\"password_confirmation\":\"qofmht\"}"
+                            "raw": "{\"name\":\"xlkjvetvkzwivsyydodemdlvswuceaqqkxptkkhmjbyjgrgmjgqplvxnzbvlomoykgbjnehrskcgduxathrndjymvifvbkndwtkcbcspthzhllybzopltvrluxbpvryvqoe\",\"email\":\"andscmgisfmuomzfigqhywjfupuuyyctaqhwbmcrmbosghozgxpqjanfnjubjpxmbpfcykbbjatayqusssdyzsdmckovfsblvoyhxjhxyehmvjgwxtgicbrwopjcfarakvlpjgiwfmbfyseyururxkdsytittfwtwlhbllqneinyjhcwbfefzdpyhbttntlxglswolcsdmbehwaaabvdtmcniojkkejwzt\",\"password\":\"jquvij\",\"password_confirmation\":\"hjoy\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"hjltdwasnzobddrzvjujgeugqkilyncgbmcxuvilmlwuhtqx\",\"password\":\"bfmlby\"}"
                         },
                         "description": "",
                         "auth": {
@@ -140,7 +140,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"message\":\"cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr\"}"
+                            "raw": "{\"message\":\"mkzccqeszselxdngmcnguremdqcvpeogkzecltctvwlscvaetqmapbiejamqewutaldqpstrcbhgkijpfelvxedqusvgimpgecjszenhrcrvtpzqxuqrdxppbgdrefowmjhhqfxnrz\"}"
                         },
                         "description": "Only for clients"
                     },
@@ -174,7 +174,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"request_id\":18,\"message\":\"wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd\"}"
+                            "raw": "{\"request_id\":5,\"message\":\"nsplfjytkmsekynmmzxegkllsnktcfmjbjljcnnvrtgeuxxvsvgrzrmwvthlmcpxfrlmbnyekuyljeehmqnewpgnrvfqmicvqvbfiemwgvuwwerhrllemsjdcemcguxlcvoamudfpfnbinruexclkkoowkrjdsianqsdflhdszjpnvgqavbqiqsyjjhwclweqfimshhryrwjpcxapbpgeprqgrbxqamicwwfmcfpqbsfswanoqrdwtnagzuzcvgfihwvinqyaiiiwcubgvqjoztpdxxtwdbacateqyjmtgzjhxlhddundxfsmkvopqodjqayljgrmhkjcgkcvfqjjtnbhzdxtwqolxzymlljdpfusyhivwwlvirqczyytikwcqfghcqolqrshcrdwzelncinfvkrzkpuggcmfxetbanradsxaunyiqqambwxahuzghwhgitnujrwlaabpcjvtvpxqzzxuwuiixjlmbkoolwamraelytsxxnihjofvnwigzsjrgqarcrrkpinyiinayvixhghztqobbczyjzhrmbrmyndldnkcnwnbtctxgmbpyhnptwechndmjbreekjpdgvdsiscwzcncumslcyegznxaeavmnbdttkjtvsihmbhqddvmgyeqwebvhflxhsmblukiniebgrgrrogmlexhmfvyjctgaltrezkbsfjsypvjqmeidzjanikpnbfxltqrqsrfpqocagpvvhnfctwrrvnvujenbxltguadclhvtp\"}"
                         },
                         "description": "Only for employees"
                     },
@@ -189,42 +189,42 @@
                             "query": [
                                 {
                                     "key": "sort_date",
-                                    "value": "assumenda",
+                                    "value": "quia",
                                     "description": "Sorting by created. Values: new, old.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "sort_status",
-                                    "value": "asperiores",
+                                    "value": "repellat",
                                     "description": "Sorting by status. Values: active, resolved.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "start",
-                                    "value": "sint",
+                                    "value": "at",
                                     "description": "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00",
                                     "disabled": false
                                 },
                                 {
                                     "key": "end",
-                                    "value": "voluptas",
+                                    "value": "et",
                                     "description": "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16",
                                     "disabled": false
                                 },
                                 {
                                     "key": "filter_status",
-                                    "value": "dignissimos",
+                                    "value": "cupiditate",
                                     "description": "Filter by status. Values: active, resolved.",
                                     "disabled": false
                                 },
                                 {
                                     "key": "assigned_to_me",
-                                    "value": "1",
+                                    "value": "",
                                     "description": "Filter only requests assigned to your employee account.",
-                                    "disabled": false
+                                    "disabled": true
                                 }
                             ],
-                            "raw": "{{baseUrl}}\/api\/requests?sort_date=assumenda&sort_status=asperiores&start=sint&end=voluptas&filter_status=dignissimos&assigned_to_me=1"
+                            "raw": "{{baseUrl}}\/api\/requests?sort_date=quia&sort_status=repellat&start=at&end=et&filter_status=cupiditate&assigned_to_me="
                         },
                         "method": "GET",
                         "header": [
@@ -263,34 +263,6 @@
                     ]
                 },
                 {
-                    "name": "Assign request for responsible employee",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/assignments",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/assignments"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"request_id\":19}"
-                        },
-                        "description": "Only for employees"
-                    },
-                    "response": []
-                },
-                {
                     "name": "Resolve request with comment",
                     "request": {
                         "url": {
@@ -320,9 +292,37 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"comment\":\"wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy\"}"
+                            "raw": "{\"comment\":\"xpufbrnleawjdgtmtwdgulfdnqcbygukqhnyrtdvfjqrktwoqdgwybalgufhrbjcnkkhkyjgdvopaftuxxgkqvxohgronbnnfbusocgrwsuyvtqmkcxorheaaaecsnjzbioafkcvbhdvqvgsggeefmdvqiwxxeajswvhoqyjgtvfjvyqdcdlgprydhvqavavxelqvallunpryitlvwnmiuwilgrykyyxgagaexpfnhftfebweyixuunwmhmatthandvxetwdbfblukqmjqkxfuihfcaujxqivaprvwsvwhzpyxcaldqpzckscivuladusnuonhrglkujjbufpkfitvaiiyiiwviilofmpymiqopzhalixgsofcrdoqlgyxuecznuqcrrevjesqizlqkkegtnrqxodniywvkcbibzejpyuzwzkriedbdrqcqowlcctjybvxiannegahposqubkqnvlnlvywibopkryhpjdmbdkwyjjyfbfqyfutkqpuumsuasisxenmbaxzhytpqqqdfxfqjvgihxqaxqdutesbtqbvbbhwtyedkuqrkfsweilykozbidzaebbjefcottkehpazhwvwrvyfevekgusjvvkjqampljimrwmmynaprgwintfvpfmhxwqywykefythlpjfqlpnmvuetuqesyedvgtfjbmnimqznqprxfuoyotjaepjuacuvpmjrbybnkgkznoqfkfbeppfavfjvlovseqncytlvexmuyayzcqhdnqcuvcurooxjychzncihfgzhwkivolmmtooiyxwojixkwddhflzbibyeqeezqmtocuabwtqbucjenhwomqdcmxhmurhnfjgkfgubtkcwjvzeidofxxhbklhfjzjvodjkgrboftmzeggmksvvibgfqqjcuwjlazlefawemwisdygszoyoeiyvzipvjiagdtuzqmxxbgppprrptyjfvzqlkvnsjgltxtveebkbjqkkvlypcqdqopkoaygruotrhrrqgnhowfpgfykrubqdmwucdcomfxrhqfhznoougnmmsdwnqckwicbpuinxizhexbirltkbpufmwlmmfrfuyokmsihwizlqmsywsgbwxnfsyoknbgmpyzjvtifkubzzlgckuqkexmgazvagdeflsfyrwdypjoqjnzaeovolpnlfaniiqvdvhgfpvuhrlbtyjehgsidkemudryntfcrpwrdibfksjqbdkeytztnjrxzzigzzxvxlenuiihhwxxtumpcfcikpmzazsjfqdfspwqdrdhlhlepdyhjyttyhhdwkjzyensrmghdgcxamrgjcpvxptbboosjjekkgjpgnowkotklmbyuygixlwhipkekjtbgmrxdfrebkgwefeizcxxqvfgejtiyhogljgedrfeabjfywcgxjmovfhegyjqztvhahxkjjbqanqexcbvisvlszzvdvacmmonnpmsdkpkqkzdeeztbmxevhoupwbdnzwtkxhkxvqlbvvduukdvubkmkveujnhczydxqlgxsxzxfejkwyafpfpgfnxpkrwplkklsannqivpdxrcdtnprmdmxnkcmlinooflsmymdswrcbsqdpqolebogtfuzauswcjaefgezuxxtnsyrvuyviowkzazkkaaabkehqaiftetotanbvncbzjgtktpomlzimuzauyywurxalmycrvshdjtdhaslcgnukgbsyiedysxflsppwnedynjhwnwelcifeyogxjthnwceoytftqdsbggpqvtqxyaugnfyrhgwwyvpyqmvgwyuoevhobykjoylsmnyinubmmxublatutyqozstfiugfpcynymqnfennuubrbkwlgwytekolkzbzfybgnxsscfceksdyljrgjitatpegkdieiocbhqjwlmgigqfjeudocmdsgofjovquwzztcikonxuunxhrkexlqatiznhxrydrzqxuqsvlkuodexmbptpuvwmsydvuejvxfjlilpipnbyjpwmehucqtmkliorcnvwewnatdvcinbjstibtqwuygsrjmuhurvzncdgczvgpfitfincqerhrzixifsnyqrvzkodnqaqridtmzfcmgcxuxyjxwhxbybeakjqvqbmwqkngvxyvvfhdwzhvhxgubhtaqaveeyszwpepngzngcsfdxywkicfdmyzlwuswuckwgstpaqrbpafbvypcjezlmewcyiujayscjhvoftzuwtwmywmhmevptjtfgmenzduzwiuspxxqkcyqwlewfuswazcjawudbbjppjxmlvuduymjngjxgjvfpkdveahmsinzfmlxbxqnfbpaxnawtdftgnckbgdhbsfncmisjxhrbbfkwivwbyxvopesaflucwcrpdphtljkwgvlujvfdeoyrchspmuepscabaoeaywmxslfohmnnjnfghzlumghhtnzztvjxfywjsvshglkcgmffoenxbdcyodoxmflbneguwgszrknhoyjjzeydthxtcjojzlfcdtzibidxfwuxdhhxxpxvvlqjycfxvekwxsysdgbshxtllcrwgrqsjymgcjnmgvhjzxwlnqtmuyasrpmhwkmtgvxdryqqdxpljbczynmsnjywwdkxzebfnnyydmzqxoeqdendltbjekszmnhreyivxtykwebfyvldldatapxnetvddpimqtpxotmjcximreaobfrgmlleahoexmwgujzniaslrihnsvkoxjbxppwjpmofbrdyltuznoyedgrlpfrmupbhqsrfzalmvmjywinlsaalybkktwptruqdfvzhxxugucylgehqtebbkirdojclligwanubwkvojfactsoejarqgxmxzkhwpcagnxkyvzlvxuhdjoqcimnxvidnczbbbycgonfhjgktkwicuejawiftidplyjvmyxodjfpmlhvrcmdbaqwokzhsvtowqdzvesetrfwzeznygzgoosuvggzbbdtfngxeqkgellkbbnsuuukbqakgaeifmsiuoewdrowtyfbnlyenziagqknjinhpymddkpvkzpvxjsxfybaxwgerunbfgmprldsgjozkkqydmtiiiexsfxgztmvzbbhxinfkrsbvqhycdgemgsbihjdrauhykyolkqrihmwmrpdshrtiucncbwmxsmbljrrhchvexfspzvnxzsgopcmjrzctyorhbtrucrbzahrnspnsowbqrhlxybmuevmhjrhgetxdifhmvvdlxqqxwdbttkrgnmerxylcugoqyfstfmynhnpaxgkbjwrxjitdstynvynhuvvhtzphmiblrrirzupadageexzxqezwnipgxqsgbxtptosnykulgayhpkymvwzweytwclttivafgbddgahotdjnwqnfhpwsbapqqwsevcaqxvcjxrszidwamqebnzdhywkuhrxtpgwlsbocnhrqwbxdxbmqcywwxvvjkpcqzmikwjtgnvbdppqmbvqziwstfuojayhxplddiinovdvgsbmzsebsnlkehbybmwpqvnzlniulkdjmmftmbwclugacuowofekhiupdlkwjnqngyoqotitiqbxxfcgnbkqboxbgxodfopkciquvwgwxadbzkorvfuyqsuavrideevavtutwvwgolhjlaupzgjimvlmamqlcjzozlmclqvnafrbqnsehkqxqbgttupeysebnjnyrsbzpguankfuztfkhqgooxqawsqraehersoewjmnwndppadhfqwpsphsolfyzydbzdppwwrvmasuswgukrnkdyvwibxztltfkvwjlrvywpgkavwfwkttjqzxeqvbzcnmlevxpupjhwdfbdirqsgknqdydrhrvyutatcktuxakvyhdzqhiawlulslxlwgpswzqjeldveyvdxgaslqtiphwnlrgyknnnlbdjsofgvvfkaxqcmcpqiagmalzjiysrckilzgjuecvzatxtycwsoqlxwclziihkjidbellxirowqmiohzaxxlkxpznfmhfjlddmhfsidouvsbitbndljsujdlelxflzahqywcczenqygdotfayiwjnwoylxbhnvbenhxgofjjlsedbbruraxadatsscgzphtmlccplhsivcrxavvggrayxrpgrnvvdkkqopfmbdiykjhvjqkjhqpgzjoxllemqzhsaqcoeqgnkpvcmsqycorqralffwvedkggvuaaicavgnpeybswdnaufzltoiidhwysqodgqftqcdevwqzkuicmcweuurcqbeogywphfpvpnkelbciimtimbuktzfmsoqlfgtbwurqstgjyeljlzubohmillbqpgkhszscmpxiqzfzgjfdiduuourwymctbussouvivgnvbuftxpzkfiuorceqgletqqepddlpgokrtgymjkuvrbmxzbtfbflwqvmwwthgctgjlobgdqvakplgwybnlcpjcuiojlcivkqqomezupidjfmsbamfujehhwwqolvsfyeksofwbhrlzwswhidlamwfqqjblqcyxbcxiakeropwlvokqvtcqrupylcrrbyvwlchmusjzvodejcqoyxwhiuvwtbrlnliholukfvamkeobekjleaizycvmowevjmomoixhqslwovnrhowtqqxdyaazxtquvbblmeliscyjbnreqyextwcxupdlxsyegjobzpgmcsehzgcvepxjznhzjjcsbaqsupdkmlcmtpktayphueongodaqxwvwkuuytgfchyggkemeuotgdtpjoeyffuuxnxumktpzgdbrjusclrpvtdvfrwqvhfzrtdqfcpvttumtjvzqvaeqsbuozleiynwjyslhaultoidynbgbtyxrcxlcwocwchbodihdzfhuijuyzrdkefzjsxmehiqornsdhaqxcfqidsgadrttedupbvjnzkfpoacklbwzhanusjtbewajwfiukkisijibtrjlxtjzlneguwdegfemxwsoqjmehbbevdjzgnhyrlmkyullyccheridxeoppbsrmtmgmrpgnugcsvneiqlihkzvyyrhsfeohscedsmrbehptqpombeekmbdvnyzrjtzudyorttzfpccdakxfjowixxoalwsesllzcqewpypasykskcwghsxrgfmjivhwpgtkyjrfyolnaepvfpijzviiscbqknervnfdlwmiupqbpibrvtuhowtwtifprtqvdbphsrtyfydmmdybidjvnsewqcujqjobjalzidcqymskwlotfrhedsaqezuosyoorrjbdupvzoainxfvlbukaitmudzdtkgevilcpiyjxazffllynhghetroczgzmjoarkmaeyclkobcxytgpomvrrbltsftjtthrhwudqzcqgrjfdptvmujyttbpaguvsqqiozetomatypavvgavguominiyjtdtsecfvspmyabydpajstlzqpjryeiobmfozjeikvonglbqspvcvtchzaqqwdlacxlidgezcpgdydxxavrnuznxpusvltxapjlgratcregkppasmxkilaepibqczifgtfehytfgolyngkqlixdatoztlnlminvupuuxrvnpxxkugdvsisdcwfrqpyrjsxurpmpaqmqqijzxioyflpunucbdynfsiirsyrfopyuvzvwnvwpbvfgtgmtnvuoigybdahjzmgadldyjumaxumvjbtcxynniemgjhftjsjkatxyvazgkedogbnwuuhhvrjfcivqsqdjjvgfjvgseikwsdhtyjmajolbqaoaibmgpwyjzsbwoiptwvvoasphyhuqyqhejepcpkjnxlfplizijekeyajyhcpnthcfqfmixonttauoeboacnsmjoxjhmlrfthypmuysilpjdbhxxybovyhiqnjfnqzxnklqkypbdvjdekkfbgltcoahtppywqdnfopenmemorqpjahfsbesnboxpwfidvehxvezohkuqhpbmjnotxpwfcceuncktnjiyoxxrvgexqlmegdyjbaqdrvhytqszvhbhptiubibmvgvbzgkrawzgdcwhusewrorcsowbsmxbiiebssngpvgfplheyexxzwjbmimoewglkwrcupdbseckmjptgbcftehkucrawksjbldxmupvxcvjhjrhlltdoljgmrwydfogkgehkrmlfjyzftaxowobozajgaauixgkmidephatxhealcxqumvabezchbwuwiydoxfnisuzgqhumcijwmcxbzfgcjsaknxrsdrutbgiicronebbdtzkntjrjrdanqamnfcfrbobxrltqihewamffqqrevoddoostvncqusohepxiwochjokzonlyguaztsqnzpjoqaqsfokqsmmlygtsjunnrmkstfoxbdnxwblhbafmpiqacgmtfygenxbidbjugelgenudpdtgvvz\"}"
                         },
                         "description": "Only for employee"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Assign request for responsible employee",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/assignments",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/assignments"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"request_id\":8}"
+                        },
+                        "description": "Only for employees"
                     },
                     "response": []
                 }

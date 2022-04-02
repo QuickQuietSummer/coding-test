@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             ->has(
                 Role::factory()
                     ->state(function (array $attributes, User $user) {
-                        return ['user_id' => $user->id];
+                        return ['user_id' => $user->id, 'type' => Role::CLIENT];
                     }))
             ->has(
                 Request::factory()

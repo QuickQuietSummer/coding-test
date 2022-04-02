@@ -55,7 +55,7 @@ class RequestController extends Controller
         $filterStatus = $httpRequest->get('filter_status');
         $assignedToMe = $httpRequest->get('assigned_to_me');
 
-        $serviceRequests = $this->requestRepository->getAll($sortDate, $sortStatus, $start, $end, $filterStatus,$assignedToMe);
+        $serviceRequests = $this->requestRepository->getAll($sortDate, $sortStatus, $start, $end, $filterStatus, $assignedToMe);
 
 
         return Response::json([

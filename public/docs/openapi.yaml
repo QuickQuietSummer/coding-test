@@ -7,47 +7,6 @@ servers:
   -
     url: 'http://backend.localhost'
 paths:
-  /api/login:
-    post:
-      summary: Login
-      description: ''
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - Auth
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: ojphbkhfjxrqtgvmodelpyihutbjrykmhyrufgtttnlgueeomgdbrolgoklladbgxpsfypdzqykhuhvaqfnktbeoziwiozvhstlarusvriqyafiarmxljqxqevplnmuunnfoffhuigoyzepvqhkxuvhzamajgbnvjlvmeenpughqqoiocqkuwvdgamxegkyrqkwytbdmgxyjjdvtbsyoyafjrg
-                password:
-                  type: string
-                  description: 'Must be at least 8 characters.'
-                  example: pznm
-              required:
-                - email
-                - password
-      security: []
   /api/register-client:
     post:
       summary: 'Register client'
@@ -80,19 +39,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: shaicmjyzgyqotpabpmxfqjgtvayiggmhygosfefyebqnqwsqnbbglupdjyghurxfqqgghuzlaehofejmmynyrrvrnexkdozftkcshtvnunclbftzszkcxacjjdkvcwwmdalunmvmrbsyntbqfiiylmcgfyrmjlcbg
+                  example: ottboriyuirhcbhqbebquhw
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: rxchthrjrwjulutwrziliargcdpxpopyudanskpkcm
+                  example: dwgwmvysbzkwybdreiqpekffyvpzuxrepqabmjjrfryslijxktzlivsxdczpmlqexnuvhkqtchchzoyfilkbpksfykkbiltppcmufwcutojlvtikfyxfbbipouvgisrewxipjdqchjnbchojpoawbonugefiaexjvrulaozazauzxcwgxnrsdnkrnopdnnpomjijmfrukyagafmohlkvjlbmcbpfz
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: 'n'
+                  example: 'y'
                 password_confirmation:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: l
+                  example: e
               required:
                 - name
                 - email
@@ -131,24 +90,65 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ihpvjomvbraxzknwgzjgmwkipelbibxkqpcquuwndtviwtnqgwslddggjkryxierzyvnfqnrsrgfbgfxkstkiwdjgabrtfcpzpmrobiveatfwfyczkeeyfxwpdafhnoskouipiysetsqxfokcuiwwsxlqgiibagbgwaxepcyggyztlwnd
+                  example: xlkjvetvkzwivsyydodemdlvswuceaqqkxptkkhmjbyjgrgmjgqplvxnzbvlomoykgbjnehrskcgduxathrndjymvifvbkndwtkcbcspthzhllybzopltvrluxbpvryvqoe
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: kypivioctxqxnjufckgityxrlxeopixnfdvrrxhqxaqvoaubqkoieutpegetasyouwbjaxzteiujnjgbgouqxwxpryijiuggzgtgsukltpjcqtezlicxcvopsivxpybttuewtxzldsnttomvcrogowolvtiwmijfrlnrexgmekenpf
+                  example: andscmgisfmuomzfigqhywjfupuuyyctaqhwbmcrmbosghozgxpqjanfnjubjpxmbpfcykbbjatayqusssdyzsdmckovfsblvoyhxjhxyehmvjgwxtgicbrwopjcfarakvlpjgiwfmbfyseyururxkdsytittfwtwlhbllqneinyjhcwbfefzdpyhbttntlxglswolcsdmbehwaaabvdtmcniojkkejwzt
                 password:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: abdbw
+                  example: jquvij
                 password_confirmation:
                   type: string
                   description: 'Must be at least 8 characters.'
-                  example: qofmht
+                  example: hjoy
               required:
                 - name
                 - email
                 - password
                 - password_confirmation
+      security: []
+  /api/login:
+    post:
+      summary: Login
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: hjltdwasnzobddrzvjujgeugqkilyncgbmcxuvilmlwuhtqx
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: bfmlby
+              required:
+                - email
+                - password
       security: []
   /api/requests:
     post:
@@ -182,7 +182,7 @@ paths:
                 message:
                   type: string
                   description: 'Message of request. Must not be greater than 255 characters.'
-                  example: cafhiswphvusuulszzaegpfqhekexowjckvmdmsqteicasqssjnakshibleeipcbvuclxbruywduxjhftulbrnjefibgpaklkjubwlhdisghucragrbcksstdfssmurbwmxdfdtrqvphqevvvvswhsxpfahmgzzulfhqyupfddbjanygickzazgimqnoewbmylsraftzzcfeozxoqugsytyjqqrelgwftwnr
+                  example: mkzccqeszselxdngmcnguremdqcvpeogkzecltctvwlscvaetqmapbiejamqewutaldqpstrcbhgkijpfelvxedqusvgimpgecjszenhrcrvtpzqxuqrdxppbgdrefowmjhhqfxnrz
               required:
                 - message
     get:
@@ -193,62 +193,62 @@ paths:
           in: query
           name: sort_date
           description: 'Sorting by created. Values: new, old.'
-          example: assumenda
+          example: quia
           required: false
           schema:
             type: string
             description: 'Sorting by created. Values: new, old.'
-            example: assumenda
+            example: quia
         -
           in: query
           name: sort_status
           description: 'Sorting by status. Values: active, resolved.'
-          example: asperiores
+          example: repellat
           required: false
           schema:
             type: string
             description: 'Sorting by status. Values: active, resolved.'
-            example: asperiores
+            example: repellat
         -
           in: query
           name: start
           description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-          example: sint
+          example: at
           required: false
           schema:
             type: string
             description: "Start of date filter. Values: Carbon compatible string.\n\nFor example: 2010-1-1 00:00:00"
-            example: sint
+            example: at
         -
           in: query
           name: end
           description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-          example: voluptas
+          example: et
           required: false
           schema:
             type: string
             description: "End of date filter. Values: Carbon compatible string.\n\nFor example: 2020-12-25 12:45:16"
-            example: voluptas
+            example: et
         -
           in: query
           name: filter_status
           description: 'Filter by status. Values: active, resolved.'
-          example: dignissimos
+          example: cupiditate
           required: false
           schema:
             type: string
             description: 'Filter by status. Values: active, resolved.'
-            example: dignissimos
+            example: cupiditate
         -
           in: query
           name: assigned_to_me
           description: 'Filter only requests assigned to your employee account.'
-          example: true
+          example: false
           required: false
           schema:
             type: boolean
             description: 'Filter only requests assigned to your employee account.'
-            example: true
+            example: false
         -
           in: header
           name: Content-Type
@@ -310,49 +310,14 @@ paths:
                 request_id:
                   type: integer
                   description: ''
-                  example: 18
+                  example: 5
                 message:
                   type: string
                   description: 'Must not be greater than 10000 characters.'
-                  example: wprwogtbbbuvkudtxddffthvnlbhrgntduwjcrobqkyvsntkvjzzzclzeeqeanteepqdbluwaxbrmohstbxsubiadopvfsqckwxzzpqpxjicecsmsteeuwsdrsumvlhirqoldvzqocihurufwxqtoxnlkuubvslesfkdpnxjjdereebwxyrbfxfpvscshvyjpttpyscgueuletrvzxeuohkircmtvptyznbipgcxbletlxqdqbgfrtovtkiqbpkzklbghhjkwkxolrvgreoznpwrrxertekpmzuxdcjliumdwktiqsnsbraqkntbsvqrlokinfrffyefvmcppnyljwhfqsywbbbxumtugfandzaudciyyrfuxwjakteawuoepinxlyzotrqxmbifwdwkspgbvqtfdmkocjoqizdotogjkzmrtgneeaskqxbzgyqpvrvbbwozemfxfgd
+                  example: nsplfjytkmsekynmmzxegkllsnktcfmjbjljcnnvrtgeuxxvsvgrzrmwvthlmcpxfrlmbnyekuyljeehmqnewpgnrvfqmicvqvbfiemwgvuwwerhrllemsjdcemcguxlcvoamudfpfnbinruexclkkoowkrjdsianqsdflhdszjpnvgqavbqiqsyjjhwclweqfimshhryrwjpcxapbpgeprqgrbxqamicwwfmcfpqbsfswanoqrdwtnagzuzcvgfihwvinqyaiiiwcubgvqjoztpdxxtwdbacateqyjmtgzjhxlhddundxfsmkvopqodjqayljgrmhkjcgkcvfqjjtnbhzdxtwqolxzymlljdpfusyhivwwlvirqczyytikwcqfghcqolqrshcrdwzelncinfvkrzkpuggcmfxetbanradsxaunyiqqambwxahuzghwhgitnujrwlaabpcjvtvpxqzzxuwuiixjlmbkoolwamraelytsxxnihjofvnwigzsjrgqarcrrkpinyiinayvixhghztqobbczyjzhrmbrmyndldnkcnwnbtctxgmbpyhnptwechndmjbreekjpdgvdsiscwzcncumslcyegznxaeavmnbdttkjtvsihmbhqddvmgyeqwebvhflxhsmblukiniebgrgrrogmlexhmfvyjctgaltrezkbsfjsypvjqmeidzjanikpnbfxltqrqsrfpqocagpvvhnfctwrrvnvujenbxltguadclhvtp
               required:
                 - request_id
                 - message
-  /api/assignments:
-    post:
-      summary: 'Assign request for responsible employee'
-      description: 'Only for employees'
-      parameters:
-        -
-          in: header
-          name: Content-Type
-          description: ''
-          example: application/json
-          schema:
-            type: string
-        -
-          in: header
-          name: Accept
-          description: ''
-          example: application/json
-          schema:
-            type: string
-      responses: {  }
-      tags:
-        - 'Employee api'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                request_id:
-                  type: integer
-                  description: ''
-                  example: 19
-              required:
-                - request_id
   '/api/requests/{id}':
     put:
       summary: 'Resolve request with comment'
@@ -385,7 +350,7 @@ paths:
                 comment:
                   type: string
                   description: 'Comment of resolve. Must not be greater than 10000 characters.'
-                  example: wrovuiwjdmgckhylhqfcipmugcyogathzplwiwtpteteoiwajziurhglrcjolnoysfagpklapuvaitkirvblmgsvlsivsohkdritztvwxguqglpshodgunuvlmsszlpiurbhrvxywdvfvbnnnwuqlyphhkypsqyjpwqghvngocccyhjuqxmhjhjzlvurldvgtbvbjpqnynjfrsjbkcuaksvpgmegflfupsuovqzknugvdgarbwfywnghnbmubdwgvhhxoeqzddlmrkazgkfsvxjkpwcokdeimlxmlheidhslfqwpwedikwugnfcgohslvpiftvdznysthkfkxelwlznznimpgpiqveevjzftxumnivtmzyeotyfpojizrqdfbpgjgodjmrqwavvmpxiotazlsiljsrfsplfpqrovlixxxwqksgrqlswguuxlzeclwrtjefduxxrvqqfrfybwygwrsdmchrvvtiwexwghzzixgiyzvkcqaeeaiwhhmrgpssgckfwvahbibvhxltmmwihankugpwwhsflpbkjdygnaksipfkzuxbtiyhvnectwvvqpgjoiuzyyttzqmfpnxrwidinfcrdowhhiparlatvbmevzikrvljyqrfkmscawbyercpemofrbzbzqznzjqvtkkpjqbpiuikhymmkigbzqcddnxktfyeemtlrhniqlfnsefjbmwxqynqoxechsvasvwunptuxxqgjtlmruxhzdoeysyyskidnfiixqjguahcvwdnnwueatktpudlhtwvtcjxxzuiahwooxwotisebnqagtzakuszcjzmsfmlcyjfusvtwovaxpyxluikzaxkxqophhpedztmukuqbqqpntwjletqrygekegtedfbcwvgcljlenqcdpljffeehjhvmjfbcpbfibuhttnnhxahhczhdafgizxcjwroqqjtyvishigkfosbspqgdnwcwycswrvqqsyevzywqmouotyqffwioeicziferkwvsjmuxmpsocycomrelkpqpwomthzdzmbosahtmgywbofvzkjzdeksyhvpeuycczbnzuldicrpmtxtuaalgnxmigamvceanldhuuijccaeruvljrhkjbmfldorawhjrwjjhvnlvbqstnltldwyufquemneecpbmkvdwgvrrbdsgbjporogcdqgpfhyufzhuzejktmjaokxbozgfieyjnjapieudimncmhqlgcmhjltrhsqlrtctecqpzyjsjokfnhuhvtrsjlnzkcbptlwwfxukjplhkqdggcwicfltilfbcesethfzjlvxacusxlspggtughcopovrqnrccesijlzvuvlzdxfyignducrwlstcyvrgsjkxbssiyybesgainmjtylpdaxmgnqnoxhzhrdypwokutjjefixdjljluooktzaeiiunespdeuaguzdpkvxshkeirptcggjjfflqruxpymdapjfstyhpoulgkkzfhnzoadpitsgbyjyarnbckjonamrvibdjzkggonabqalmgdosbfpqcubwyucqmysbnsjtdllmdrqpkmdayihhqmulbemnpagmsorfrjpyhhefsnzqhowszteiaaehjmzwysujsrobnomioupewiwmofbdaajblrzmwegdtniqqgqspneeqivmjrylhivazobnbxletyndigrpffnenirkyixrcrihhjwyiwfgepdkhstaiwfgofovqgapsqmzwbqjybvmixkzfmatdsatbvonbwnxboqondxqmrspvhiwwdrjkdkstcdhqjspkfxqyoflfqtbdngvabwixbuwixpfrehlspjcngnwjvwhqxuhczjgadsfticagzbhanhsmhksptnbhlekpagvfdkdnwliehonaxkipjxggsdfmcchxeoudrgtdakjxahkkbtmfeqbxikbbspimuwxobtlwcadenvjvbhzqaulvgrovznzqyqyfwbmjwwtkhvevxlastenocpyiofnqevzrxilitptilhaousblddsrxczcovmrjkqrykxrqibivugzaxttklvwtoivnuawsqdyvqixppovlfwtaggwrmqmmtfcjhsulqslskrbctrkvewhpmpaqprngxbejlskmlbydwcmxggvvklqcqptoremeltkjaftpzhwtbvpnrqcnycxarpdbxcaothdovfmzscybfuzfbkwpcupjguzgrhepwwcoichuijgmlkeiinggeozadnvfbsatswrmptggzklwuypheniixqamyavobximfaaxolohjmfctjsyetigspvramdhyeodmxqgnumotypfnzwytuxogxtnhvspfjxylkgjvfinejfywfhweyszbkeqjruxxkcsjuqulgkrbnkhaihzmkpiciodpdbikjdigubfsbcjuqlvcrajhujnptmsrsxhtntnhlwddgszxpydgqwbubjeudzozlzqifvrknixqxbbbnvphyclxgcehcpspdrjetrfecjpyasovepfgadsahfhjyxwpinwockdpcgkyaeduwwmzedxovikrwaesuuwthzsvxcgxofegnrdcxblignjprplhyfqywvekiqbswkrypacqepvbuxtyordhfotimsjilrnkmwbyjxofywsguenubexiwnokyxnvpaapnbfzwzqyolqrocygksntnfrbcmrvowblfwcnfwaykoiyudhgasdpgmtrjuzesafclftrawvufegkgftvhhdmtpbieinwpnrhclwhuqpdbzgfbakfrjioxwwrxqomchvqrdsurguqkxysguqmjlnituoljpsmhujvdodmuunxojyudqlghaalmauazhjaetszsgnjrsyvzpmltpspksjladfpssmculqrujkegmqkndguphefsnbsqegpzwwkibiyqxgvpziuymrhhqpnldjigejkbhuhibpvrchobyzdnsnfrvywuyygwedjhhkfpfnhqstflqgotwrxpcmfjjuflkztjnadxjdqwcukshlxcetnypafuljdgmysjkawtmidqroowtpkcrnoudxbeyfdhtpbaiukfrxmpinbtxnvoxqdrqgonxpfrzmgwwxsmtmsflneehfxnqwwdaubkpjxnjhbdwsjczpefistbegalgvezwrsjrcghmdwjnsmrtirofgzzeyvqsahtgjceqgtmivqfuogtexyogabttfoioumwduwzomxdgpphlohtmnjkubrizmlsqwkoencrnrobmkjyeezdfeprjdnthnhuaoklriqfhexbcnwbgtvkynzymflupfvtsdmlnucedhplpblxyokzondeseeovwqzzvzdohztthwwvtwfauwgrstbrujfzaaeaughrlompjcuokqsvrrkmfgluytczuvdhzgvitvtewgmngblxnacpzelrknghputyoyaaxvxcnnhpclefridxxpikpitjfwzjattngbiocgxuclhwhnwvummskwbyvtwzzhwboerwlvxdpycgjwajzpuottlvreeivnqyiepczzekvzfmsyuassvebdqutxpbtgtbszklwhqxffcmilhunszgreypwesvqxvwfvhslnikzuwwvmfolavbanitngnengyfopkbkhpuwoiugsuagihfpjesntbljwiwpnymkfuqsfyeyupdpklwzelblsqicsoiyiqnchatmmkbxfbyxmfkidyejsqpwwtyxzyiy
+                  example: xpufbrnleawjdgtmtwdgulfdnqcbygukqhnyrtdvfjqrktwoqdgwybalgufhrbjcnkkhkyjgdvopaftuxxgkqvxohgronbnnfbusocgrwsuyvtqmkcxorheaaaecsnjzbioafkcvbhdvqvgsggeefmdvqiwxxeajswvhoqyjgtvfjvyqdcdlgprydhvqavavxelqvallunpryitlvwnmiuwilgrykyyxgagaexpfnhftfebweyixuunwmhmatthandvxetwdbfblukqmjqkxfuihfcaujxqivaprvwsvwhzpyxcaldqpzckscivuladusnuonhrglkujjbufpkfitvaiiyiiwviilofmpymiqopzhalixgsofcrdoqlgyxuecznuqcrrevjesqizlqkkegtnrqxodniywvkcbibzejpyuzwzkriedbdrqcqowlcctjybvxiannegahposqubkqnvlnlvywibopkryhpjdmbdkwyjjyfbfqyfutkqpuumsuasisxenmbaxzhytpqqqdfxfqjvgihxqaxqdutesbtqbvbbhwtyedkuqrkfsweilykozbidzaebbjefcottkehpazhwvwrvyfevekgusjvvkjqampljimrwmmynaprgwintfvpfmhxwqywykefythlpjfqlpnmvuetuqesyedvgtfjbmnimqznqprxfuoyotjaepjuacuvpmjrbybnkgkznoqfkfbeppfavfjvlovseqncytlvexmuyayzcqhdnqcuvcurooxjychzncihfgzhwkivolmmtooiyxwojixkwddhflzbibyeqeezqmtocuabwtqbucjenhwomqdcmxhmurhnfjgkfgubtkcwjvzeidofxxhbklhfjzjvodjkgrboftmzeggmksvvibgfqqjcuwjlazlefawemwisdygszoyoeiyvzipvjiagdtuzqmxxbgppprrptyjfvzqlkvnsjgltxtveebkbjqkkvlypcqdqopkoaygruotrhrrqgnhowfpgfykrubqdmwucdcomfxrhqfhznoougnmmsdwnqckwicbpuinxizhexbirltkbpufmwlmmfrfuyokmsihwizlqmsywsgbwxnfsyoknbgmpyzjvtifkubzzlgckuqkexmgazvagdeflsfyrwdypjoqjnzaeovolpnlfaniiqvdvhgfpvuhrlbtyjehgsidkemudryntfcrpwrdibfksjqbdkeytztnjrxzzigzzxvxlenuiihhwxxtumpcfcikpmzazsjfqdfspwqdrdhlhlepdyhjyttyhhdwkjzyensrmghdgcxamrgjcpvxptbboosjjekkgjpgnowkotklmbyuygixlwhipkekjtbgmrxdfrebkgwefeizcxxqvfgejtiyhogljgedrfeabjfywcgxjmovfhegyjqztvhahxkjjbqanqexcbvisvlszzvdvacmmonnpmsdkpkqkzdeeztbmxevhoupwbdnzwtkxhkxvqlbvvduukdvubkmkveujnhczydxqlgxsxzxfejkwyafpfpgfnxpkrwplkklsannqivpdxrcdtnprmdmxnkcmlinooflsmymdswrcbsqdpqolebogtfuzauswcjaefgezuxxtnsyrvuyviowkzazkkaaabkehqaiftetotanbvncbzjgtktpomlzimuzauyywurxalmycrvshdjtdhaslcgnukgbsyiedysxflsppwnedynjhwnwelcifeyogxjthnwceoytftqdsbggpqvtqxyaugnfyrhgwwyvpyqmvgwyuoevhobykjoylsmnyinubmmxublatutyqozstfiugfpcynymqnfennuubrbkwlgwytekolkzbzfybgnxsscfceksdyljrgjitatpegkdieiocbhqjwlmgigqfjeudocmdsgofjovquwzztcikonxuunxhrkexlqatiznhxrydrzqxuqsvlkuodexmbptpuvwmsydvuejvxfjlilpipnbyjpwmehucqtmkliorcnvwewnatdvcinbjstibtqwuygsrjmuhurvzncdgczvgpfitfincqerhrzixifsnyqrvzkodnqaqridtmzfcmgcxuxyjxwhxbybeakjqvqbmwqkngvxyvvfhdwzhvhxgubhtaqaveeyszwpepngzngcsfdxywkicfdmyzlwuswuckwgstpaqrbpafbvypcjezlmewcyiujayscjhvoftzuwtwmywmhmevptjtfgmenzduzwiuspxxqkcyqwlewfuswazcjawudbbjppjxmlvuduymjngjxgjvfpkdveahmsinzfmlxbxqnfbpaxnawtdftgnckbgdhbsfncmisjxhrbbfkwivwbyxvopesaflucwcrpdphtljkwgvlujvfdeoyrchspmuepscabaoeaywmxslfohmnnjnfghzlumghhtnzztvjxfywjsvshglkcgmffoenxbdcyodoxmflbneguwgszrknhoyjjzeydthxtcjojzlfcdtzibidxfwuxdhhxxpxvvlqjycfxvekwxsysdgbshxtllcrwgrqsjymgcjnmgvhjzxwlnqtmuyasrpmhwkmtgvxdryqqdxpljbczynmsnjywwdkxzebfnnyydmzqxoeqdendltbjekszmnhreyivxtykwebfyvldldatapxnetvddpimqtpxotmjcximreaobfrgmlleahoexmwgujzniaslrihnsvkoxjbxppwjpmofbrdyltuznoyedgrlpfrmupbhqsrfzalmvmjywinlsaalybkktwptruqdfvzhxxugucylgehqtebbkirdojclligwanubwkvojfactsoejarqgxmxzkhwpcagnxkyvzlvxuhdjoqcimnxvidnczbbbycgonfhjgktkwicuejawiftidplyjvmyxodjfpmlhvrcmdbaqwokzhsvtowqdzvesetrfwzeznygzgoosuvggzbbdtfngxeqkgellkbbnsuuukbqakgaeifmsiuoewdrowtyfbnlyenziagqknjinhpymddkpvkzpvxjsxfybaxwgerunbfgmprldsgjozkkqydmtiiiexsfxgztmvzbbhxinfkrsbvqhycdgemgsbihjdrauhykyolkqrihmwmrpdshrtiucncbwmxsmbljrrhchvexfspzvnxzsgopcmjrzctyorhbtrucrbzahrnspnsowbqrhlxybmuevmhjrhgetxdifhmvvdlxqqxwdbttkrgnmerxylcugoqyfstfmynhnpaxgkbjwrxjitdstynvynhuvvhtzphmiblrrirzupadageexzxqezwnipgxqsgbxtptosnykulgayhpkymvwzweytwclttivafgbddgahotdjnwqnfhpwsbapqqwsevcaqxvcjxrszidwamqebnzdhywkuhrxtpgwlsbocnhrqwbxdxbmqcywwxvvjkpcqzmikwjtgnvbdppqmbvqziwstfuojayhxplddiinovdvgsbmzsebsnlkehbybmwpqvnzlniulkdjmmftmbwclugacuowofekhiupdlkwjnqngyoqotitiqbxxfcgnbkqboxbgxodfopkciquvwgwxadbzkorvfuyqsuavrideevavtutwvwgolhjlaupzgjimvlmamqlcjzozlmclqvnafrbqnsehkqxqbgttupeysebnjnyrsbzpguankfuztfkhqgooxqawsqraehersoewjmnwndppadhfqwpsphsolfyzydbzdppwwrvmasuswgukrnkdyvwibxztltfkvwjlrvywpgkavwfwkttjqzxeqvbzcnmlevxpupjhwdfbdirqsgknqdydrhrvyutatcktuxakvyhdzqhiawlulslxlwgpswzqjeldveyvdxgaslqtiphwnlrgyknnnlbdjsofgvvfkaxqcmcpqiagmalzjiysrckilzgjuecvzatxtycwsoqlxwclziihkjidbellxirowqmiohzaxxlkxpznfmhfjlddmhfsidouvsbitbndljsujdlelxflzahqywcczenqygdotfayiwjnwoylxbhnvbenhxgofjjlsedbbruraxadatsscgzphtmlccplhsivcrxavvggrayxrpgrnvvdkkqopfmbdiykjhvjqkjhqpgzjoxllemqzhsaqcoeqgnkpvcmsqycorqralffwvedkggvuaaicavgnpeybswdnaufzltoiidhwysqodgqftqcdevwqzkuicmcweuurcqbeogywphfpvpnkelbciimtimbuktzfmsoqlfgtbwurqstgjyeljlzubohmillbqpgkhszscmpxiqzfzgjfdiduuourwymctbussouvivgnvbuftxpzkfiuorceqgletqqepddlpgokrtgymjkuvrbmxzbtfbflwqvmwwthgctgjlobgdqvakplgwybnlcpjcuiojlcivkqqomezupidjfmsbamfujehhwwqolvsfyeksofwbhrlzwswhidlamwfqqjblqcyxbcxiakeropwlvokqvtcqrupylcrrbyvwlchmusjzvodejcqoyxwhiuvwtbrlnliholukfvamkeobekjleaizycvmowevjmomoixhqslwovnrhowtqqxdyaazxtquvbblmeliscyjbnreqyextwcxupdlxsyegjobzpgmcsehzgcvepxjznhzjjcsbaqsupdkmlcmtpktayphueongodaqxwvwkuuytgfchyggkemeuotgdtpjoeyffuuxnxumktpzgdbrjusclrpvtdvfrwqvhfzrtdqfcpvttumtjvzqvaeqsbuozleiynwjyslhaultoidynbgbtyxrcxlcwocwchbodihdzfhuijuyzrdkefzjsxmehiqornsdhaqxcfqidsgadrttedupbvjnzkfpoacklbwzhanusjtbewajwfiukkisijibtrjlxtjzlneguwdegfemxwsoqjmehbbevdjzgnhyrlmkyullyccheridxeoppbsrmtmgmrpgnugcsvneiqlihkzvyyrhsfeohscedsmrbehptqpombeekmbdvnyzrjtzudyorttzfpccdakxfjowixxoalwsesllzcqewpypasykskcwghsxrgfmjivhwpgtkyjrfyolnaepvfpijzviiscbqknervnfdlwmiupqbpibrvtuhowtwtifprtqvdbphsrtyfydmmdybidjvnsewqcujqjobjalzidcqymskwlotfrhedsaqezuosyoorrjbdupvzoainxfvlbukaitmudzdtkgevilcpiyjxazffllynhghetroczgzmjoarkmaeyclkobcxytgpomvrrbltsftjtthrhwudqzcqgrjfdptvmujyttbpaguvsqqiozetomatypavvgavguominiyjtdtsecfvspmyabydpajstlzqpjryeiobmfozjeikvonglbqspvcvtchzaqqwdlacxlidgezcpgdydxxavrnuznxpusvltxapjlgratcregkppasmxkilaepibqczifgtfehytfgolyngkqlixdatoztlnlminvupuuxrvnpxxkugdvsisdcwfrqpyrjsxurpmpaqmqqijzxioyflpunucbdynfsiirsyrfopyuvzvwnvwpbvfgtgmtnvuoigybdahjzmgadldyjumaxumvjbtcxynniemgjhftjsjkatxyvazgkedogbnwuuhhvrjfcivqsqdjjvgfjvgseikwsdhtyjmajolbqaoaibmgpwyjzsbwoiptwvvoasphyhuqyqhejepcpkjnxlfplizijekeyajyhcpnthcfqfmixonttauoeboacnsmjoxjhmlrfthypmuysilpjdbhxxybovyhiqnjfnqzxnklqkypbdvjdekkfbgltcoahtppywqdnfopenmemorqpjahfsbesnboxpwfidvehxvezohkuqhpbmjnotxpwfcceuncktnjiyoxxrvgexqlmegdyjbaqdrvhytqszvhbhptiubibmvgvbzgkrawzgdcwhusewrorcsowbsmxbiiebssngpvgfplheyexxzwjbmimoewglkwrcupdbseckmjptgbcftehkucrawksjbldxmupvxcvjhjrhlltdoljgmrwydfogkgehkrmlfjyzftaxowobozajgaauixgkmidephatxhealcxqumvabezchbwuwiydoxfnisuzgqhumcijwmcxbzfgcjsaknxrsdrutbgiicronebbdtzkntjrjrdanqamnfcfrbobxrltqihewamffqqrevoddoostvncqusohepxiwochjokzonlyguaztsqnzpjoqaqsfokqsmmlygtsjunnrmkstfoxbdnxwblhbafmpiqacgmtfygenxbidbjugelgenudpdtgvvz
               required:
                 - comment
     parameters:
@@ -397,6 +362,41 @@ paths:
         required: true
         schema:
           type: integer
+  /api/assignments:
+    post:
+      summary: 'Assign request for responsible employee'
+      description: 'Only for employees'
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - 'Employee api'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                request_id:
+                  type: integer
+                  description: ''
+                  example: 8
+              required:
+                - request_id
 tags:
   -
     name: Auth
