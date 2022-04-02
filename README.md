@@ -12,6 +12,12 @@
 Авторизация упрощена, все токены ползьователя отзываются каждый раз при логине и дается новый.
 Создание отвественных работников упрощено и доступно по публичному апи.
 
+-cd project-folder
+
+-cp .env.example .env
+
+-php artisan key:generate
+
 #### В файле .env нужно настроить:
 APP_*
 
@@ -25,7 +31,6 @@ DB_*
 -php artisan migrate
 
 -php artisan scribe:generate
-
 
 ### Песочница /docs
 ### Письма /mailbase
